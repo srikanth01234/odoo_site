@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5">
+  <title>CounterPower · Black & Red POS</title>
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Google Font: Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <style>
+    /* ---------- BLACK & RED PALETTE · WHITE BG · TIGHT SPACING ---------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: #ffffff;
+      color: #1a1a1a;
+      line-height: 1.5;
+    }
+
+    :root {
+      --primary: #b71c1c;        /* deep red */
+      --primary-light: #d32f2f;
+      --primary-dark: #8b0000;
+      --black: #0a0a0a;
+      --black-soft: #1e1e1e;
+      --gray-100: #f8f8f8;
+      --gray-300: #e4e4e4;
+      --gray-600: #5c5c5c;
+      --card-bg: #ffffff;
+      --border-light: #eaeaea;
+      --shadow-sm: 0 8px 20px -5px rgba(0,0,0,0.04), 0 4px 6px -2px rgba(0,0,0,0.02);
+      --shadow-md: 0 16px 30px -12px rgba(0,0,0,0.1);
+      --radius-md: 24px;
+      --radius-sm: 16px;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background-color: var(--primary);
+      color: white;
+      font-weight: 600;
+      font-size: 1.1rem;
+      padding: 14px 36px;
+      border: none;
+      border-radius: 60px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      box-shadow: 0 8px 18px rgba(183, 28, 28, 0.2);
+      letter-spacing: 0.3px;
+    }
+
+    .btn i {
+      transition: transform 0.2s;
+    }
+
+    .btn:hover {
+      background-color: var(--primary-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 14px 24px rgba(139, 0, 0, 0.25);
+    }
+
+    .btn:hover i {
+      transform: translateX(5px);
+    }
+
+    h1, h2, h3 {
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    h1 {
+      font-size: 3.5rem;
+      line-height: 1.2;
+      margin-bottom: 1.5rem;
+      color: var(--black);
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: var(--black);
+    }
+
+    /* ---------- NAVIGATION ---------- */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0 10px;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--black);
+    }
+
+    .logo i {
+      color: var(--primary);
+      font-size: 2rem;
+    }
+
+    .nav-cta {
+      background-color: white;
+      color: var(--primary);
+      border: 1.5px solid var(--border-light);
+      padding: 12px 28px;
+      border-radius: 40px;
+      font-weight: 600;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.2s;
+      text-decoration: none;
+    }
+
+    .nav-cta i {
+      color: var(--primary);
+      margin-left: 6px;
+    }
+
+    .nav-cta:hover {
+      background: var(--primary);
+      color: white;
+      border-color: var(--primary);
+    }
+    .nav-cta:hover i {
+      color: white;
+    }
+
+    /* ---------- HERO ---------- */
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 50px;
+      padding: 20px 0 40px;
+    }
+
+    .hero-content span.highlight {
+      color: var(--primary);
+      border-bottom: 6px solid rgba(183, 28, 28, 0.2);
+      display: inline-block;
+      line-height: 0.9;
+    }
+
+    .hero-description {
+      font-size: 1.25rem;
+      color: var(--gray-600);
+      margin-bottom: 2rem;
+      max-width: 90%;
+    }
+
+    .hero-stats {
+      display: flex;
+      margin-top: 30px;
+      gap: 40px;
+    }
+
+    .stat-number {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--primary-dark);
+    }
+
+    .stat-label {
+      color: var(--gray-600);
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* hero visual */
+    .hero-visual {
+      background: var(--gray-100);
+      border-radius: 40px;
+      padding: 30px 20px;
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--border-light);
+    }
+
+    .device-mock {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .device-header {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 10px 20px 10px;
+      border-bottom: 2px solid var(--border-light);
+    }
+
+    .device-dot { display: flex; gap: 8px; }
+    .dot { width: 12px; height: 12px; border-radius: 50%; background: #ddd; }
+    .dot-red { background: var(--primary); }
+    .dot-yellow { background: #ffbd2e; }
+    .dot-green { background: #27c93f; }
+
+    .device-content { padding-top: 25px; display: flex; flex-direction: column; gap: 18px; }
+    .order-row {
+      display: flex; justify-content: space-between; align-items: center;
+      background: white; padding: 12px 16px; border-radius: 14px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.02); border: 1px solid var(--border-light);
+    }
+    .order-id { font-weight: 600; color: var(--black); }
+    .badge {
+      background: #f0f0f0; padding: 6px 14px; border-radius: 100px;
+      font-size: 0.8rem; font-weight: 600; color: var(--black-soft);
+    }
+    .badge.prep { background: #ffebee; color: var(--primary-dark); }
+    .badge.ready { background: #e8e8e8; color: #1e1e1e; }
+
+    /* ---------- FEATURES (compact) ---------- */
+    .features {
+      padding: 50px 0 40px;
+    }
+
+    .section-label {
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      margin-bottom: 12px;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .feature-card {
+      background: var(--card-bg);
+      border-radius: var(--radius-md);
+      padding: 36px 24px;
+      border: 1px solid var(--border-light);
+      transition: all 0.25s ease;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .feature-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--primary);
+      box-shadow: 0 20px 30px -12px rgba(183, 28, 28, 0.15);
+    }
+
+    .icon-lg {
+      font-size: 2.6rem;
+      color: var(--primary);
+      margin-bottom: 24px;
+    }
+
+    .feature-card h3 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+      color: var(--black);
+    }
+
+    .feature-card p {
+      color: var(--gray-600);
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    /* ---------- ORDER MANAGEMENT · NEW SECTION (tight) ---------- */
+    .order-mgmt-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 40px;
+      background: var(--gray-100);
+      border-radius: var(--radius-md);
+      padding: 48px 48px;
+      margin: 30px 0 30px;
+      border: 1px solid var(--border-light);
+    }
+
+    .mgmt-left h2 {
+      font-size: 2.2rem;
+      margin-bottom: 16px;
+    }
+
+    .mgmt-left p {
+      color: var(--gray-600);
+      font-size: 1.1rem;
+      margin-bottom: 28px;
+    }
+
+    .mgmt-feature-list {
+      list-style: none;
+      margin-bottom: 32px;
+    }
+
+    .mgmt-feature-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      margin-bottom: 18px;
+      font-size: 1.05rem;
+      color: var(--black-soft);
+    }
+
+    .mgmt-feature-list li i {
+      color: var(--primary);
+      font-size: 1.25rem;
+      margin-top: 2px;
+    }
+
+    .mgmt-visual {
+      background: white;
+      border-radius: 28px;
+      padding: 28px;
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--border-light);
+    }
+
+    .delivery-card {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .delivery-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border-bottom: 1px solid var(--border-light);
+      padding-bottom: 16px;
+    }
+
+    .delivery-header i {
+      font-size: 2rem;
+      color: var(--primary);
+    }
+
+    .delivery-header span {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: var(--black);
+    }
+
+    .rider-progress {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .rider-info {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .rider-avatar {
+      background: var(--gray-100);
+      border-radius: 50%;
+      padding: 10px;
+    }
+
+    .eta {
+      background: #ffebee;
+      color: var(--primary-dark);
+      padding: 8px 16px;
+      border-radius: 60px;
+      font-weight: 600;
+    }
+
+    .map-placeholder {
+      background: var(--gray-100);
+      height: 100px;
+      border-radius: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gray-600);
+      border: 1px dashed var(--border-light);
+    }
+
+    /* ---------- INTERACTIVE DEMO (compact) ---------- */
+    .demo-section {
+      background: var(--gray-100);
+      border-radius: var(--radius-md);
+      padding: 48px 40px;
+      margin: 30px 0 30px;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      align-items: center;
+      gap: 40px;
+      border: 1px solid var(--border-light);
+    }
+
+    .demo-left h2 {
+      font-size: 2.2rem;
+      margin-bottom: 16px;
+    }
+
+    .demo-left p {
+      color: var(--gray-600);
+      font-size: 1.1rem;
+      margin-bottom: 28px;
+    }
+
+    .order-tracker-card {
+      background: white;
+      border-radius: 28px;
+      padding: 28px;
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--border-light);
+    }
+
+    .tracker-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .order-number {
+      font-weight: 700;
+      background: #f0f0f0;
+      padding: 6px 16px;
+      border-radius: 60px;
+      font-size: 0.9rem;
+      color: var(--black);
+    }
+
+    .status-badge {
+      background: var(--primary);
+      color: white;
+      padding: 8px 22px;
+      border-radius: 60px;
+      font-weight: 600;
+      font-size: 1rem;
+      text-transform: capitalize;
+    }
+
+    .progress-visual {
+      display: flex;
+      justify-content: space-between;
+      margin: 24px 0;
+    }
+
+    .progress-step {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      background: white;
+      padding: 0 4px;
+    }
+
+    .step-icon {
+      width: 44px;
+      height: 44px;
+      background: #f0f0f0;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gray-600);
+      font-size: 1.2rem;
+    }
+
+    .step-icon.active {
+      background: var(--primary);
+      color: white;
+    }
+
+    .step-label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: var(--gray-600);
+    }
+
+    .btn-update {
+      background: white;
+      color: var(--primary);
+      border: 1.5px solid var(--primary);
+      border-radius: 60px;
+      padding: 12px 24px;
+      font-weight: 700;
+      width: 100%;
+      margin-top: 16px;
+      transition: 0.2s;
+      cursor: pointer;
+    }
+
+    .btn-update:hover {
+      background: var(--primary);
+      color: white;
+    }
+
+    /* ---------- CTA BANNER (black background) ---------- */
+    .cta-banner {
+      background: var(--black);
+      border-radius: var(--radius-md);
+      padding: 60px 40px;
+      color: white;
+      text-align: center;
+      margin: 30px 0 40px;
+    }
+
+    .cta-banner h2 {
+      color: white;
+      font-size: 2.6rem;
+      margin-bottom: 16px;
+    }
+
+    .cta-banner p {
+      font-size: 1.2rem;
+      opacity: 0.85;
+      margin-bottom: 32px;
+      color: #f0f0f0;
+    }
+
+    /* ---------- FOOTER ---------- */
+    footer {
+      padding: 30px 0 40px;
+      border-top: 1px solid var(--border-light);
+      color: var(--gray-600);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    /* ---------- RESPONSIVE ---------- */
+    @media (max-width: 1024px) {
+      h1 { font-size: 2.8rem; }
+      .hero,
+      .order-mgmt-section,
+      .demo-section { grid-template-columns: 1fr; }
+      .hero-visual { order: -1; max-width: 550px; margin: 0 auto; }
+      .features-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 700px) {
+      .container { padding: 0 20px; }
+      h1 { font-size: 2.3rem; }
+      h2 { font-size: 2rem; }
+      .features-grid { grid-template-columns: 1fr; }
+      .hero-stats { flex-wrap: wrap; gap: 24px; }
+      .navbar { flex-direction: column; gap: 16px; }
+      .cta-banner h2 { font-size: 2rem; }
+      .order-mgmt-section { padding: 36px 24px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <div class="container">
+    <div class="navbar">
+      <div class="logo">
+        <i class="fas fa-utensils"></i> 
+        <span>Counter<span style="color:var(--primary);">Power</span></span>
+      </div>
+      <a href="#" class="nav-cta">
+        <i class="fas fa-bolt"></i> Get Started Now
+      </a>
+    </div>
+  </div>
+
+  <main>
+    <!-- HERO section -->
+    <div class="container">
+      <div class="hero">
+        <div class="hero-content">
+          <h1>
+            Transform Your Counter <br>into a 
+            <span class="highlight">Powerhouse</span>.
+          </h1>
+          <p class="hero-description">
+            Running your restaurant is now easier with a multi-functional POS system. 
+            It helps you manage every part of the counter experience — from the first hello to the last bite.
+          </p>
+          <button class="btn" onclick="handleGetStarted()">
+            Get Started Now <i class="fas fa-arrow-right"></i>
+          </button>
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-number">500+</span>
+              <span class="stat-label">restaurants</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">15k+</span>
+              <span class="stat-label">orders/day</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">99.9%</span>
+              <span class="stat-label">uptime</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="device-mock">
+            <div class="device-header">
+              <div class="device-dot">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+              </div>
+              <i class="fas fa-wifi" style="color:var(--gray-600);"></i>
+            </div>
+            <div class="device-content">
+              <div class="order-row">
+                <span class="order-id"><i class="fas fa-store" style="color:var(--primary);"></i> Branch #12</span>
+                <span class="badge prep"><i class="fas fa-fire"></i> prep</span>
+              </div>
+              <div class="order-row">
+                <span class="order-id"><i class="fas fa-bike" style="color:var(--primary);"></i> Delivery #421</span>
+                <span class="badge ready"><i class="fas fa-check-circle"></i> ready</span>
+              </div>
+              <div class="order-row">
+                <span class="order-id"><i class="fas fa-laptop"></i> takeaway #88</span>
+                <span class="badge">new</span>
+              </div>
+              <div style="display:flex; gap:10px; margin-top:12px; color:var(--gray-600); justify-content:center;">
+                <i class="fas fa-tablet-alt"></i><i class="fas fa-laptop"></i><i class="fas fa-mobile-alt"></i>
+                <span style="font-size:0.8rem;">any device</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FEATURES section -->
+    <div class="container features">
+      <span class="section-label"><i class="fas fa-crown" style="margin-right:6px;"></i> ALL-IN-ONE COUNTER</span>
+      <h2 style="max-width: 700px;">Everything you need to run the front of house</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="icon-lg"><i class="fas fa-code-branch"></i></div>
+          <h3>Branch‑wise</h3>
+          <p>Get branch-specific POS to handle dine-in, home delivery, takeaway, and reservations – tailored per location. No more one-size-fits-all.</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon-lg"><i class="fas fa-chart-line"></i></div>
+          <h3>Live order flow</h3>
+          <p>Track the progress of each order in real time, from prep to delivery. Update statuses instantly; your team and customers stay in sync.</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon-lg"><i class="fas fa-cloud"></i></div>
+          <h3>Any device</h3>
+          <p>Accessible on laptop, desktop, or tablet. Ultimate convenience for managers, runners, and hosts – the counter travels with you.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ★ NEW SECTION: ORDER MANAGEMENT (exactly as requested) ★ -->
+    <div class="container">
+      <div class="order-mgmt-section">
+        <div class="mgmt-left">
+          <span class="section-label"><i class="fas fa-clipboard-list"></i> ORDER MANAGEMENT</span>
+          <h2>Manage Orders Like a Pro</h2>
+          <p>Ensure every order is tracked, updated, and handled swiftly. No delays. No mistakes. Just smooth operations.</p>
+          <ul class="mgmt-feature-list">
+            <li><i class="fas fa-fingerprint"></i> Access all the order details you need at your fingertips.</li>
+            <li><i class="fas fa-copy"></i> Make quick changes or duplicate orders without missing a step.</li>
+            <li><i class="fas fa-map-marked-alt"></i> Monitor your delivery man’s progress in real-time.</li>
+          </ul>
+          <button class="btn" onclick="handleGetStarted()">
+            Get Started Now <i class="fas fa-arrow-right"></i>
+          </button>
+        </div>
+        <div class="mgmt-visual">
+          <div class="delivery-card">
+            <div class="delivery-header">
+              <i class="fas fa-motorcycle"></i>
+              <span>Delivery #421 · Alex Chen</span>
+            </div>
+            <div class="rider-progress">
+              <div class="rider-info">
+                <div class="rider-avatar">
+                  <i class="fas fa-user-circle fa-2x" style="color:var(--primary);"></i>
+                </div>
+                <div>
+                  <div style="font-weight:600;">ETA 8 min</div>
+                  <div style="color:var(--gray-600);">2.3 km away</div>
+                </div>
+              </div>
+              <span class="eta"><i class="fas fa-clock"></i> 8:42 PM</span>
+            </div>
+            <div class="map-placeholder">
+              <i class="fas fa-map" style="margin-right:8px;"></i> Live tracking enabled
+            </div>
+            <p style="color:var(--gray-600); font-size:0.85rem; margin-top:8px;">
+              <i class="fas fa-location-dot" style="color:var(--primary);"></i> last update: just now
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- INTERACTIVE DEMO section (order tracker) -->
+    <div class="container">
+      <div class="demo-section">
+        <div class="demo-left">
+          <span class="section-label"><i class="fas fa-flask"></i> LIVE DEMO</span>
+          <h2>From prep to 'ready' <br> in one tap.</h2>
+          <p>Update statuses as orders move. See how the progress bar responds – just like our POS.</p>
+          <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+            <span style="background: #ffebee; padding: 8px 16px; border-radius: 60px; font-size:0.9rem; font-weight:600; color:var(--primary-dark);"><i class="fas fa-clock"></i> realtime sync</span>
+            <span style="background: #ffebee; padding: 8px 16px; border-radius: 60px; font-size:0.9rem; font-weight:600; color:var(--primary-dark);"><i class="fas fa-bell"></i> push updates</span>
+          </div>
+        </div>
+        <div class="order-tracker-card">
+          <div class="tracker-header">
+            <span class="order-number"><i class="fas fa-receipt"></i> ORDER #2483</span>
+            <span id="dynamicStatusBadge" class="status-badge">preparing</span>
+          </div>
+          <div class="progress-visual">
+            <div class="progress-step">
+              <div id="stepPrepIcon" class="step-icon active"><i class="fas fa-clipboard-list"></i></div>
+              <span class="step-label">Prep</span>
+            </div>
+            <div class="progress-step">
+              <div id="stepCookIcon" class="step-icon"><i class="fas fa-fire"></i></div>
+              <span class="step-label">Cooking</span>
+            </div>
+            <div class="progress-step">
+              <div id="stepReadyIcon" class="step-icon"><i class="fas fa-check-circle"></i></div>
+              <span class="step-label">Ready</span>
+            </div>
+            <div class="progress-step">
+              <div id="stepDeliverIcon" class="step-icon"><i class="fas fa-bike"></i></div>
+              <span class="step-label">Out for delivery</span>
+            </div>
+          </div>
+          <p style="color: var(--gray-600); font-size:0.95rem; margin: 8px 0;"><i class="fas fa-map-pin" style="color:var(--primary);"></i> Table 7 · 2 items</p>
+          <button id="updateStatusBtn" class="btn-update">
+            <i class="fas fa-rotate"></i> Update status
+          </button>
+          <p style="font-size:0.75rem; color: var(--gray-600); margin-top: 16px; text-align:center;">click to simulate order progress</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA BANNER (black background) -->
+    <div class="container">
+      <div class="cta-banner">
+        <h2>Turn your counter into a command center.</h2>
+        <p>Join 500+ restaurants that use CounterPower to streamline dine-in, delivery & takeaway.</p>
+        <button class="btn" onclick="handleGetStarted()">
+          <i class="fas fa-rocket"></i> Get Started Now
+        </button>
+        <p style="margin-top: 28px; opacity:0.7; font-size:0.9rem; color:#ccc;">
+          <i class="fas fa-tablet"></i> works on any device · free 14-day trial
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="container">
+    <div style="display: flex; gap: 24px; align-items: center;">
+      <span style="font-weight: 700; color:var(--black);"><i class="fas fa-utensils" style="color:var(--primary);"></i> CounterPower</span>
+      <span style="color:var(--gray-600);">© 2025 — Black & Red Edition</span>
+    </div>
+    <div style="display: flex; gap: 28px; color:var(--gray-600);">
+      <i class="fab fa-twitter"></i>
+      <i class="fab fa-linkedin"></i>
+      <i class="fab fa-instagram"></i>
+    </div>
+  </footer>
+
+  <!-- JAVASCRIPT (same interactive demo) -->
+  <script>
+    const statusFlow = [
+      { name: 'preparing', step: 0, bgColor: '#b71c1c' },
+      { name: 'cooking', step: 1, bgColor: '#8b0000' },
+      { name: 'ready', step: 2, bgColor: '#b71c1c' },
+      { name: 'out for delivery', step: 3, bgColor: '#0a0a0a' }
+    ];
+
+    let currentStatusIndex = 0;
+    const statusBadge = document.getElementById('dynamicStatusBadge');
+    const updateBtn = document.getElementById('updateStatusBtn');
+    const stepIcons = [
+      document.getElementById('stepPrepIcon'),
+      document.getElementById('stepCookIcon'),
+      document.getElementById('stepReadyIcon'),
+      document.getElementById('stepDeliverIcon')
+    ];
+
+    function refreshOrderStatus() {
+      const status = statusFlow[currentStatusIndex];
+      statusBadge.textContent = status.name;
+      statusBadge.style.backgroundColor = status.bgColor;
+      stepIcons.forEach((icon, idx) => {
+        if (idx <= status.step) icon.classList.add('active');
+        else icon.classList.remove('active');
+      });
+    }
+
+    function cycleStatus() {
+      currentStatusIndex = (currentStatusIndex + 1) % statusFlow.length;
+      refreshOrderStatus();
+    }
+
+    if (updateBtn) updateBtn.addEventListener('click', cycleStatus);
+    window.handleGetStarted = () => alert('🔥 Order Management ready. A specialist will show you the live dashboard.');
+    window.addEventListener('DOMContentLoaded', refreshOrderStatus);
+
+    // nav CTA
+    document.querySelectorAll('.nav-cta').forEach(btn => {
+      btn.addEventListener('click', (e) => { e.preventDefault(); handleGetStarted(); });
+    });
+  </script>
+</body>
+</html>

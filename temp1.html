@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant Types · unified platform</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #FFFFFF;
+      color: #0A0A0A;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.4;
+      font-weight: 400;
+    }
+
+    .page {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 2.8rem 2.5rem;
+    }
+
+    /* ---------- HEADER — absolutely minimal ---------- */
+    .main-title {
+      font-size: 3.2rem;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      line-height: 1;
+      color: #0A0A0A;
+      display: inline-block;
+      margin-bottom: 0.5rem;
+    }
+    .main-title::after {
+      content: '';
+      display: block;
+      width: 70px;
+      height: 5px;
+      background: #D32F2F;
+      margin-top: 5px;
+      border-radius: 2px;
+    }
+
+    .tagline {
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: #1E1E1E;
+      letter-spacing: -0.02em;
+      margin-top: 1.2rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .intro {
+      font-size: 1.1rem;
+      color: #3D3D3D;
+      max-width: 850px;
+      margin-bottom: 2.5rem;
+      font-weight: 400;
+    }
+
+    /* ---------- 2‑COLUMN GRID – clean, compact ---------- */
+    .restaurant-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.8rem 2.5rem;
+    }
+
+    /* block: red vertical stripe only – no extra borders, no shadows */
+    .restaurant-block {
+      border-left: 5px solid #D32F2F;
+      padding-left: 1.4rem;
+      padding-bottom: 0.4rem;
+      background: #FFFFFF;
+    }
+
+    /* header row – icon + title */
+    .block-header {
+      display: flex;
+      align-items: baseline;
+      gap: 0.6rem;
+      margin-bottom: 0.2rem;
+    }
+    .block-header i {
+      font-size: 1.6rem;
+      color: #D32F2F;
+      width: 1.8rem;
+    }
+    .block-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #0A0A0A;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+
+    /* subtitle – subtle, all caps */
+    .block-subtitle {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #D32F2F;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.9rem;
+      border-bottom: 1px solid #F0F0F0;
+      padding-bottom: 0.4rem;
+    }
+
+    /* two columns inside block: best / help */
+    .detail-columns {
+      display: flex;
+      gap: 1.2rem;
+      flex-wrap: wrap;
+    }
+    .best-col {
+      flex: 1 1 130px;
+    }
+    .help-col {
+      flex: 2 1 180px;
+    }
+
+    .label {
+      font-weight: 700;
+      color: #D32F2F;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      display: block;
+      margin-bottom: 0.3rem;
+    }
+
+    /* best for: very short, comma list */
+    .best-text {
+      font-size: 0.85rem;
+      color: #1A1A1A;
+      font-weight: 500;
+      line-height: 1.4;
+    }
+
+    /* help list – exactly 3 items, minimal '–' bullet */
+    .help-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .help-list li {
+      font-size: 0.82rem;
+      color: #202020;
+      display: flex;
+      align-items: baseline;
+      gap: 0.35rem;
+      margin-bottom: 0.25rem;
+    }
+    .help-list li i {
+      color: #D32F2F;
+      font-size: 0.6rem;
+      width: 0.9rem;
+      text-align: center;
+    }
+
+    /* no description paragraph – removed entirely */
+
+    /* responsive */
+    @media screen and (max-width: 950px) {
+      .restaurant-grid { grid-template-columns: 1fr; }
+      .page { padding: 2rem 1.5rem; }
+      .main-title { font-size: 2.6rem; }
+      .tagline { font-size: 1.4rem; }
+    }
+    @media screen and (max-width: 600px) {
+      .page { padding: 1.5rem 1.2rem; }
+      .main-title { font-size: 2.2rem; }
+      .block-title { font-size: 1.3rem; }
+      .detail-columns { flex-direction: column; gap: 0.8rem; }
+      .restaurant-block { padding-left: 1rem; }
+    }
+
+    /* footer – barely visible */
+    .footer-note {
+      margin-top: 3rem;
+      font-size: 0.7rem;
+      color: #BCBCBC;
+      border-top: 1px solid #F2F2F2;
+      padding-top: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+    }
+    .footer-note span { color: #D32F2F; }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <!-- HEADER — short, clean -->
+    <h1 class="main-title">Restaurant Types</h1>
+    <div class="tagline">One Platform. Every Model.</div>
+    <p class="intro">No matter how you serve — dine‑in, delivery, takeaway — our system adapts perfectly.</p>
+
+    <!-- 2‑COLUMN GRID – only essentials -->
+    <div class="restaurant-grid">
+      
+      <!-- 1. FINE DINING -->
+      <div class="restaurant-block">
+        <div class="block-header">
+          <i class="fas fa-utensils"></i>
+          <h2 class="block-title">Fine Dining</h2>
+        </div>
+        <div class="block-subtitle">Precision, Elegance & Control</div>
+        <div class="detail-columns">
+          <div class="best-col">
+            <span class="label">Best for</span>
+            <div class="best-text">Luxury, chef-driven, premium</div>
+          </div>
+          <div class="help-col">
+            <span class="label">How we help</span>
+            <ul class="help-list">
+              <li><i class="fas fa-minus"></i> Table & reservation mgmt</li>
+              <li><i class="fas fa-minus"></i> Course-based tracking</li>
+              <li><i class="fas fa-minus"></i> Real‑time order status</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. QSR -->
+      <div class="restaurant-block">
+        <div class="block-header">
+          <i class="fas fa-bolt"></i>
+          <h2 class="block-title">Quick Service (QSR)</h2>
+        </div>
+        <div class="block-subtitle">Speed That Keeps Lines Moving</div>
+        <div class="detail-columns">
+          <div class="best-col">
+            <span class="label">Best for</span>
+            <div class="best-text">Fast food, franchises, counters</div>
+          </div>
+          <div class="help-col">
+            <span class="label">How we help</span>
+            <ul class="help-list">
+              <li><i class="fas fa-minus"></i> Lightning‑fast POS</li>
+              <li><i class="fas fa-minus"></i> Takeaway/delivery ready</li>
+              <li><i class="fas fa-minus"></i> Auto sync across devices</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. CLOUD KITCHENS -->
+      <div class="restaurant-block">
+        <div class="block-header">
+          <i class="fas fa-cloud"></i>
+          <h2 class="block-title">Cloud / Dark Kitchens</h2>
+        </div>
+        <div class="block-subtitle">Delivery‑First. Profit‑Focused.</div>
+        <div class="detail-columns">
+          <div class="best-col">
+            <span class="label">Best for</span>
+            <div class="best-text">Online‑only, multi‑brand</div>
+          </div>
+          <div class="help-col">
+            <span class="label">How we help</span>
+            <ul class="help-list">
+              <li><i class="fas fa-minus"></i> Centralized order mgmt</li>
+              <li><i class="fas fa-minus"></i> Multi‑brand dashboard</li>
+              <li><i class="fas fa-minus"></i> KDS support</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. CAFÉS & COFFEE SHOPS -->
+      <div class="restaurant-block">
+        <div class="block-header">
+          <i class="fas fa-mug-hot"></i>
+          <h2 class="block-title">Cafés & Coffee Shops</h2>
+        </div>
+        <div class="block-subtitle">Simple, Smooth & Stylish</div>
+        <div class="detail-columns">
+          <div class="best-col">
+            <span class="label">Best for</span>
+            <div class="best-text">Coffee shops, bakeries</div>
+          </div>
+          <div class="help-col">
+            <span class="label">How we help</span>
+            <ul class="help-list">
+              <li><i class="fas fa-minus"></i> Easy POS + add‑ons</li>
+              <li><i class="fas fa-minus"></i> Loyalty & promotions</li>
+              <li><i class="fas fa-minus"></i> Dine‑in / takeaway switch</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. FOOD TRUCKS -->
+      <div class="restaurant-block">
+        <div class="block-header">
+          <i class="fas fa-truck"></i>
+          <h2 class="block-title">Food Trucks</h2>
+        </div>
+        <div class="block-subtitle">Big Power for Small Spaces</div>
+        <div class="detail-columns">
+          <div class="best-col">
+            <span class="label">Best for</span>
+            <div class="best-text">Trucks, pop‑ups, mobile</div>
+          </div>
+          <div class="help-col">
+            <span class="label">How we help</span>
+            <ul class="help-list">
+              <li><i class="fas fa-minus"></i> Mobile‑friendly POS</li>
+              <li><i class="fas fa-minus"></i> Offline orders</li>
+              <li><i class="fas fa-minus"></i> Tablet/phone ready</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6. BARS & LOUNGES -->
+      <div class="restaurant-block">
+        <div class="block-header">
+          <i class="fas fa-glass-cheers"></i>
+          <h2 class="block-title">Bars & Lounges</h2>
+        </div>
+        <div class="block-subtitle">Smart Control for Busy Nights</div>
+        <div class="detail-columns">
+          <div class="best-col">
+            <span class="label">Best for</span>
+            <div class="best-text">Bars, pubs, lounges</div>
+          </div>
+          <div class="help-col">
+            <span class="label">How we help</span>
+            <ul class="help-list">
+              <li><i class="fas fa-minus"></i> Table billing & split</li>
+              <li><i class="fas fa-minus"></i> Happy hour promotions</li>
+              <li><i class="fas fa-minus"></i> Real‑time updates</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- 7. BAKERIES & DESSERT SHOPS -->
+      <div class="restaurant-block">
+        <div class="block-header">
+          <i class="fas fa-cake-candles"></i>
+          <h2 class="block-title">Bakeries & Desserts</h2>
+        </div>
+        <div class="block-subtitle">Fresh Orders. Fresh Profits.</div>
+        <div class="detail-columns">
+          <div class="best-col">
+            <span class="label">Best for</span>
+            <div class="best-text">Bakeries, cake shops</div>
+          </div>
+          <div class="help-col">
+            <span class="label">How we help</span>
+            <ul class="help-list">
+              <li><i class="fas fa-minus"></i> Daily availability</li>
+              <li><i class="fas fa-minus"></i> Pre‑order & pickup</li>
+              <li><i class="fas fa-minus"></i> Seasonal menus</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- 8. MULTI‑BRANCH & FRANCHISE -->
+      <div class="restaurant-block">
+        <div class="block-header">
+          <i class="fas fa-store-alt"></i>
+          <h2 class="block-title">Franchise & Chains</h2>
+        </div>
+        <div class="block-subtitle">One Brand. Total Control.</div>
+        <div class="detail-columns">
+          <div class="best-col">
+            <span class="label">Best for</span>
+            <div class="best-text">Franchises, chains</div>
+          </div>
+          <div class="help-col">
+            <span class="label">How we help</span>
+            <ul class="help-list">
+              <li><i class="fas fa-minus"></i> Branch‑specific menus</li>
+              <li><i class="fas fa-minus"></i> Central reporting</li>
+              <li><i class="fas fa-minus"></i> Unified POS auto‑sync</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- very light footer -->
+    <div class="footer-note">
+      <span>●</span> dine‑in · delivery · takeaway <span>●</span>
+    </div>
+  </div>
+</body>
+</html>
