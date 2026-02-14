@@ -21,7 +21,7 @@ const features = [
       "Make quick changes or duplicate orders without missing a step.",
       "Monitor your delivery man’s progress in real-time."
     ],
-    image: "https://images.unsplash.com/photo-1526367790999-0150786486a9?q=80&w=2070"
+    image: "https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?q=80&w=2070"
   },
   {
     category: "Table & Reservation",
@@ -99,10 +99,15 @@ const FeaturesSection = () => {
               {/* Image Side */}
               <div className="w-full lg:w-1/2 relative group">
                 <div className="absolute -inset-4 bg-red-600/10 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <div className="relative h-[400px] w-full rounded-2xl overflow-hidden border border-zinc-200">
+                <div className="relative h-[400px] w-full rounded-2xl overflow-hidden border border-zinc-200 bg-zinc-100">
                    {/* Placeholder image overlay */}
                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent z-10"></div>
-                   <div className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style={{ backgroundImage: `url(${feature.image})` }}></div>
+                   <Image 
+                     src={feature.image} 
+                     alt={feature.title} 
+                     fill 
+                     className="object-cover transition-transform duration-700 group-hover:scale-110"
+                   />
                    
                    {/* Corner Decorations */}
                    <div className="absolute top-4 left-4 z-20">

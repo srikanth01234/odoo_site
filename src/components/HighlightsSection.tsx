@@ -25,7 +25,7 @@ const HighlightsSection = () => {
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
         
         {/* Left Column: Phone Mockup */}
-        <div className="relative flex justify-center lg:justify-end lg:-translate-x-12 order-last lg:order-first transition-transform duration-500">
+        <div className="relative flex justify-center lg:justify-end lg:-translate-x-32 order-last lg:order-first transition-transform duration-500">
           {/* Main Phone Frame */}
           <div className="relative w-[300px] h-[600px] bg-black border-[14px] border-gray-800 rounded-[3rem] shadow-2xl overflow-hidden ring-1 ring-gray-700/50">
             {/* Screen Content */}

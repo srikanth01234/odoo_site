@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Link from 'next/link'
 import { 
   ArrowRight, 
   Store, 
@@ -79,9 +80,11 @@ const FeaturesPage = () => {
               Running your restaurant is now easier with a multi-functional POS system. 
               It helps you manage every part of the counter experience — from the first hello to the last bite.
             </p>
-            <button className="group bg-red-600 text-white px-8 py-3.5 rounded-full font-bold text-base flex items-center gap-2 hover:bg-red-700 transition-all hover:-translate-y-1 shadow-xl shadow-red-600/20 active:scale-95">
-              Get Started Now <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </button>
+            <Link href="/features/pos-management">
+              <button className="group bg-red-600 text-white px-8 py-3.5 rounded-full font-bold text-base flex items-center gap-2 hover:bg-red-700 transition-all hover:-translate-y-1 shadow-xl shadow-red-600/20 active:scale-95">
+                Get Started Now <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </button>
+            </Link>
             <div className="flex gap-10 pt-1">
               <div>
                 <div className="text-2xl font-extrabold text-red-800">500+</div>
@@ -221,9 +224,11 @@ const FeaturesPage = () => {
                   </li>
                 ))}
               </ul>
-              <button className="group bg-red-600 text-white px-7 py-3.5 rounded-full font-bold text-base flex items-center gap-2 hover:bg-red-700 transition-all hover:-translate-y-1 shadow-xl shadow-red-600/40">
-                Get Started Now <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </button>
+              <Link href="/features/order-management">
+                <button className="group bg-red-600 text-white px-7 py-3.5 rounded-full font-bold text-base flex items-center gap-2 hover:bg-red-700 transition-all hover:-translate-y-1 shadow-xl shadow-red-600/40">
+                  Get Started Now <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </button>
+              </Link>
             </div>
 
             <div className="relative z-10">
@@ -333,9 +338,11 @@ const FeaturesPage = () => {
                   </li>
                 ))}
               </ul>
-              <button className="group bg-red-600 text-white px-7 py-3.5 rounded-full font-bold text-base flex items-center gap-2 hover:bg-red-700 transition-all hover:-translate-y-1 shadow-xl shadow-red-600/40">
-                Get Started Now <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </button>
+              <Link href="/features/table-reservation">
+                <button className="group bg-red-600 text-white px-7 py-3.5 rounded-full font-bold text-base flex items-center gap-2 hover:bg-red-700 transition-all hover:-translate-y-1 shadow-xl shadow-red-600/40">
+                  Get Started Now <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </button>
+              </Link>
             </div>
           </div>
         </section>
@@ -371,9 +378,11 @@ const FeaturesPage = () => {
                   </li>
                 ))}
               </ul>
-              <button className="group bg-red-600 text-white px-7 py-3.5 rounded-full font-bold text-base flex items-center gap-2 hover:bg-red-700 transition-all hover:-translate-y-1 shadow-xl shadow-red-600/40">
-                Get Started Now <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </button>
+              <Link href="/features/promotion-management">
+                <button className="group bg-red-600 text-white px-7 py-3.5 rounded-full font-bold text-base flex items-center gap-2 hover:bg-red-700 transition-all hover:-translate-y-1 shadow-xl shadow-red-600/40">
+                  Get Started Now <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </button>
+              </Link>
             </div>
 
             {/* Visual Box - Right */}
@@ -636,12 +645,135 @@ const FeaturesPage = () => {
                   </li>
                 ))}
               </ul>
-              <button className="group bg-red-600 text-white px-7 py-3.5 rounded-full font-bold text-base flex items-center gap-2 hover:bg-red-700 transition-all hover:-translate-y-1 shadow-xl shadow-red-600/40">
-                Get Started Now <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </button>
+              <Link href="/features/multi-menu-management">
+                <button className="group bg-red-600 text-white px-7 py-3.5 rounded-full font-bold text-base flex items-center gap-2 hover:bg-red-700 transition-all hover:-translate-y-1 shadow-xl shadow-red-600/40">
+                  Get Started Now <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </button>
+              </Link>
             </div>
           </div>
         </section>
+
+        {/* INVENTORY MANAGEMENT section */}
+        <section className="max-w-7xl mx-auto px-6 py-2 lg:py-4">
+          <div className="bg-zinc-950 rounded-[40px] p-8 lg:p-12 grid lg:grid-cols-2 items-center gap-10 lg:gap-16 overflow-hidden relative border border-white/5">
+            <div className="absolute top-0 right-0 w-80 h-80 bg-red-600/10 blur-[100px] rounded-full"></div>
+            
+            <div className="relative z-10">
+              <div className="flex items-center gap-2 text-red-500 font-bold text-[10px] tracking-widest uppercase mb-5">
+                <Layers className="w-4 h-4" />
+                Inventory Management
+              </div>
+              <h2 className="text-3xl lg:text-4xl font-bold text-white mb-5 leading-tight">
+                Control Your Stock <br /> with Precision
+              </h2>
+              <p className="text-base text-zinc-400 mb-8 leading-relaxed max-w-sm">
+                Real-time tracking for every ingredient. Reduce waste, automate reordering, and keep your kitchen running smoothly.
+              </p>
+              <Link href="/features/inventory-management">
+                <button className="group bg-red-600 text-white px-7 py-3.5 rounded-full font-bold text-base flex items-center gap-2 hover:bg-red-700 transition-all hover:-translate-y-1 shadow-xl shadow-red-600/40">
+                  Get Started Now <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </button>
+              </Link>
+            </div>
+
+            <div className="relative z-10">
+              <div className="bg-white rounded-[32px] p-6 lg:p-8 shadow-3xl border border-zinc-100 space-y-4">
+                 {[
+                   { item: 'Tomato Sauce', stock: '12.5 kg', status: 'In Stock', color: 'bg-emerald-500' },
+                   { item: 'Pizza Dough', stock: '45 units', status: 'Low Stock', color: 'bg-amber-500' },
+                   { item: 'Mozzarella', stock: '2.0 kg', status: 'Critically Low', color: 'bg-red-500' }
+                 ].map((inv, idx) => (
+                   <div key={idx} className="flex items-center justify-between p-3 rounded-xl bg-zinc-50 border border-zinc-100">
+                     <span className="text-sm font-bold text-zinc-900">{inv.item}</span>
+                     <div className="flex items-center gap-3">
+                        <span className="text-xs font-bold text-zinc-500">{inv.stock}</span>
+                        <div className={`w-2 h-2 rounded-full ${inv.color}`}></div>
+                     </div>
+                   </div>
+                 ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* QR CODE MENU section */}
+        <section className="max-w-7xl mx-auto px-6 py-2 lg:py-4">
+          <div className="bg-zinc-950 rounded-[40px] p-8 lg:p-12 grid lg:grid-cols-2 items-center gap-10 lg:gap-16 overflow-hidden relative border border-white/5">
+            <div className="absolute top-0 left-0 w-80 h-80 bg-red-600/10 blur-[100px] rounded-full"></div>
+            
+            <div className="relative z-10 lg:order-2 order-1">
+              <div className="flex items-center gap-2 text-red-500 font-bold text-[10px] tracking-widest uppercase mb-5">
+                <Smartphone className="w-4 h-4" />
+                QR Code Menu
+              </div>
+              <h2 className="text-3xl lg:text-4xl font-bold text-white mb-5 leading-tight">
+                Contactless Dining <br /> Reimagined
+              </h2>
+              <p className="text-base text-zinc-400 mb-8 leading-relaxed max-w-sm">
+                Give your guests the power to browse, order, and pay from their own devices. Faster service, higher table turnover.
+              </p>
+              <Link href="/features/qr-code-menu">
+                <button className="group bg-red-600 text-white px-7 py-3.5 rounded-full font-bold text-base flex items-center gap-2 hover:bg-red-700 transition-all hover:-translate-y-1 shadow-xl shadow-red-600/40">
+                  Get Started Now <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </button>
+              </Link>
+            </div>
+
+            <div className="relative z-10 lg:order-1 order-2">
+              <div className="bg-white rounded-[32px] p-8 shadow-3xl border border-zinc-100 flex flex-col items-center">
+                 <div className="w-32 h-32 bg-zinc-50 rounded-2xl border-4 border-zinc-900 mb-4 flex items-center justify-center">
+                    <Grid3X3 className="w-20 h-20 text-zinc-900" />
+                 </div>
+                 <div className="text-[10px] font-black uppercase text-zinc-400 tracking-widest">Scan to Order</div>
+                 <div className="text-sm font-bold text-zinc-950 mt-1">Table #07</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* RESTAURANT WEBSITE section */}
+        <section className="max-w-7xl mx-auto px-6 py-2 lg:py-4">
+          <div className="bg-zinc-950 rounded-[40px] p-8 lg:p-12 grid lg:grid-cols-2 items-center gap-10 lg:gap-16 overflow-hidden relative border border-white/5">
+            <div className="absolute bottom-0 right-0 w-80 h-80 bg-red-600/10 blur-[100px] rounded-full"></div>
+            
+            <div className="relative z-10">
+              <div className="flex items-center gap-2 text-red-500 font-bold text-[10px] tracking-widest uppercase mb-5">
+                <Laptop className="w-4 h-4" />
+                Restaurant Website
+              </div>
+              <h2 className="text-3xl lg:text-4xl font-bold text-white mb-5 leading-tight">
+                Your Brand, <br /> Your Domain
+              </h2>
+              <p className="text-base text-zinc-400 mb-8 leading-relaxed max-w-sm">
+                Get a stunning, SEO-optimized website that integrates perfectly with your POS and ordering system. Zero commission, 100% yours.
+              </p>
+              <Link href="/features/restaurant-website">
+                <button className="group bg-red-600 text-white px-7 py-3.5 rounded-full font-bold text-base flex items-center gap-2 hover:bg-red-700 transition-all hover:-translate-y-1 shadow-xl shadow-red-600/40">
+                  Get Started Now <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </button>
+              </Link>
+            </div>
+
+            <div className="relative z-10">
+              <div className="bg-white rounded-[32px] p-2 shadow-3xl border border-zinc-100 overflow-hidden">
+                 <div className="bg-zinc-100 rounded-t-[24px] p-2 flex gap-1.5 px-4">
+                    <div className="w-2 h-2 rounded-full bg-zinc-300"></div>
+                    <div className="w-2 h-2 rounded-full bg-zinc-300"></div>
+                    <div className="w-2 h-2 rounded-full bg-zinc-300"></div>
+                 </div>
+                 <div className="p-6 bg-white rounded-b-[24px]">
+                    <div className="w-1/2 h-4 bg-zinc-100 rounded mb-4"></div>
+                    <div className="grid grid-cols-2 gap-3">
+                       <div className="aspect-video bg-zinc-50 rounded-lg"></div>
+                       <div className="aspect-video bg-zinc-50 rounded-lg"></div>
+                    </div>
+                 </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section className="max-w-7xl mx-auto px-6 py-2 lg:py-4">
           <div className="bg-zinc-50 rounded-[40px] border border-zinc-100 p-8 lg:p-12 grid lg:grid-cols-2 items-center gap-10 lg:gap-16">
             <div>
