@@ -1,4 +1,4 @@
-- [x] Verify that the copilot-instructions.md file in the .github directory is created.
+D:\metetroncube\odoo_marketing\src\app\restaurant-types\food-truck\page.tsx- [x] Verify that the copilot-instructions.md file in the .github directory is created.
 - [x] Clarify Project Requirements
 - [x] Scaffold the Project
 - [x] Customize the Project

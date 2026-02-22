@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Menumium - Complete Restaurant Management System",
+  title: "dine360 - Complete Restaurant Management System",
   description: "Built for Growth - The Complete Restaurant Management System with 24/7 Expert Support",
 };
 

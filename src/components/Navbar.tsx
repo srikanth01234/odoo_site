@@ -11,7 +11,12 @@ import {
   Tag, 
   Layers,
   ChevronDown,
-  ArrowRight
+  ArrowRight,
+  Utensils,
+  Coffee,
+  Truck,
+  Smartphone,
+  ChefHat
 } from 'lucide-react';
 
 const Navbar = () => {
@@ -24,6 +29,14 @@ const Navbar = () => {
     { name: 'QR Code Menu', href: '/features/qr-code-menu', icon: QrCode },
     { name: 'Promotion Management', href: '/features/promotion-management', icon: Tag },
     { name: 'Inventory Management', href: '/features/inventory-management', icon: Layers },
+  ];
+
+  const restaurantTypes = [
+    { name: 'Fast Food', href: '/restaurant-types/fast-food', icon: Utensils },
+    { name: 'Food Trucks', href: '/restaurant-types/food-truck', icon: Truck },
+    { name: 'Cafe & Bistro', href: '/restaurant-types/cafe-bistro', icon: Coffee },
+    { name: 'Ghost / Virtual Dine', href: '/restaurant-types/ghost-kitchen', icon: Smartphone },
+    { name: 'Full Service', href: '/restaurant-types/full-service', icon: ChefHat },
   ];
 
   return (
@@ -71,7 +84,36 @@ const Navbar = () => {
           </div>
         </div>
 
-        <Link href="/restaurant-types" className="hover:text-red-500 transition-colors">Restaurant Types</Link>
+        <div className="relative group py-4">
+          <Link href="/restaurant-types" className="hover:text-red-500 transition-colors flex items-center gap-1">
+            Restaurant Types
+            <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180" />
+          </Link>
+          
+          <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2 hidden group-hover:block w-[500px]">
+            <div className="bg-white rounded-2xl shadow-2xl border border-zinc-100 overflow-hidden p-3 grid grid-cols-2 gap-2">
+              {restaurantTypes.map((item) => (
+                <Link 
+                  key={item.name} 
+                  href={item.href}
+                  className="flex items-center gap-3 p-3 rounded-xl hover:bg-zinc-50 transition-colors group/item border border-transparent hover:border-zinc-100"
+                >
+                  <span className={`w-10 h-10 flex items-center justify-center rounded-lg bg-red-50 text-red-600 group-hover/item:bg-red-600 group-hover/item:text-white transition-all`}>
+                    <item.icon className="w-5 h-5" />
+                  </span>
+                  <span className="font-medium text-zinc-600 group-hover/item:text-zinc-900 transition-colors text-sm">{item.name}</span>
+                </Link>
+              ))}
+              <Link 
+                href="/restaurant-types"
+                className="flex items-center justify-between p-3 rounded-xl bg-red-50 hover:bg-red-100 transition-colors group/view-all"
+              >
+                <span className="font-semibold text-red-700 text-sm">View All</span>
+                <ArrowRight className="w-4 h-4 text-red-700 transition-transform group-hover/view-all:translate-x-1" />
+              </Link>
+            </div>
+          </div>
+        </div>
         <Link href="/pricing" className="hover:text-red-500 transition-colors">Pricing</Link>
         <Link href="/contact" className="hover:text-red-500 transition-colors">Contact</Link>
       </div>
