@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
+import VideoSection from "@/components/VideoSection";
 import HighlightsSection from "@/components/HighlightsSection";
 import Testimonials from "@/components/Testimonials";
 import FeaturesSection from "@/components/FeaturesSection";
@@ -12,6 +13,7 @@ export default function Home() {
     <div className="relative min-h-screen font-sans bg-black text-white selection:bg-red-600 selection:text-white">
       <Navbar />
       <HeroSection />
+      <VideoSection />
       <FeaturesSection />
       <HighlightsSection />
       <Testimonials />

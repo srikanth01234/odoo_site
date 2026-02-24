@@ -33,22 +33,24 @@ const FAQItem = ({ question, answer, isOpen, onClick }: { question: string, answ
   return (
     <motion.div 
       initial={false}
-      className="rounded-2xl overflow-hidden mb-4 bg-[#111111] border border-transparent"
+      className={`rounded-2xl overflow-hidden mb-4 transition-all duration-300 ${
+        isOpen ? 'bg-black shadow-xl' : 'bg-black/90 hover:bg-black'
+      }`}
     >
       <button
         onClick={onClick}
         className="w-full flex items-center justify-between p-5 text-left"
       >
         <span
-          className={`font-medium text-sm md:text-base transition-colors duration-200 ${
-            isOpen ? 'text-[#ff0033]' : 'text-white'
+          className={`font-bold text-base md:text-lg transition-colors duration-200 ${
+            isOpen ? 'text-red-500' : 'text-white'
           }`}
         >
           {question}
         </span>
         <div
-          className={`p-1.5 rounded-full flex-shrink-0 ml-4 transition-colors duration-200 ${
-            isOpen ? 'bg-[#ff0033] text-white' : 'bg-[#222222] text-white'
+          className={`p-1.5 rounded-full flex-shrink-0 ml-4 transition-all duration-300 ${
+            isOpen ? 'bg-red-600 text-white' : 'bg-white/10 text-gray-400'
           }`}
         >
           {isOpen ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
@@ -63,7 +65,7 @@ const FAQItem = ({ question, answer, isOpen, onClick }: { question: string, answ
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
           >
-            <div className="px-5 pb-5 text-gray-300 text-sm leading-relaxed">
+            <div className="px-5 pb-6 text-gray-300 text-sm md:text-base leading-relaxed">
               {answer}
             </div>
           </motion.div>
@@ -83,49 +85,30 @@ const FAQ = () => {
     : faqs;
 
   return (
-    <section className="relative w-full bg-[#0a0a0a] flex flex-col items-center pt-0">
-      {/* Smooth starting transition from white */}
-      <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-brand-cream to-transparent z-10 pointer-events-none" />
-
-      {/* Top Background Image Section */}
-      <div className="relative w-full flex flex-col items-center px-4 pt-32 pb-10">
-        <motion.div 
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1 }}
-          className="absolute inset-0 z-0"
-        >
-          <Image 
-            src="https://images.unsplash.com/photo-1506521781263-d8422e82fd6d?q=80&w=2000&auto=format&fit=crop" 
-            alt="Cityscape" 
-            fill 
-            className="object-cover opacity-60"
-          />
-          {/* Gradient overlay to fade into black at the bottom and top */}
-          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-[#0a0a0a]/80 to-[#0a0a0a]" />
-          <div className="absolute inset-0 bg-gradient-to-t from-transparent to-[#0a0a0a]/50" />
-        </motion.div>
-
+    <section className="relative w-full bg-brand-cream flex flex-col items-center pb-20 lg:pb-32 pt-10">
+      
+      {/* Top Header Section */}
+      <div className="relative w-full flex flex-col items-center px-4 mb-10">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          transition={{ duration: 0.8 }}
           className="relative z-10 text-center max-w-3xl mx-auto"
         >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 tracking-tight">
-            Frequently Asked Questions
+          <span className="text-red-600 font-bold uppercase tracking-wider text-sm mb-4 block">Answers to common questions</span>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-black mb-6 tracking-tight uppercase">
+            Frequently <br/> Asked <span className="text-red-600">Questions</span>
           </h2>
-          <p className="text-[#ff0033] text-sm md:text-base max-w-2xl mx-auto">
-            We're here to help with any questions you have about plans, pricing, and supported features.
+          <p className="text-gray-500 text-lg md:text-xl max-w-2xl mx-auto">
+            Everything you need to know about Odoo restaurant management system to get started. 
           </p>
         </motion.div>
       </div>
 
       {/* Tabs - Hidden for single category */}
       {faqCategories.length > 1 && (
-        <div className="relative z-10 flex flex-wrap justify-center gap-2 md:gap-4 px-4 -mt-10 mb-12">
+        <div className="relative z-10 flex flex-wrap justify-center gap-2 md:gap-4 px-4 mb-12">
           {faqCategories.map((category) => (
             <button
               key={category}
@@ -135,8 +118,8 @@ const FAQ = () => {
               }}
               className={`px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${
                 activeCategory === category 
-                  ? 'bg-[#ff0033] text-white shadow-[0_0_20px_rgba(255,0,51,0.5)] border border-[#ff0033]' 
-                  : 'bg-[#222222] text-gray-300 hover:bg-[#333333] border border-transparent'
+                  ? 'bg-red-600 text-white shadow-lg shadow-red-600/30' 
+                  : 'bg-white text-gray-600 hover:bg-gray-50 border border-gray-200'
               }`}
             >
               {category}
@@ -146,16 +129,17 @@ const FAQ = () => {
       )}
 
       {/* FAQ List */}
-      <div className="relative z-10 w-full max-w-3xl mx-auto px-4 pb-10">
+      <div className="relative z-10 w-full max-w-3xl mx-auto px-4">
         <motion.div 
           layout
-          className="space-y-3"
+          className="space-y-4"
         >
           {filteredFaqs.map((faq, index) => (
             <motion.div
               layout
               initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
               transition={{ duration: 0.4, delay: index * 0.05 }}
               key={`${activeCategory}-${index}`}
             >
@@ -169,9 +153,6 @@ const FAQ = () => {
           ))}
         </motion.div>
       </div>
-
-      {/* Smooth ending to connect the white color */}
-      {/* <div className="w-full h-24 bg-gradient-to-b from-[#0a0a0a] to-white" /> */}
     </section>
   );
 };

@@ -94,13 +94,16 @@ const FeaturesSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-20 max-w-3xl mx-auto"
+          className="text-center mb-20 max-w-5xl mx-auto"
         >
           <span className="text-red-500 font-script text-3xl md:text-4xl mb-4 block italic">The Complete Restaurant Toolkit</span>
-          <h2 className="text-4xl md:text-5xl font-bold text-zinc-900 mb-6 leading-tight">
-            Reimagine Restaurant Management <br/> with <span className="text-red-600">Powerful Features</span>
+          <h2 className="text-3xl md:text-5xl font-extrabold text-black mb-4 leading-tight uppercase">
+            Reimagine Restaurant Management
           </h2>
-          <p className="text-gray-600 text-lg">
+          <h2 className="text-3xl md:text-5xl font-extrabold text-red-600 mb-8 leading-tight uppercase">
+            with Powerful Features
+          </h2>
+          <p className="text-gray-600 text-lg md:text-xl max-w-3xl mx-auto">
             Our restaurant management platform offers powerful tools to automate operations, improve workflows, and ensure a better dining experience for your customers.
           </p>
         </motion.div>
