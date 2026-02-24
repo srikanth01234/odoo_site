@@ -1,69 +1,77 @@
+'use client';
+
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 const features = [
   {
     category: "POS",
-    title: "Transform Your Counter into a Powerhouse",
+    title: "1️⃣ Smart POS System",
     description: "Running your restaurant is now easier with a multi-functional POS system. It helps you manage every part of the counter experience.",
     points: [
-      "Get branch-specific POS system to handle dine-in, home delivery, takeaway, and reservations",
-      "Track the progress of each order in real time, from prep to delivery, and update statuses accordingly.",
-      "Accessible on any device, whether it’s a laptop, desktop, or tablet, for ultimate convenience."
+      "Lightning-fast billing",
+      "Dine-in, takeaway & delivery support",
+      "Split bills & multiple payment methods",
+      "Real-time sales reports"
     ],
     image: "https://images.unsplash.com/photo-1556742044-3c52d6e88c62?q=80&w=2070"
   },
   {
     category: "Order Management",
-    title: "Manage Orders Like a Pro",
+    title: "2️⃣ Order Management",
     description: "Ensure every order is tracked, updated, and handled swiftly. No delays. No mistakes. Just smooth operations.",
     points: [
-      "Access all the order details you need at your fingertips.",
-      "Make quick changes or duplicate orders without missing a step.",
-      "Monitor your delivery man’s progress in real-time."
+      "Track all orders in one dashboard",
+      "Kitchen display integration",
+      "Reduce human errors",
+      "Improve preparation time"
     ],
     image: "https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?q=80&w=2070"
   },
   {
     category: "Table & Reservation",
-    title: "Master Your Restaurant's Seating in Seconds",
+    title: "3️⃣ Table & Reservation Management",
     description: "Take charge of your floor’s seating and reservations with a smart, easy-to-use system that saves time and increases efficiency.",
     points: [
-      "Get a graphical view of your entire restaurant layout, from any angle.",
-      "Check table availability in real-time—whether occupied or reserved.",
-      "Handle & manage reservations even without food orders."
+      "Digital table layout",
+      "Pre-booking system",
+      "Walk-in management",
+      "Reduce waiting chaos"
     ],
     image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070"
   },
   {
-    category: "Promotions",
-    title: "Drive Sales with Impactful Promotions",
-    description: "Simplify your marketing efforts and watch your sales grow with our easy-to-use effective promotional features.",
+    category: "QR Code Menu",
+    title: "4️⃣ QR Code Menu",
+    description: "Simplify your ordering process and watch your sales grow with our effective QR code menu features.",
     points: [
-      "Increase order volumes with compelling Buy One Get One deals.",
-      "Schedule time-based discounts to drive sales during slow hours.",
-      "Create exclusive coupon codes for targeted promotions."
+      "Contactless digital menu",
+      "Easy updates",
+      "No reprinting costs",
+      "Faster ordering experience"
     ],
     image: "https://images.unsplash.com/photo-1513151233558-d860c5398176?q=80&w=2144"
   },
   {
-    category: "Multi Branch System",
-    title: "Effortlessly Manage Across Multiple Locations",
-    description: "Maximize efficiency across multiple branches with a system that simplifies the complexities of multi-location management.",
+    category: "Inventory Management",
+    title: "5️⃣ Inventory Management",
+    description: "Maximize efficiency with a system that simplifies the complexities of inventory management.",
     points: [
-      "Define delivery areas, menu prices, and operating hours for each branch.",
-      "Customize menus, recipes, and promotional campaigns for each location.",
-      "Create tailored menus for each branch to reflect unique customer preferences."
+      "Real-time stock tracking",
+      "Low-stock alerts",
+      "Ingredient-level tracking",
+      "Reduce wastage & theft"
     ],
     image: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=2074"
   },
   {
-    category: "Multi Menu + Seasonal Menu",
-    title: "Personalize Your Menus Like Before",
-    description: "Simplify menu management with tools that let you create and update seasonal, event-based, or regular menus with ease.",
+    category: "Multi-Branch Control",
+    title: "6️⃣ Multi-Branch Control",
+    description: "Manage your restaurant empire from a single location with centralized branch management tools.",
     points: [
-      "Categorize food items with detailed labels, subcategories, and cuisines.",
-      "Link recipes to food items and activate add-ons for upselling opportunities.",
-      "Adjust food availability with status controls to reflect inventory."
+      "Manage multiple outlets from one dashboard",
+      "Centralized reporting",
+      "Branch performance comparison"
     ],
     image: "https://images.unsplash.com/photo-1546241072-48010ad2862c?q=80&w=1974"
   }
@@ -81,7 +89,13 @@ const FeaturesSection = () => {
       <div className="max-w-7xl mx-auto relative z-10">
         
         {/* Section Header */}
-        <div className="text-center mb-20 max-w-3xl mx-auto">
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-20 max-w-3xl mx-auto"
+        >
           <span className="text-red-500 font-script text-3xl md:text-4xl mb-4 block italic">The Complete Restaurant Toolkit</span>
           <h2 className="text-4xl md:text-5xl font-bold text-zinc-900 mb-6 leading-tight">
             Reimagine Restaurant Management <br/> with <span className="text-red-600">Powerful Features</span>
@@ -89,12 +103,19 @@ const FeaturesSection = () => {
           <p className="text-gray-600 text-lg">
             Our restaurant management platform offers powerful tools to automate operations, improve workflows, and ensure a better dining experience for your customers.
           </p>
-        </div>
+        </motion.div>
 
         {/* Features List */}
         <div className="flex flex-col gap-24">
           {features.map((feature, index) => (
-            <div key={index} className={`flex flex-col lg:flex-row items-center gap-10 ${index % 2 !== 0 ? 'lg:flex-row-reverse' : ''}`}>
+            <motion.div 
+              key={index} 
+              initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              className={`flex flex-col lg:flex-row items-center gap-10 ${index % 2 !== 0 ? 'lg:flex-row-reverse' : ''}`}
+            >
               
               {/* Image Side */}
               <div className="w-full lg:w-1/2 relative group">
@@ -125,9 +146,7 @@ const FeaturesSection = () => {
                 <div className="bg-zinc-50 border border-zinc-100 p-8 md:p-12 rounded-3xl hover:border-red-600/30 transition-colors duration-300">
                   <span className="text-red-600 font-bold tracking-wider text-sm uppercase mb-3 block">{feature.category}</span>
                   <h3 className="text-3xl font-bold text-zinc-900 mb-4">
-                    {feature.title.split(' ').map((word, i) => 
-                      <span key={i} className="text-zinc-900">{word} </span>
-                    )}
+                    {feature.title}
                   </h3>
                   
                   <p className="text-gray-600 mb-8 leading-relaxed">
@@ -136,10 +155,17 @@ const FeaturesSection = () => {
 
                   <ul className="space-y-4 mb-8">
                     {feature.points.map((point, i) => (
-                      <li key={i} className="flex items-start gap-3 group/item">
+                      <motion.li 
+                        initial={{ opacity: 0, x: -10 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.3 + (i * 0.1) }}
+                        key={i} 
+                        className="flex items-start gap-3 group/item"
+                      >
                         <span className="mt-1.5 w-2 h-2 rounded-full bg-red-600 group-hover/item:scale-150 transition-transform"></span>
                         <span className="text-gray-700 text-sm md:text-base">{point}</span>
-                      </li>
+                      </motion.li>
                     ))}
                   </ul>
 
@@ -149,7 +175,7 @@ const FeaturesSection = () => {
                 </div>
               </div>
 
-            </div>
+            </motion.div>
           ))}
         </div>
 

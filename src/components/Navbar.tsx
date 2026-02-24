@@ -1,6 +1,9 @@
+'use client';
+
 import Link from 'next/link';
 import Image from 'next/image';
 import Logo from '@/assets/img/dine360.jpeg';
+import { motion } from 'framer-motion';
 import { 
   Monitor, 
   BookOpen, 
@@ -16,7 +19,11 @@ import {
   Coffee,
   Truck,
   Smartphone,
-  ChefHat
+  ChefHat,
+  FileText,
+  Info,
+  HelpCircle,
+  Phone
 } from 'lucide-react';
 
 const Navbar = () => {
@@ -39,8 +46,20 @@ const Navbar = () => {
     { name: 'Full Service', href: '/restaurant-types/full-service', icon: ChefHat },
   ];
 
+  const resourceItems = [
+    { name: 'Blog', href: '/blog', icon: FileText },
+    { name: 'About Us', href: '/about', icon: Info },
+    { name: 'FAQ', href: '/faq', icon: HelpCircle },
+    { name: 'Contact Us', href: '/contact', icon: Phone },
+  ];
+
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 py-4 bg-white border-b border-zinc-100 shadow-sm backdrop-blur-lg">
+    <motion.nav 
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+      className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 py-4 bg-white border-b border-zinc-100 shadow-sm backdrop-blur-lg"
+    >
       <div className="flex items-center gap-4">
         <Link href="/" className="pl-5 flex items-center gap-2">
           <Image 
@@ -115,7 +134,29 @@ const Navbar = () => {
           </div>
         </div>
         <Link href="/pricing" className="hover:text-red-500 transition-colors">Pricing</Link>
-        <Link href="/contact" className="hover:text-red-500 transition-colors">Contact</Link>
+        <div className="relative group py-4">
+          <button className="hover:text-red-500 transition-colors flex items-center gap-1 bg-transparent border-none p-0 cursor-pointer font-medium text-base">
+            Resources
+            <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180" />
+          </button>
+          
+          <div className="absolute top-full right-0 pt-2 hidden group-hover:block w-[240px]">
+            <div className="bg-white rounded-2xl shadow-2xl border border-zinc-100 overflow-hidden p-2 flex flex-col gap-1">
+              {resourceItems.map((item) => (
+                <Link 
+                  key={item.name} 
+                  href={item.href}
+                  className="flex items-center gap-3 p-3 rounded-xl hover:bg-zinc-50 transition-colors group/item border border-transparent hover:border-zinc-100"
+                >
+                  <span className={`w-10 h-10 flex items-center justify-center rounded-lg bg-red-50 text-red-600 group-hover/item:bg-red-600 group-hover/item:text-white transition-all`}>
+                    <item.icon className="w-5 h-5" />
+                  </span>
+                  <span className="font-medium text-zinc-600 group-hover/item:text-zinc-900 transition-colors text-sm">{item.name}</span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
 
       <div className="flex items-center gap-6 text-base font-medium px-5">
@@ -123,7 +164,7 @@ const Navbar = () => {
           Start Now
         </Link>
       </div>
-    </nav>
+    </motion.nav>
   );
 };
 

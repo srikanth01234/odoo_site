@@ -7,26 +7,26 @@ import { ArrowLeft, ArrowRight, Star, Quote } from 'lucide-react';
 const testimonials = [
   {
     id: 1,
-    name: "Sandra Bullock",
-    role: "Manager",
-    quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet sit purus tempor dui. Pharetra consequat nibh elit urna interdum. Viverra quam a arcu duis Quis lectus donec nulladui sit in viverra tempus risus.",
+    name: "Sarah J.",
+    role: "Multi-Branch Operator",
+    quote: "Before Dine360, managing 4 branches felt like a nightmare. Now, I track everything—from sales to inventory—in real-time on one dashboard. It's a game-changer.",
     rating: 5,
     avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200&auto=format&fit=crop"
   },
   {
     id: 2,
-    name: "Robert Fox",
-    role: "Food Critic",
-    quote: "The flavors are absolutely incredible. Every dish tells a story of tradition mixed with modern culinary excellence. I've never tasted a better pizza in Chicago. Truly a masterpiece.",
+    name: "Ahmed K.",
+    role: "Café Owner",
+    quote: "The Smart POS and QR menu saved us so much time. Our staff is happier, and customers love the speed. Revenue increased by 20% in just two months!",
     rating: 5,
     avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=200&auto=format&fit=crop"
   },
   {
     id: 3,
-    name: "Jenny Wilson",
-    role: "Regular Customer",
-    quote: "Fast service, amazing atmosphere, and the most delicious grilled chicken I've ever had. This place has become our weekly family tradition. Highly recommended!",
-    rating: 4,
+    name: "Jason L.",
+    role: "Restaurant Manager",
+    quote: "Security and control were my biggest concerns. With Dine360, I can monitor staff activity and reduce waste instantly. Highly recommended for any restaurant brand.",
+    rating: 5,
     avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=200&auto=format&fit=crop"
   }
 ];
