@@ -35,7 +35,7 @@ const FeatureQuickNav = () => {
             <Link 
               key={item.name} 
               href={item.href}
-              className="relative bg-zinc-200/50 hover:bg-white p-6 rounded-lg transition-all duration-300 group shadow-sm hover:shadow-xl border border-transparent hover:border-zinc-200 flex flex-col items-center gap-4 text-center overflow-hidden"
+              className="relative bg-zinc-100 hover:bg-white p-6 rounded-lg transition-all duration-300 group shadow-sm hover:shadow-xl border-2 border-zinc-200 hover:border-zinc-300 flex flex-col items-center gap-4 text-center overflow-hidden"
             >
               {/* Colorful Top Border like the image */}
               <div className={`absolute top-0 left-0 right-0 h-1.5 ${item.color}`}></div>

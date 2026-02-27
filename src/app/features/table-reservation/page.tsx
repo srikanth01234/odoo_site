@@ -50,34 +50,34 @@ const TableReservationPage = () => {
           {/* 3 Columns Layout with Bordered Cards */}
           <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center mb-32 px-4">
             {/* Feature 1 */}
-            <div className="flex flex-col items-center p-10 rounded-2xl border border-zinc-300 bg-white transition-all duration-300 hover:border-red-600/30 hover:shadow-xl hover:shadow-red-600/5 group">
-              <div className="w-16 h-16 rounded-2xl bg-red-50 flex items-center justify-center mb-6 text-red-600 transition-colors group-hover:bg-red-600 group-hover:text-white">
+            <div className="flex flex-col items-center p-10 rounded-2xl border border-zinc-800 bg-zinc-950 transition-all duration-300 hover:border-red-600/30 hover:shadow-xl hover:shadow-red-600/5 group">
+              <div className="w-16 h-16 rounded-2xl bg-red-600/10 flex items-center justify-center mb-6 text-red-600 transition-colors group-hover:bg-red-600 group-hover:text-white">
                 <Calendar className="w-8 h-8" />
               </div>
-              <h3 className="text-xl font-bold text-zinc-900 mb-4">Smart Booking</h3>
-              <p className="text-gray-500 leading-relaxed text-sm">
+              <h3 className="text-xl font-bold text-white mb-4">Smart Booking</h3>
+              <p className="text-zinc-400 leading-relaxed text-sm">
                 Enable 24/7 online reservations. Automated table allocation ensures you never double-book and always maximize your seating capacity.
               </p>
             </div>
 
             {/* Feature 2 */}
-            <div className="flex flex-col items-center p-10 rounded-2xl border border-zinc-300 bg-white transition-all duration-300 hover:border-red-600/30 hover:shadow-xl hover:shadow-red-600/5 group">
-              <div className="w-16 h-16 rounded-2xl bg-red-50 flex items-center justify-center mb-6 text-red-600 transition-colors group-hover:bg-red-600 group-hover:text-white">
+            <div className="flex flex-col items-center p-10 rounded-2xl border border-zinc-800 bg-zinc-950 transition-all duration-300 hover:border-red-600/30 hover:shadow-xl hover:shadow-red-600/5 group">
+              <div className="w-16 h-16 rounded-2xl bg-red-600/10 flex items-center justify-center mb-6 text-red-600 transition-colors group-hover:bg-red-600 group-hover:text-white">
                 <Layout className="w-8 h-8" />
               </div>
-              <h3 className="text-xl font-bold text-zinc-900 mb-4">Floor Map</h3>
-              <p className="text-gray-500 leading-relaxed text-sm">
+              <h3 className="text-xl font-bold text-white mb-4">Floor Map</h3>
+              <p className="text-zinc-400 leading-relaxed text-sm">
                 Visualize your floor plan in real-time. Drag-and-drop tables, track dining progress, and identify "ready-to-bus" tables instantly.
               </p>
             </div>
 
             {/* Feature 3 */}
-            <div className="flex flex-col items-center p-10 rounded-2xl border border-zinc-300 bg-white transition-all duration-300 hover:border-red-600/30 hover:shadow-xl hover:shadow-red-600/5 group">
-              <div className="w-16 h-16 rounded-2xl bg-red-50 flex items-center justify-center mb-6 text-red-600 transition-colors group-hover:bg-red-600 group-hover:text-white">
+            <div className="flex flex-col items-center p-10 rounded-2xl border border-zinc-800 bg-zinc-950 transition-all duration-300 hover:border-red-600/30 hover:shadow-xl hover:shadow-red-600/5 group">
+              <div className="w-16 h-16 rounded-2xl bg-red-600/10 flex items-center justify-center mb-6 text-red-600 transition-colors group-hover:bg-red-600 group-hover:text-white">
                 <UserCheck className="w-8 h-8" />
               </div>
-              <h3 className="text-xl font-bold text-zinc-900 mb-4">Guest History</h3>
-              <p className="text-gray-500 leading-relaxed text-sm">
+              <h3 className="text-xl font-bold text-white mb-4">Guest History</h3>
+              <p className="text-zinc-400 leading-relaxed text-sm">
                 Recognize VIPs and regulars the moment they book. View allergy notes, favorite tables, and past orders to provide elite service.
               </p>
             </div>
@@ -126,25 +126,25 @@ const TableReservationPage = () => {
               
               <div className="grid grid-cols-2 gap-4 pt-4">
                 <div className="flex items-center gap-3">
-                  <div className="w-5 h-5 rounded-full bg-red-100 flex items-center justify-center text-red-600">
+                  <div className="w-5 h-5 rounded-full bg-red-600/10 flex items-center justify-center text-red-600">
                     <CheckCircle className="w-3 h-3" />
                   </div>
                   <span className="text-sm font-bold text-zinc-700">Digital Floor Plan</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="w-5 h-5 rounded-full bg-red-100 flex items-center justify-center text-red-600">
+                  <div className="w-5 h-5 rounded-full bg-red-600/10 flex items-center justify-center text-red-600">
                     <CheckCircle className="w-3 h-3" />
                   </div>
                   <span className="text-sm font-bold text-zinc-700">Waitlist Management</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="w-5 h-5 rounded-full bg-red-100 flex items-center justify-center text-red-600">
+                  <div className="w-5 h-5 rounded-full bg-red-600/10 flex items-center justify-center text-red-600">
                     <CheckCircle className="w-3 h-3" />
                   </div>
                   <span className="text-sm font-bold text-zinc-700">SMS Notifications</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="w-5 h-5 rounded-full bg-red-100 flex items-center justify-center text-red-600">
+                  <div className="w-5 h-5 rounded-full bg-red-600/10 flex items-center justify-center text-red-600">
                     <CheckCircle className="w-3 h-3" />
                   </div>
                   <span className="text-sm font-bold text-zinc-700">Guest Database</span>
@@ -230,27 +230,27 @@ const TableReservationPage = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
               {[
                 {
-                  icon: <Layout className="w-6 h-6 text-white" />,
+                  icon: <Layout className="w-6 h-6" />,
                   title: "Auto-Assignment",
                   desc: "Instantly assigns incoming reservations to the best available table to prevent gaps and optimize server sections."
                 },
                 {
-                  icon: <UserCheck className="w-6 h-6 text-white" />,
+                  icon: <UserCheck className="w-6 h-6" />,
                   title: "VIP Recognition",
                   desc: "Alerts the host when a high-spending regular walks in. See their favorite table and past order history instantly."
                 },
                 {
-                  icon: <Calendar className="w-6 h-6 text-white" />,
+                  icon: <Calendar className="w-6 h-6" />,
                   title: "Event Management",
                   desc: "Easily block out sections for private parties or large groups without disrupting the rest of the flow."
                 }
               ].map((feature, i) => (
-                <div key={i} className="bg-white p-8 rounded-2xl shadow-sm border border-zinc-100 hover:shadow-md transition-shadow">
-                  <div className="w-12 h-12 bg-zinc-900 rounded-xl flex items-center justify-center mb-6">
+                <div key={i} className="bg-zinc-950 p-8 rounded-2xl shadow-sm border border-zinc-800 hover:shadow-md transition-shadow">
+                  <div className="w-12 h-12 bg-red-600/10 rounded-xl flex items-center justify-center text-red-600 mb-6">
                     {feature.icon}
                   </div>
-                  <h3 className="text-xl font-bold text-zinc-900 mb-3">{feature.title}</h3>
-                  <p className="text-zinc-500 leading-relaxed">
+                  <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
+                  <p className="text-zinc-400 leading-relaxed">
                     {feature.desc}
                   </p>
                 </div>

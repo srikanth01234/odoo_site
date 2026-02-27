@@ -122,15 +122,15 @@ const FeaturesSection = () => {
               
               {/* Image Side */}
               <div className="w-full lg:w-1/2 relative group">
-                <div className="absolute -inset-4 bg-red-600/10 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <div className="relative h-[400px] w-full rounded-2xl overflow-hidden border border-zinc-200 bg-zinc-100">
+                <div className="absolute -inset-6 bg-red-600/10 rounded-[4rem] blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                <div className="relative h-[450px] w-full rounded-[4rem] rounded-tr-2xl rounded-bl-2xl overflow-hidden border-2 border-zinc-200 bg-white shadow-xl transition-all duration-500 group-hover:shadow-2xl group-hover:-translate-y-2">
                    {/* Placeholder image overlay */}
-                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent z-10"></div>
+                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent z-10"></div>
                    <Image 
                      src={feature.image} 
                      alt={feature.title} 
                      fill 
-                     className="object-cover transition-transform duration-700 group-hover:scale-110"
+                     className="object-cover transition-transform duration-1000 group-hover:scale-110"
                    />
                    
                    {/* Corner Decorations */}

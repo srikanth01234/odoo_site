@@ -41,34 +41,34 @@ const InventoryManagementPage = () => {
           {/* 3 Columns Layout with Bordered Cards */}
           <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center mb-32 px-4">
             {/* Feature 1 */}
-            <div className="flex flex-col items-center p-10 rounded-2xl border border-zinc-300 bg-white transition-all duration-300 hover:border-red-600/30 hover:shadow-xl hover:shadow-red-600/5 group">
-              <div className="w-16 h-16 rounded-2xl bg-red-50 flex items-center justify-center mb-6 text-red-600 transition-colors group-hover:bg-red-600 group-hover:text-white">
+            <div className="flex flex-col items-center p-10 rounded-2xl border border-zinc-800 bg-zinc-950 transition-all duration-300 hover:border-red-600/30 hover:shadow-xl hover:shadow-red-600/5 group">
+              <div className="w-16 h-16 rounded-2xl bg-red-600/10 flex items-center justify-center mb-6 text-red-600 transition-colors group-hover:bg-red-600 group-hover:text-white">
                 <Layers className="w-8 h-8" />
               </div>
-              <h3 className="text-xl font-bold text-zinc-900 mb-4">Stock Intelligence</h3>
-              <p className="text-gray-500 leading-relaxed text-sm">
+              <h3 className="text-xl font-bold text-white mb-4">Stock Intelligence</h3>
+              <p className="text-zinc-400 leading-relaxed text-sm">
                 Automated stock counting and low-inventory alerts ensure you never run out of critical ingredients during a rush.
               </p>
             </div>
 
             {/* Feature 2 */}
-            <div className="flex flex-col items-center p-10 rounded-2xl border border-zinc-300 bg-white transition-all duration-300 hover:border-red-600/30 hover:shadow-xl hover:shadow-red-600/5 group">
-              <div className="w-16 h-16 rounded-2xl bg-red-50 flex items-center justify-center mb-6 text-red-600 transition-colors group-hover:bg-red-600 group-hover:text-white">
+            <div className="flex flex-col items-center p-10 rounded-2xl border border-zinc-800 bg-zinc-950 transition-all duration-300 hover:border-red-600/30 hover:shadow-xl hover:shadow-red-600/5 group">
+              <div className="w-16 h-16 rounded-2xl bg-red-600/10 flex items-center justify-center mb-6 text-red-600 transition-colors group-hover:bg-red-600 group-hover:text-white">
                 <Trash2 className="w-8 h-8" />
               </div>
-              <h3 className="text-xl font-bold text-zinc-900 mb-4">Waste Reduction</h3>
-              <p className="text-gray-500 leading-relaxed text-sm">
+              <h3 className="text-xl font-bold text-white mb-4">Waste Reduction</h3>
+              <p className="text-zinc-400 leading-relaxed text-sm">
                 Track expiration dates and portion control to significantly reduce food waste and improve your bottom line.
               </p>
             </div>
 
             {/* Feature 3 */}
-            <div className="flex flex-col items-center p-10 rounded-2xl border border-zinc-300 bg-white transition-all duration-300 hover:border-red-600/30 hover:shadow-xl hover:shadow-red-600/5 group">
-              <div className="w-16 h-16 rounded-2xl bg-red-50 flex items-center justify-center mb-6 text-red-600 transition-colors group-hover:bg-red-600 group-hover:text-white">
+            <div className="flex flex-col items-center p-10 rounded-2xl border border-zinc-800 bg-zinc-950 transition-all duration-300 hover:border-red-600/30 hover:shadow-xl hover:shadow-red-600/5 group">
+              <div className="w-16 h-16 rounded-2xl bg-red-600/10 flex items-center justify-center mb-6 text-red-600 transition-colors group-hover:bg-red-600 group-hover:text-white">
                 <Repeat className="w-8 h-8" />
               </div>
-              <h3 className="text-xl font-bold text-zinc-900 mb-4">Vendor Sync</h3>
-              <p className="text-gray-500 leading-relaxed text-sm">
+              <h3 className="text-xl font-bold text-white mb-4">Vendor Sync</h3>
+              <p className="text-zinc-400 leading-relaxed text-sm">
                 Connect directly with your suppliers. Generate purchase orders automatically based on real-time usage and historical data.
               </p>
             </div>
@@ -117,25 +117,25 @@ const InventoryManagementPage = () => {
               
               <div className="grid grid-cols-2 gap-4 pt-4">
                 <div className="flex items-center gap-3">
-                  <div className="w-5 h-5 rounded-full bg-red-100 flex items-center justify-center text-red-600">
+                  <div className="w-5 h-5 rounded-full bg-red-600/10 flex items-center justify-center text-red-600">
                     <CheckCircle className="w-3 h-3" />
                   </div>
                   <span className="text-sm font-bold text-zinc-700">Real-time alerts</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="w-5 h-5 rounded-full bg-red-100 flex items-center justify-center text-red-600">
+                  <div className="w-5 h-5 rounded-full bg-red-600/10 flex items-center justify-center text-red-600">
                     <CheckCircle className="w-3 h-3" />
                   </div>
                   <span className="text-sm font-bold text-zinc-700">Waste reduction</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="w-5 h-5 rounded-full bg-red-100 flex items-center justify-center text-red-600">
+                  <div className="w-5 h-5 rounded-full bg-red-600/10 flex items-center justify-center text-red-600">
                     <CheckCircle className="w-3 h-3" />
                   </div>
                   <span className="text-sm font-bold text-zinc-700">Supplier mgmt</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="w-5 h-5 rounded-full bg-red-100 flex items-center justify-center text-red-600">
+                  <div className="w-5 h-5 rounded-full bg-red-600/10 flex items-center justify-center text-red-600">
                     <CheckCircle className="w-3 h-3" />
                   </div>
                   <span className="text-sm font-bold text-zinc-700">Low stock warns</span>
@@ -238,11 +238,11 @@ const InventoryManagementPage = () => {
                     "Multi-location transfer management",
                     "Recipe costing and menu engineering"
                   ].map((item, i) => (
-                    <div key={i} className="flex items-start gap-4 p-4 rounded-xl bg-white border border-zinc-200 shadow-sm hover:shadow-md transition-shadow">
-                      <div className="mt-1 w-6 h-6 rounded-full bg-red-100 flex items-center justify-center shrink-0">
+                    <div key={i} className="flex items-start gap-4 p-4 rounded-xl bg-zinc-950 border border-zinc-800 shadow-sm hover:shadow-md transition-shadow">
+                      <div className="mt-1 w-6 h-6 rounded-full bg-red-600/10 flex items-center justify-center shrink-0">
                         <CheckCircle className="w-4 h-4 text-red-600" />
                       </div>
-                      <span className="text-zinc-800 font-medium">{item}</span>
+                      <span className="text-white font-medium">{item}</span>
                     </div>
                   ))}
                 </div>

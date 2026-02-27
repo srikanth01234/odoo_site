@@ -43,34 +43,34 @@ const POSManagementPage = () => {
           {/* 3 Columns Layout with Bordered Cards */}
           <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center mb-32 px-4">
             {/* Feature 1 */}
-            <div className="flex flex-col items-center p-10 rounded-2xl border border-zinc-300 bg-white transition-all duration-300 hover:border-red-600/30 hover:shadow-xl hover:shadow-red-600/5 group">
-              <div className="w-16 h-16 rounded-2xl bg-red-50 flex items-center justify-center mb-6 text-red-600 transition-colors group-hover:bg-red-600 group-hover:text-white">
+            <div className="flex flex-col items-center p-10 rounded-2xl border border-zinc-800 bg-zinc-950 transition-all duration-300 hover:border-red-600/30 hover:shadow-xl hover:shadow-red-600/5 group">
+              <div className="w-16 h-16 rounded-2xl bg-red-600/10 flex items-center justify-center mb-6 text-red-600 transition-colors group-hover:bg-red-600 group-hover:text-white">
                 <Zap className="w-8 h-8" />
               </div>
-              <h3 className="text-xl font-bold text-zinc-900 mb-4">Speed Operations</h3>
-              <p className="text-gray-500 leading-relaxed text-sm">
+              <h3 className="text-xl font-bold text-white mb-4">Speed Operations</h3>
+              <p className="text-zinc-400 leading-relaxed text-sm">
                 Slash wait times with a lightning-fast interface designed for high-volume transactions and seamless kitchen communication.
               </p>
             </div>
 
             {/* Feature 2 */}
-            <div className="flex flex-col items-center p-10 rounded-2xl border border-zinc-300 bg-white transition-all duration-300 hover:border-red-600/30 hover:shadow-xl hover:shadow-red-600/5 group">
-              <div className="w-16 h-16 rounded-2xl bg-red-50 flex items-center justify-center mb-6 text-red-600 transition-colors group-hover:bg-red-600 group-hover:text-white">
+            <div className="flex flex-col items-center p-10 rounded-2xl border border-zinc-800 bg-zinc-950 transition-all duration-300 hover:border-red-600/30 hover:shadow-xl hover:shadow-red-600/5 group">
+              <div className="w-16 h-16 rounded-2xl bg-red-600/10 flex items-center justify-center mb-6 text-red-600 transition-colors group-hover:bg-red-600 group-hover:text-white">
                 <LineChart className="w-8 h-8" />
               </div>
-              <h3 className="text-xl font-bold text-zinc-900 mb-4">Revenue Tracking</h3>
-              <p className="text-gray-500 leading-relaxed text-sm">
+              <h3 className="text-xl font-bold text-white mb-4">Revenue Tracking</h3>
+              <p className="text-zinc-400 leading-relaxed text-sm">
                 Monitor your sales flow in real-time. Detailed financial reporting helps you understand your most profitable shifts.
               </p>
             </div>
 
             {/* Feature 3 */}
-            <div className="flex flex-col items-center p-10 rounded-2xl border border-zinc-300 bg-white transition-all duration-300 hover:border-red-600/30 hover:shadow-xl hover:shadow-red-600/5 group">
-              <div className="w-16 h-16 rounded-2xl bg-red-50 flex items-center justify-center mb-6 text-red-600 transition-colors group-hover:bg-red-600 group-hover:text-white">
+            <div className="flex flex-col items-center p-10 rounded-2xl border border-zinc-800 bg-zinc-950 transition-all duration-300 hover:border-red-600/30 hover:shadow-xl hover:shadow-red-600/5 group">
+              <div className="w-16 h-16 rounded-2xl bg-red-600/10 flex items-center justify-center mb-6 text-red-600 transition-colors group-hover:bg-red-600 group-hover:text-white">
                 <Smartphone className="w-8 h-8" />
               </div>
-              <h3 className="text-xl font-bold text-zinc-900 mb-4">Hardware Agnostic</h3>
-              <p className="text-gray-500 leading-relaxed text-sm">
+              <h3 className="text-xl font-bold text-white mb-4">Hardware Agnostic</h3>
+              <p className="text-zinc-400 leading-relaxed text-sm">
                 Run your POS on any device. From dedicated terminals to tablets and smartphones, your counter goes where you do.
               </p>
             </div>
@@ -239,11 +239,11 @@ const POSManagementPage = () => {
                     "Digital receipts via email or SMS",
                     "Automatic tip prompting and calculation"
                   ].map((item, i) => (
-                    <div key={i} className="flex items-start gap-4 p-4 rounded-xl bg-white border border-zinc-200 shadow-sm hover:shadow-md transition-shadow">
-                      <div className="mt-1 w-6 h-6 rounded-full bg-red-100 flex items-center justify-center shrink-0">
+                    <div key={i} className="flex items-start gap-4 p-4 rounded-xl bg-zinc-950 border border-zinc-800 shadow-sm hover:shadow-md transition-shadow">
+                      <div className="mt-1 w-6 h-6 rounded-full bg-red-600/10 flex items-center justify-center shrink-0">
                         <CheckCircle className="w-4 h-4 text-red-600" />
                       </div>
-                      <span className="text-zinc-800 font-medium">{item}</span>
+                      <span className="text-white font-medium">{item}</span>
                     </div>
                   ))}
                 </div>
@@ -320,33 +320,33 @@ const POSManagementPage = () => {
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <div className="bg-white p-8 rounded-2xl shadow-sm border border-zinc-200 hover:shadow-md transition-shadow">
-                  <div className="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center text-red-600 mb-6">
+              <div className="bg-zinc-950 p-8 rounded-2xl shadow-sm border border-zinc-800 hover:shadow-md transition-shadow">
+                  <div className="w-12 h-12 bg-red-600/10 rounded-xl flex items-center justify-center text-red-600 mb-6">
                     <Layers className="w-6 h-6" />
                   </div>
-                  <h3 className="text-lg font-bold text-zinc-900 mb-3">Table Management</h3>
-                  <p className="text-gray-500 text-sm leading-relaxed">Visual floor plans let you manage tables, track status, and assign servers instantly.</p>
+                  <h3 className="text-lg font-bold text-white mb-3">Table Management</h3>
+                  <p className="text-zinc-400 text-sm leading-relaxed">Visual floor plans let you manage tables, track status, and assign servers instantly.</p>
               </div>
-              <div className="bg-white p-8 rounded-2xl shadow-sm border border-zinc-200 hover:shadow-md transition-shadow">
-                  <div className="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center text-red-600 mb-6">
+              <div className="bg-zinc-950 p-8 rounded-2xl shadow-sm border border-zinc-800 hover:shadow-md transition-shadow">
+                  <div className="w-12 h-12 bg-red-600/10 rounded-xl flex items-center justify-center text-red-600 mb-6">
                     <Menu className="w-6 h-6" />
                   </div>
-                  <h3 className="text-lg font-bold text-zinc-900 mb-3">Menu Customization</h3>
-                  <p className="text-gray-500 text-sm leading-relaxed">Update items, prices, and modifiers in real-time across all devices with a few clicks.</p>
+                  <h3 className="text-lg font-bold text-white mb-3">Menu Customization</h3>
+                  <p className="text-zinc-400 text-sm leading-relaxed">Update items, prices, and modifiers in real-time across all devices with a few clicks.</p>
               </div>
-              <div className="bg-white p-8 rounded-2xl shadow-sm border border-zinc-200 hover:shadow-md transition-shadow">
-                  <div className="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center text-red-600 mb-6">
+              <div className="bg-zinc-950 p-8 rounded-2xl shadow-sm border border-zinc-800 hover:shadow-md transition-shadow">
+                  <div className="w-12 h-12 bg-red-600/10 rounded-xl flex items-center justify-center text-red-600 mb-6">
                     <TrendingUp className="w-6 h-6" />
                   </div>
-                  <h3 className="text-lg font-bold text-zinc-900 mb-3">Staff Performance</h3>
-                  <p className="text-gray-500 text-sm leading-relaxed">Track sales by server to reward top performers and identify training needs quickly.</p>
+                  <h3 className="text-lg font-bold text-white mb-3">Staff Performance</h3>
+                  <p className="text-zinc-400 text-sm leading-relaxed">Track sales by server to reward top performers and identify training needs quickly.</p>
               </div>
-              <div className="bg-white p-8 rounded-2xl shadow-sm border border-zinc-200 hover:shadow-md transition-shadow">
-                  <div className="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center text-red-600 mb-6">
+              <div className="bg-zinc-950 p-8 rounded-2xl shadow-sm border border-zinc-800 hover:shadow-md transition-shadow">
+                  <div className="w-12 h-12 bg-red-600/10 rounded-xl flex items-center justify-center text-red-600 mb-6">
                     <Megaphone className="w-6 h-6" />
                   </div>
-                  <h3 className="text-lg font-bold text-zinc-900 mb-3">Customer Profiles</h3>
-                  <p className="text-gray-500 text-sm leading-relaxed">Build a database of loyal guests with order history and detailed preferences.</p>
+                  <h3 className="text-lg font-bold text-white mb-3">Customer Profiles</h3>
+                  <p className="text-zinc-400 text-sm leading-relaxed">Build a database of loyal guests with order history and detailed preferences.</p>
               </div>
             </div>
           </div>

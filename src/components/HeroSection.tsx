@@ -93,7 +93,7 @@ const HeroSection = () => {
                     href="https://www.youtube.com/watch?v=hipB2vhwj_Y" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="w-full sm:w-auto flex items-center justify-center gap-3 border-2 border-white/20 text-white px-10 py-4 rounded-full font-black text-lg hover:bg-white hover:text-black transition-all hover:scale-105 active:scale-95 bg-white/5 backdrop-blur-sm"
+                    className="w-full sm:w-auto flex items-center justify-center gap-3 border-2 border-white/20 text-white px-10 py-4 rounded-full font-black text-lg hover:bg-white hover:text-black transition-all duration-500 ease-in-out hover:scale-105 active:scale-95 bg-white/5 backdrop-blur-sm"
                   >
                     <div className="w-6 h-6 bg-red-600 rounded-full flex items-center justify-center">
                       <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>

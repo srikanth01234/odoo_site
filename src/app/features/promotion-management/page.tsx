@@ -50,34 +50,34 @@ const PromotionManagementPage = () => {
           {/* 3 Columns Layout with Bordered Cards */}
           <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center mb-32 px-4">
             {/* Feature 1 */}
-            <div className="flex flex-col items-center p-10 rounded-2xl border border-zinc-300 bg-white transition-all duration-300 hover:border-red-600/30 hover:shadow-xl hover:shadow-red-600/5 group">
-              <div className="w-16 h-16 rounded-2xl bg-red-50 flex items-center justify-center mb-6 text-red-600 transition-colors group-hover:bg-red-600 group-hover:text-white">
+            <div className="flex flex-col items-center p-10 rounded-2xl border border-zinc-800 bg-zinc-950 transition-all duration-300 hover:border-red-600/30 hover:shadow-xl hover:shadow-red-600/5 group">
+              <div className="w-16 h-16 rounded-2xl bg-red-600/10 flex items-center justify-center mb-6 text-red-600 transition-colors group-hover:bg-red-600 group-hover:text-white">
                 <Gift className="w-8 h-8" />
               </div>
-              <h3 className="text-xl font-bold text-zinc-900 mb-4">Loyalty Loop</h3>
-              <p className="text-gray-500 leading-relaxed text-sm">
+              <h3 className="text-xl font-bold text-white mb-4">Loyalty Loop</h3>
+              <p className="text-zinc-400 leading-relaxed text-sm">
                 Reward your fans. Create automated loyalty programs that keep customers coming back with points, tiers, and exclusive perks.
               </p>
             </div>
 
             {/* Feature 2 */}
-            <div className="flex flex-col items-center p-10 rounded-2xl border border-zinc-300 bg-white transition-all duration-300 hover:border-red-600/30 hover:shadow-xl hover:shadow-red-600/5 group">
-              <div className="w-16 h-16 rounded-2xl bg-red-50 flex items-center justify-center mb-6 text-red-600 transition-colors group-hover:bg-red-600 group-hover:text-white">
+            <div className="flex flex-col items-center p-10 rounded-2xl border border-zinc-800 bg-zinc-950 transition-all duration-300 hover:border-red-600/30 hover:shadow-xl hover:shadow-red-600/5 group">
+              <div className="w-16 h-16 rounded-2xl bg-red-600/10 flex items-center justify-center mb-6 text-red-600 transition-colors group-hover:bg-red-600 group-hover:text-white">
                 <Zap className="w-8 h-8" />
               </div>
-              <h3 className="text-xl font-bold text-zinc-900 mb-4">Flash Sales</h3>
-              <p className="text-gray-500 leading-relaxed text-sm">
+              <h3 className="text-xl font-bold text-white mb-4">Flash Sales</h3>
+              <p className="text-zinc-400 leading-relaxed text-sm">
                 Fill empty tables during slow hours. Launch instant SMS or email promotions to your database with time-sensitive offers.
               </p>
             </div>
 
             {/* Feature 3 */}
-            <div className="flex flex-col items-center p-10 rounded-2xl border border-zinc-300 bg-white transition-all duration-300 hover:border-red-600/30 hover:shadow-xl hover:shadow-red-600/5 group">
-              <div className="w-16 h-16 rounded-2xl bg-red-50 flex items-center justify-center mb-6 text-red-600 transition-colors group-hover:bg-red-600 group-hover:text-white">
+            <div className="flex flex-col items-center p-10 rounded-2xl border border-zinc-800 bg-zinc-950 transition-all duration-300 hover:border-red-600/30 hover:shadow-xl hover:shadow-red-600/5 group">
+              <div className="w-16 h-16 rounded-2xl bg-red-600/10 flex items-center justify-center mb-6 text-red-600 transition-colors group-hover:bg-red-600 group-hover:text-white">
                 <Ticket className="w-8 h-8" />
               </div>
-              <h3 className="text-xl font-bold text-zinc-900 mb-4">Coupon Control</h3>
-              <p className="text-gray-500 leading-relaxed text-sm">
+              <h3 className="text-xl font-bold text-white mb-4">Coupon Control</h3>
+              <p className="text-zinc-400 leading-relaxed text-sm">
                 Issue unique, trackable discount codes. Analyze which campaigns drive the most ROI and optimize your marketing budget.
               </p>
             </div>
@@ -126,25 +126,25 @@ const PromotionManagementPage = () => {
               
               <div className="grid grid-cols-2 gap-4 pt-4">
                 <div className="flex items-center gap-3">
-                  <div className="w-5 h-5 rounded-full bg-red-100 flex items-center justify-center text-red-600">
+                  <div className="w-5 h-5 rounded-full bg-red-600/10 flex items-center justify-center text-red-600">
                     <CheckCircle className="w-3 h-3" />
                   </div>
                   <span className="text-sm font-bold text-zinc-700">Dynamic discounts</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="w-5 h-5 rounded-full bg-red-100 flex items-center justify-center text-red-600">
+                  <div className="w-5 h-5 rounded-full bg-red-600/10 flex items-center justify-center text-red-600">
                     <CheckCircle className="w-3 h-3" />
                   </div>
                   <span className="text-sm font-bold text-zinc-700">Loyalty points</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="w-5 h-5 rounded-full bg-red-100 flex items-center justify-center text-red-600">
+                  <div className="w-5 h-5 rounded-full bg-red-600/10 flex items-center justify-center text-red-600">
                     <CheckCircle className="w-3 h-3" />
                   </div>
                   <span className="text-sm font-bold text-zinc-700">Targeted coupons</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="w-5 h-5 rounded-full bg-red-100 flex items-center justify-center text-red-600">
+                  <div className="w-5 h-5 rounded-full bg-red-600/10 flex items-center justify-center text-red-600">
                     <CheckCircle className="w-3 h-3" />
                   </div>
                   <span className="text-sm font-bold text-zinc-700">Analytics tracking</span>
@@ -233,27 +233,27 @@ const PromotionManagementPage = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
               {[
                 {
-                  icon: <Gift className="w-6 h-6 text-white" />,
+                  icon: <Gift className="w-6 h-6" />,
                   title: "Birthday Triggers",
                   desc: "Automatically send a free dessert styling coupon 3 days before a guest's birthday. It's a small gesture with a huge impact."
                 },
                 {
-                  icon: <Ticket className="w-6 h-6 text-white" />,
+                  icon: <Ticket className="w-6 h-6" />,
                   title: "Win-Back Emails",
                   desc: "Haven't seen a regular in 30 days? Automatically entice them back with a 'We Miss You' discount."
                 },
                 {
-                  icon: <Tag className="w-6 h-6 text-white" />,
+                  icon: <Tag className="w-6 h-6" />,
                   title: "Smart Segmentation",
                   desc: "Target high spenders for wine tastings and lunch regulars for sandwich specials. Relevance drives revenue."
                 }
               ].map((feature, i) => (
-                <div key={i} className="bg-white p-8 rounded-2xl shadow-sm border border-zinc-100 hover:shadow-md transition-shadow">
-                  <div className="w-12 h-12 bg-zinc-900 rounded-xl flex items-center justify-center mb-6">
+                <div key={i} className="bg-zinc-950 p-8 rounded-2xl shadow-sm border border-zinc-800 hover:shadow-md transition-shadow">
+                  <div className="w-12 h-12 bg-red-600/10 rounded-xl flex items-center justify-center text-red-600 mb-6">
                     {feature.icon}
                   </div>
-                  <h3 className="text-xl font-bold text-zinc-900 mb-3">{feature.title}</h3>
-                  <p className="text-zinc-500 leading-relaxed">
+                  <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
+                  <p className="text-zinc-400 leading-relaxed">
                     {feature.desc}
                   </p>
                 </div>

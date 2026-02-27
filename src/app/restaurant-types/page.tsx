@@ -308,13 +308,14 @@ const RestaurantTypesPage = () => {
         </section>
 
         {/* ─── PERFORMANCE JOURNEY ───────────────────────────────────── */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white text-zinc-900">
+          <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-zinc-500 font-bold uppercase tracking-[0.2em] text-[10px] mb-3"
+              className="text-red-600 font-bold uppercase tracking-[0.2em] text-[10px] mb-3"
             >
               Dine360 Challenging
             </motion.div>
@@ -322,7 +323,7 @@ const RestaurantTypesPage = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-3xl md:text-4xl font-black text-white mb-4"
+              className="text-3xl md:text-4xl font-black text-zinc-900 mb-4"
             >
               The Performance Journey
             </motion.h2>
@@ -331,7 +332,7 @@ const RestaurantTypesPage = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="text-zinc-400 max-w-2xl mx-auto text-sm leading-relaxed"
+              className="text-zinc-600 max-w-2xl mx-auto text-sm leading-relaxed"
             >
               Transforming restaurant operations with innovative intelligence. Explore our story of efficiency and accuracy, creating a system that inspires and enhances modern dining.
             </motion.p>
@@ -341,18 +342,18 @@ const RestaurantTypesPage = () => {
 
             {/* Step 1: Left */}
             <div className="flex flex-col md:flex-row items-center relative">
-              <div className="hidden md:block absolute left-0 top-0 w-[55%] h-full border-t-10 border-l-10 border-b-10 border-white/10 rounded-l-[100px] z-0" />
+              <div className="hidden md:block absolute left-0 top-0 w-[55%] h-full border-t-10 border-l-10 border-b-10 border-black rounded-l-[100px] z-0" />
               <div className="w-full md:w-1/2 p-6 md:pl-10 md:py-8 relative z-10">
-                <div className="relative h-36 w-full rounded-3xl md:rounded-l-[80px] md:rounded-r-2xl overflow-hidden shadow-lg">
+                <div className="relative h-36 w-full rounded-3xl md:rounded-l-[80px] md:rounded-r-2xl overflow-hidden shadow-lg border border-zinc-100">
                   <Image src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&q=80&w=800" alt="Fast Processing" fill className="object-cover" />
                 </div>
               </div>
               <div className="w-full md:w-1/2 p-6 md:px-12 relative z-10">
-                <div className="w-10 h-10 bg-red-600/10 rounded-xl flex items-center justify-center text-red-500 mb-4">
+                <div className="w-10 h-10 bg-red-100 rounded-xl flex items-center justify-center text-red-600 mb-4">
                   <Zap className="w-5 h-5" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">3X Faster Order Processing</h3>
-                <p className="text-zinc-400 text-sm leading-relaxed font-medium">
+                <h3 className="text-xl font-bold text-zinc-900 mb-3">3X Faster Order Processing</h3>
+                <p className="text-zinc-600 text-sm leading-relaxed font-medium">
                   Cut down serving time and maximize table turnover. Our cloud-integrated order management ensures your staff moves at the speed of light.
                 </p>
               </div>
@@ -360,18 +361,18 @@ const RestaurantTypesPage = () => {
 
             {/* Step 2: Right */}
             <div className="flex flex-col md:flex-row-reverse items-center relative md:-mt-2.5">
-              <div className="hidden md:block absolute right-0 top-0 w-[55%] h-full border-r-10 border-b-10 border-white/10 rounded-r-[100px] z-0" />
+              <div className="hidden md:block absolute right-0 top-0 w-[55%] h-full border-r-10 border-b-10 border-black rounded-r-[100px] z-0" />
               <div className="w-full md:w-1/2 p-6 md:pr-10 md:py-8 relative z-10">
-                <div className="relative h-36 w-full rounded-3xl md:rounded-r-[80px] md:rounded-l-2xl overflow-hidden shadow-lg">
+                <div className="relative h-36 w-full rounded-3xl md:rounded-r-[80px] md:rounded-l-2xl overflow-hidden shadow-lg border border-zinc-100">
                   <Image src="https://images.unsplash.com/photo-1556742044-3c52d6e88c62?auto=format&fit=crop&q=80&w=800" alt="Order Syncing" fill className="object-cover" />
                 </div>
               </div>
               <div className="w-full md:w-1/2 p-6 md:px-12 relative z-10">
-                <div className="w-10 h-10 bg-red-600/10 rounded-xl flex items-center justify-center text-red-500 mb-4">
+                <div className="w-10 h-10 bg-red-100 rounded-xl flex items-center justify-center text-red-600 mb-4">
                   <RefreshCw className="w-5 h-5" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">Instant Order Syncing</h3>
-                <p className="text-zinc-400 text-sm leading-relaxed font-medium">
+                <h3 className="text-xl font-bold text-zinc-900 mb-3">Instant Order Syncing</h3>
+                <p className="text-zinc-600 text-sm leading-relaxed font-medium">
                   Eliminate manual errors and communication gaps between the floor and the kitchen. Orders are updated in real-time across all devices.
                 </p>
               </div>
@@ -379,18 +380,18 @@ const RestaurantTypesPage = () => {
 
             {/* Step 3: Left */}
             <div className="flex flex-col md:flex-row items-center relative md:-mt-2.5">
-              <div className="hidden md:block absolute left-0 top-0 w-[55%] h-full border-l-10 border-b-10 border-white/10 rounded-l-[100px] z-0" />
+              <div className="hidden md:block absolute left-0 top-0 w-[55%] h-full border-l-10 border-b-10 border-black rounded-l-[100px] z-0" />
               <div className="w-full md:w-1/2 p-6 md:pl-10 md:py-8 relative z-10">
-                <div className="relative h-36 w-full rounded-3xl md:rounded-l-[80px] md:rounded-r-2xl overflow-hidden shadow-lg">
+                <div className="relative h-36 w-full rounded-3xl md:rounded-l-[80px] md:rounded-r-2xl overflow-hidden shadow-lg border border-zinc-100">
                   <Image src="https://images.unsplash.com/photo-1556745753-b2904692b3cd?auto=format&fit=crop&q=80&w=800" alt="Zero Delays" fill className="object-cover" />
                 </div>
               </div>
               <div className="w-full md:w-1/2 p-6 md:px-12 relative z-10">
-                <div className="w-10 h-10 bg-red-600/10 rounded-xl flex items-center justify-center text-red-500 mb-4">
+                <div className="w-10 h-10 bg-red-100 rounded-xl flex items-center justify-center text-red-600 mb-4">
                   <Clock className="w-5 h-5" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">Zero Order Delays</h3>
-                <p className="text-zinc-400 text-sm leading-relaxed font-medium">
+                <h3 className="text-xl font-bold text-zinc-900 mb-3">Zero Order Delays</h3>
+                <p className="text-zinc-600 text-sm leading-relaxed font-medium">
                   Keep your service flowing like clockwork. Our intelligent queue management prevents bottlenecks even during your busiest rush hours.
                 </p>
               </div>
@@ -398,23 +399,24 @@ const RestaurantTypesPage = () => {
 
             {/* Step 4: Right */}
             <div className="flex flex-col md:flex-row-reverse items-center relative md:-mt-2.5">
-              <div className="hidden md:block absolute right-0 top-0 w-[55%] h-full border-r-10 border-b-10 border-white/10 rounded-r-[100px] z-0" />
+              <div className="hidden md:block absolute right-0 top-0 w-[55%] h-full border-r-10 border-b-10 border-black rounded-r-[100px] z-0" />
               <div className="w-full md:w-1/2 p-6 md:pr-10 md:py-8 relative z-10">
-                <div className="relative h-36 w-full rounded-3xl md:rounded-r-[80px] md:rounded-l-2xl overflow-hidden shadow-lg">
+                <div className="relative h-36 w-full rounded-3xl md:rounded-r-[80px] md:rounded-l-2xl overflow-hidden shadow-lg border border-zinc-100">
                   <Image src="https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?auto=format&fit=crop&q=80&w=800" alt="Order Accuracy" fill className="object-cover" />
                 </div>
               </div>
               <div className="w-full md:w-1/2 p-6 md:px-12 relative z-10">
-                <div className="w-10 h-10 bg-red-600/10 rounded-xl flex items-center justify-center text-red-500 mb-4">
+                <div className="w-10 h-10 bg-red-100 rounded-xl flex items-center justify-center text-red-600 mb-4">
                   <Target className="w-5 h-5" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">100% Order Accuracy</h3>
-                <p className="text-zinc-400 text-sm leading-relaxed font-medium">
+                <h3 className="text-xl font-bold text-zinc-900 mb-3">100% Order Accuracy</h3>
+                <p className="text-zinc-600 text-sm leading-relaxed font-medium">
                   Deliver precision with every plate. Our visual order confirmation and real-time validation eliminate mistakes before they happen.
                 </p>
               </div>
             </div>
 
+          </div>
           </div>
         </section>
 
@@ -586,14 +588,14 @@ const RestaurantTypesPage = () => {
         </section>
 
         {/* ─── RESTAURANT TYPES CARD GRID ─────────────────────────────── */}
-        <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 bg-brand-cream">
+        <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 bg-zinc-100">
           <div className="max-w-7xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.45 }}
-              className="mb-8 sm:mb-10"
+              className="mb-8 sm:mb-10 text-center"
             >
               <p className="text-red-600 font-bold uppercase tracking-[0.2em] text-[10px] mb-2">View All Types</p>
               <h3 className="text-zinc-900 text-2xl sm:text-3xl font-black">Built for All Restaurant Types</h3>
@@ -614,28 +616,46 @@ const RestaurantTypesPage = () => {
                   >
                     <Link
                       href={type.href}
-                      className="group block rounded-2xl border p-5 sm:p-6 h-full transition-all duration-300"
+                      className="group block rounded-2xl border transition-all duration-300 relative overflow-hidden h-full p-5 sm:p-6"
                       style={{
-                        backgroundColor: isHovered ? '#fee2e2' : '#ffffff',
-                        borderColor: isHovered ? '#dc262633' : '#e4e4e7',
-                        boxShadow: isHovered ? '0 16px 36px rgba(220,38,38,0.12)' : '0 6px 18px rgba(24,24,27,0.04)',
+                        backgroundColor: isHovered ? '#ffffff' : '#18181b', // White on hover, Black default
+                        borderColor: isHovered ? '#dc2626' : '#27272a', // RED Border on hover
+                        borderWidth: isHovered ? '2px' : '1px', // Thick border on hover
+                        boxShadow: isHovered ? '0 16px 36px rgba(0,0,0,0.1)' : '0 6px 18px rgba(0,0,0,0.3)',
                       }}
                       onMouseEnter={() => setHoveredCardIdx(idx)}
                       onMouseLeave={() => setHoveredCardIdx(null)}
                     >
-                      <div className="w-16 h-16 rounded-full border border-zinc-200 bg-white flex items-center justify-center text-3xl shadow-sm mb-4 transition-transform duration-300 group-hover:scale-105">
-                        <span aria-hidden="true">{RESTAURANT_TYPE_EMOJIS[type.label] ?? '🍴'}</span>
+                      {/* Background Glow Effect on Hover - Subtle warm tint */}
+                      <div className={`absolute inset-0 bg-gradient-to-br from-red-50/50 to-transparent transition-opacity duration-300 pointer-events-none ${isHovered ? 'opacity-100' : 'opacity-0'}`} />
+
+                      <div 
+                        className={`w-16 h-16 rounded-full border flex items-center justify-center text-3xl shadow-sm mb-4 transition-all duration-300 group-hover:scale-105 relative z-10 text-white ${
+                          isHovered 
+                            ? 'bg-red-500 border-red-600' 
+                            : 'bg-zinc-800 border-zinc-700'
+                        }`}
+                      >
+                        <type.icon aria-hidden="true" className="w-8 h-8 transition-all duration-300 text-white" />
                       </div>
 
-                      <h4 className="text-zinc-900 text-2xl leading-tight font-black mb-2">{type.label}</h4>
-                      <p className="text-zinc-600 text-base leading-relaxed mb-6">{type.description}</p>
+                      <h4 className={`text-2xl leading-tight font-black mb-2 relative z-10 transition-colors duration-300 ${
+                        isHovered ? 'text-red-600' : 'text-white' // Red Title on Hover
+                      }`}>
+                        {type.label}
+                      </h4>
+                      <p className={`text-base leading-relaxed mb-6 relative z-10 transition-colors duration-300 ${
+                        isHovered ? 'text-zinc-600' : 'text-zinc-400'
+                      }`}>
+                        {type.description}
+                      </p>
 
                       <span
-                        className="inline-flex items-center justify-center rounded-xl px-4 py-2 font-semibold text-sm transition-all duration-300"
+                        className="inline-flex items-center justify-center rounded-xl px-4 py-2 font-semibold text-sm transition-all duration-300 relative z-10"
                         style={{
-                          backgroundColor: isHovered ? '#dc2626' : 'transparent',
-                          border: `1px solid ${isHovered ? '#dc2626' : '#fecaca'}`,
-                          color: isHovered ? '#ffffff' : '#991b1b',
+                          backgroundColor: '#dc2626',
+                          border: `1px solid #dc2626`,
+                          color: '#ffffff',
                         }}
                       >
                         Learn More
