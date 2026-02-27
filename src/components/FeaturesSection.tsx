@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 const features = [
   {
     category: "POS",
-    title: "1️⃣ Smart POS System",
+    title: "Smart POS System",
     description: "Running your restaurant is now easier with a multi-functional POS system. It helps you manage every part of the counter experience.",
     points: [
       "Lightning-fast billing",
@@ -18,7 +18,7 @@ const features = [
   },
   {
     category: "Order Management",
-    title: "2️⃣ Order Management",
+    title: "Order Management",
     description: "Ensure every order is tracked, updated, and handled swiftly. No delays. No mistakes. Just smooth operations.",
     points: [
       "Track all orders in one dashboard",
@@ -30,7 +30,7 @@ const features = [
   },
   {
     category: "Table & Reservation",
-    title: "3️⃣ Table & Reservation Management",
+    title: "Table & Reservation Management",
     description: "Take charge of your floor’s seating and reservations with a smart, easy-to-use system that saves time and increases efficiency.",
     points: [
       "Digital table layout",
@@ -42,7 +42,7 @@ const features = [
   },
   {
     category: "QR Code Menu",
-    title: "4️⃣ QR Code Menu",
+    title: "QR Code Menu",
     description: "Simplify your ordering process and watch your sales grow with our effective QR code menu features.",
     points: [
       "Contactless digital menu",
@@ -54,7 +54,7 @@ const features = [
   },
   {
     category: "Inventory Management",
-    title: "5️⃣ Inventory Management",
+    title: "Inventory Management",
     description: "Maximize efficiency with a system that simplifies the complexities of inventory management.",
     points: [
       "Real-time stock tracking",
@@ -66,7 +66,7 @@ const features = [
   },
   {
     category: "Multi-Branch Control",
-    title: "6️⃣ Multi-Branch Control",
+    title: "Multi-Branch Control",
     description: "Manage your restaurant empire from a single location with centralized branch management tools.",
     points: [
       "Manage multiple outlets from one dashboard",
@@ -97,10 +97,10 @@ const FeaturesSection = () => {
           className="text-center mb-20 max-w-5xl mx-auto"
         >
           <span className="text-red-500 font-script text-3xl md:text-4xl mb-4 block italic">The Complete Restaurant Toolkit</span>
-          <h2 className="text-3xl md:text-5xl font-extrabold text-black mb-4 leading-tight uppercase">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-black mb-4 leading-tight uppercase">
             Reimagine Restaurant Management
           </h2>
-          <h2 className="text-3xl md:text-5xl font-extrabold text-red-600 mb-8 leading-tight uppercase">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-red-600 mb-8 leading-tight uppercase">
             with Powerful Features
           </h2>
           <p className="text-gray-600 text-lg md:text-xl max-w-3xl mx-auto">

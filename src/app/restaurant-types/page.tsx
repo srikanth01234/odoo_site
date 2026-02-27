@@ -97,8 +97,20 @@ const SEO_TAGS = [
   "Manage Orders to Operations with Menumium"
 ]
 
+const RESTAURANT_TYPE_EMOJIS: Record<string, string> = {
+  "Fast Food": "🍟",
+  "Food Truck": "🚚",
+  "Cafe & Bistro": "☕",
+  "Ghost Kitchen": "🧑‍🍳",
+  "Full Service": "🍽️",
+  "Bakery": "🥐",
+  "Fine Dine": "🛎️",
+  "Family Style": "🧑‍🤝‍🧑",
+}
+
 const RestaurantTypesPage = () => {
   const [hoveredIdx, setHoveredIdx] = useState<number | null>(null)
+  const [hoveredCardIdx, setHoveredCardIdx] = useState<number | null>(null)
   return (
     <div className="min-h-screen bg-black font-sans selection:bg-red-600 selection:text-white">
       <Navbar />
@@ -418,7 +430,7 @@ const RestaurantTypesPage = () => {
                 viewport={{ once: true }}
                 className="text-zinc-500 font-bold uppercase tracking-[0.2em] text-[10px] mb-3"
               >
-                Menumium For Everyone
+                Dine360 For Everyone
               </motion.div>
               <motion.h2
                 initial={{ opacity: 0, y: 20 }}
@@ -570,6 +582,69 @@ const RestaurantTypesPage = () => {
               </div>
             </motion.div>
 
+          </div>
+        </section>
+
+        {/* ─── RESTAURANT TYPES CARD GRID ─────────────────────────────── */}
+        <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 bg-brand-cream">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.45 }}
+              className="mb-8 sm:mb-10"
+            >
+              <p className="text-red-600 font-bold uppercase tracking-[0.2em] text-[10px] mb-2">View All Types</p>
+              <h3 className="text-zinc-900 text-2xl sm:text-3xl font-black">Built for All Restaurant Types</h3>
+            </motion.div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 sm:gap-5">
+              {RESTAURANT_TYPES.map((type, idx) => {
+                const isHovered = hoveredCardIdx === idx
+
+                return (
+                  <motion.div
+                    key={type.label}
+                    initial={{ opacity: 0, y: 24 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.2 }}
+                    transition={{ duration: 0.45, delay: idx * 0.04 }}
+                    whileHover={{ y: -6 }}
+                  >
+                    <Link
+                      href={type.href}
+                      className="group block rounded-2xl border p-5 sm:p-6 h-full transition-all duration-300"
+                      style={{
+                        backgroundColor: isHovered ? '#fee2e2' : '#ffffff',
+                        borderColor: isHovered ? '#dc262633' : '#e4e4e7',
+                        boxShadow: isHovered ? '0 16px 36px rgba(220,38,38,0.12)' : '0 6px 18px rgba(24,24,27,0.04)',
+                      }}
+                      onMouseEnter={() => setHoveredCardIdx(idx)}
+                      onMouseLeave={() => setHoveredCardIdx(null)}
+                    >
+                      <div className="w-16 h-16 rounded-full border border-zinc-200 bg-white flex items-center justify-center text-3xl shadow-sm mb-4 transition-transform duration-300 group-hover:scale-105">
+                        <span aria-hidden="true">{RESTAURANT_TYPE_EMOJIS[type.label] ?? '🍴'}</span>
+                      </div>
+
+                      <h4 className="text-zinc-900 text-2xl leading-tight font-black mb-2">{type.label}</h4>
+                      <p className="text-zinc-600 text-base leading-relaxed mb-6">{type.description}</p>
+
+                      <span
+                        className="inline-flex items-center justify-center rounded-xl px-4 py-2 font-semibold text-sm transition-all duration-300"
+                        style={{
+                          backgroundColor: isHovered ? '#dc2626' : 'transparent',
+                          border: `1px solid ${isHovered ? '#dc2626' : '#fecaca'}`,
+                          color: isHovered ? '#ffffff' : '#991b1b',
+                        }}
+                      >
+                        Learn More
+                      </span>
+                    </Link>
+                  </motion.div>
+                )
+              })}
+            </div>
           </div>
         </section>
 

@@ -14,8 +14,18 @@ import {
   TrendingUp,
   Laptop,
   Smartphone,
-  MousePointerClick
+  MousePointerClick,
+  Zap,
+  LayoutGrid,
+  WifiOff,
+  Trash2,
+  Users,
+  CalendarCheck,
+  QrCode,
+  Percent,
+  Tags
 } from 'lucide-react';
+import { motion } from 'framer-motion';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import FeatureQuickNav from '@/components/FeatureQuickNav';
@@ -144,6 +154,105 @@ const RestaurantWebsitePage = () => {
                 Learn More 
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
+            </div>
+          </div>
+        </section>
+
+        {/* STATS SECTION (Dark) */}
+        <section className="bg-zinc-900 text-white py-32 px-6">
+          <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+            <div>
+              <div className="inline-flex items-center space-x-2 bg-zinc-800 rounded-full px-4 py-2 mb-8 border border-zinc-700">
+                <span className="w-2 h-2 rounded-full bg-purple-500 animate-pulse"></span>
+                <span className="text-sm font-medium text-zinc-300">Direct Sales</span>
+              </div>
+              <h2 className="text-4xl md:text-5xl font-bold mb-8 leading-tight">
+                Own Your Customers, Keep Your Margin
+              </h2>
+              <p className="text-zinc-400 text-lg leading-relaxed mb-10">
+                Stop paying 30% commissions to third-party apps. Drive traffic to your own white-labeled website where you control the brand, the data, and the profit.
+              </p>
+              
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 border-t border-zinc-800 pt-10">
+                <div>
+                  <div className="text-4xl font-bold text-white mb-2">100%</div>
+                  <div className="text-zinc-500 text-sm">Commission Saved</div>
+                </div>
+                <div>
+                  <div className="text-4xl font-bold text-white mb-2">+15%</div>
+                  <div className="text-zinc-500 text-sm">Conversion Rate</div>
+                </div>
+                 <div>
+                  <div className="text-4xl font-bold text-white mb-2">+40%</div>
+                  <div className="text-zinc-500 text-sm">Brand Loyalty</div>
+                </div>
+              </div>
+            </div>
+            
+            <div className="relative">
+              <div className="absolute inset-0 bg-gradient-to-tr from-purple-600/20 to-transparent rounded-3xl blur-2xl"></div>
+              <div className="relative bg-zinc-950 border border-zinc-800 rounded-3xl p-8 shadow-2xl">
+                 <div className="border border-zinc-800 rounded-xl overflow-hidden mb-4">
+                   <div className="bg-zinc-900 p-2 border-b border-zinc-800 flex items-center space-x-2">
+                     <div className="w-2 md:w-3 h-2 md:h-3 rounded-full bg-red-500"></div>
+                     <div className="w-2 md:w-3 h-2 md:h-3 rounded-full bg-yellow-500"></div>
+                     <div className="w-2 md:w-3 h-2 md:h-3 rounded-full bg-green-500"></div>
+                     <div className="ml-4 bg-zinc-800 rounded-md px-2 py-0.5 text-[10px] text-zinc-500 flex-1">your-restaurant.com</div>
+                   </div>
+                   <div className="bg-zinc-950 p-4 min-h-[200px] flex items-center justify-center">
+                      <div className="text-center">
+                        <div className="w-16 h-16 bg-zinc-800 rounded-full mx-auto mb-4 animate-pulse"></div>
+                        <div className="h-4 w-32 bg-zinc-800 rounded mx-auto mb-2"></div>
+                        <div className="h-2 w-24 bg-zinc-800 rounded mx-auto"></div>
+                      </div>
+                   </div>
+                 </div>
+                 <p className="text-center text-zinc-500 text-sm italic">
+                   "Our direct ordering website now processes more orders than all delivery apps combined."
+                 </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* DETAILED FEATURE (Light) */}
+        <section className="bg-zinc-50 py-32 px-6">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center max-w-3xl mx-auto mb-20">
+              <h2 className="text-4xl font-bold text-zinc-900 mb-6">Mobile First Experience</h2>
+              <p className="text-xl text-zinc-500">
+                It's not just a responsive site; it's a web app. Designed for thumbs, optimized for speed, and built to convert hungry visitors into paying customers.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+              {[
+                {
+                  icon: <Smartphone className="w-6 h-6 text-white" />,
+                  title: "App-like Interface",
+                  desc: "Smooth transitions, bottom-sheet menus, and sticky 'Add to Cart' buttons provide a native app feel without the download."
+                },
+                {
+                  icon: <Search className="w-6 h-6 text-white" />,
+                  title: "SEO Optimized",
+                  desc: "Built with modern tech that Google loves. Ranking higher for 'best [cuisine] near me' happens automatically."
+                },
+                {
+                  icon: <MousePointerClick className="w-6 h-6 text-white" />,
+                  title: "One-Click Reorder",
+                  desc: "Saved payments and favorite orders make it effortless for regulars to order 'the usual' again."
+                }
+              ].map((feature, i) => (
+                <div key={i} className="bg-white p-8 rounded-2xl shadow-sm border border-zinc-100 hover:shadow-md transition-shadow">
+                  <div className="w-12 h-12 bg-zinc-900 rounded-xl flex items-center justify-center mb-6">
+                    {feature.icon}
+                  </div>
+                  <h3 className="text-xl font-bold text-zinc-900 mb-3">{feature.title}</h3>
+                  <p className="text-zinc-500 leading-relaxed">
+                    {feature.desc}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
         </section>

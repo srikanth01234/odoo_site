@@ -14,8 +14,19 @@ import {
   TrendingUp,
   Gift,
   Zap,
-  Ticket
+  Ticket,
+  Smartphone,
+  Globe,
+  LayoutGrid,
+  WifiOff,
+  Trash2,
+  Users,
+  CalendarCheck,
+  QrCode,
+  Percent,
+  Tags
 } from 'lucide-react';
+import { motion } from 'framer-motion';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import FeatureQuickNav from '@/components/FeatureQuickNav';
@@ -144,6 +155,109 @@ const PromotionManagementPage = () => {
                 Learn More 
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
+            </div>
+          </div>
+        </section>
+
+        {/* STATS SECTION (Dark) */}
+        <section className="bg-zinc-900 text-white py-32 px-6">
+          <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+            <div className="order-2 md:order-1 relative">
+               <div className="absolute inset-0 bg-gradient-to-l from-orange-500/20 to-transparent rounded-3xl blur-2xl"></div>
+              <div className="relative bg-zinc-950 border border-zinc-800 rounded-3xl p-8 shadow-2xl">
+                 <div className="flex justify-between items-end mb-6">
+                   <div>
+                     <div className="text-zinc-500 text-sm mb-1">Campaign ROI</div>
+                     <div className="text-3xl font-bold text-white">1,240%</div>
+                   </div>
+                    <div className="h-12 w-24 flex items-end space-x-1">
+                      <div className="w-1/4 h-1/2 bg-zinc-800 rounded-sm"></div>
+                      <div className="w-1/4 h-2/3 bg-zinc-800 rounded-sm"></div>
+                      <div className="w-1/4 h-3/4 bg-zinc-700 rounded-sm"></div>
+                      <div className="w-1/4 h-full bg-orange-500 rounded-sm"></div>
+                    </div>
+                 </div>
+                 <div className="space-y-3 pt-6 border-t border-zinc-800">
+                    <div className="flex items-center justify-between text-sm">
+                      <span className="text-zinc-300">Summer Happy Hour</span>
+                      <span className="text-green-500 font-bold">+210% Visits</span>
+                    </div>
+                     <div className="flex items-center justify-between text-sm">
+                      <span className="text-zinc-300">Birthday Rewards</span>
+                      <span className="text-green-500 font-bold">+85% Redemption</span>
+                    </div>
+                 </div>
+              </div>
+            </div>
+
+            <div className="order-1 md:order-2">
+              <div className="inline-flex items-center space-x-2 bg-zinc-800 rounded-full px-4 py-2 mb-8 border border-zinc-700">
+                <span className="w-2 h-2 rounded-full bg-orange-500 animate-pulse"></span>
+                <span className="text-sm font-medium text-zinc-300">Customer Retention</span>
+              </div>
+              <h2 className="text-4xl md:text-5xl font-bold mb-8 leading-tight">
+                Turn Guests into Superfans
+              </h2>
+              <p className="text-zinc-400 text-lg leading-relaxed mb-10">
+                Acquiring a new customer is 5x more expensive than retaining one. Build lasting relationships with automated marketing that feels personal, not spammy.
+              </p>
+              
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 border-t border-zinc-800 pt-10">
+                <div>
+                  <div className="text-4xl font-bold text-white mb-2">+45%</div>
+                  <div className="text-zinc-500 text-sm">Repeat Rate</div>
+                </div>
+                <div>
+                  <div className="text-4xl font-bold text-white mb-2">10x</div>
+                  <div className="text-zinc-500 text-sm">ROI</div>
+                </div>
+                 <div>
+                  <div className="text-4xl font-bold text-white mb-2">+25%</div>
+                  <div className="text-zinc-500 text-sm">Sales Boost</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* DETAILED FEATURE (Light) */}
+        <section className="bg-zinc-50 py-32 px-6">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center max-w-3xl mx-auto mb-20">
+              <h2 className="text-4xl font-bold text-zinc-900 mb-6">Automated Campaigns</h2>
+              <p className="text-xl text-zinc-500">
+                Set it and forget it. Our system triggers the right offer at the right time based on customer behavior, ensuring you're always top of mind.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+              {[
+                {
+                  icon: <Gift className="w-6 h-6 text-white" />,
+                  title: "Birthday Triggers",
+                  desc: "Automatically send a free dessert styling coupon 3 days before a guest's birthday. It's a small gesture with a huge impact."
+                },
+                {
+                  icon: <Ticket className="w-6 h-6 text-white" />,
+                  title: "Win-Back Emails",
+                  desc: "Haven't seen a regular in 30 days? Automatically entice them back with a 'We Miss You' discount."
+                },
+                {
+                  icon: <Tag className="w-6 h-6 text-white" />,
+                  title: "Smart Segmentation",
+                  desc: "Target high spenders for wine tastings and lunch regulars for sandwich specials. Relevance drives revenue."
+                }
+              ].map((feature, i) => (
+                <div key={i} className="bg-white p-8 rounded-2xl shadow-sm border border-zinc-100 hover:shadow-md transition-shadow">
+                  <div className="w-12 h-12 bg-zinc-900 rounded-xl flex items-center justify-center mb-6">
+                    {feature.icon}
+                  </div>
+                  <h3 className="text-xl font-bold text-zinc-900 mb-3">{feature.title}</h3>
+                  <p className="text-zinc-500 leading-relaxed">
+                    {feature.desc}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
         </section>

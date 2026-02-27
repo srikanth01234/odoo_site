@@ -14,8 +14,19 @@ import {
   TrendingUp,
   Calendar,
   Layout,
-  UserCheck
+  UserCheck,
+  Zap,
+  Smartphone,
+  Globe,
+  LayoutGrid,
+  WifiOff,
+  Trash2,
+  CalendarCheck,
+  QrCode,
+  Percent,
+  Tags
 } from 'lucide-react';
+import { motion } from 'framer-motion';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import FeatureQuickNav from '@/components/FeatureQuickNav';
@@ -144,6 +155,106 @@ const TableReservationPage = () => {
                 Learn More 
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
+            </div>
+          </div>
+        </section>
+
+        {/* STATS SECTION (Dark) */}
+        <section className="bg-zinc-900 text-white py-32 px-6">
+          <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+             <div className="order-2 md:order-1 relative">
+               <div className="absolute inset-0 bg-gradient-to-br from-amber-600/20 to-transparent rounded-3xl blur-2xl"></div>
+              <div className="relative bg-zinc-950 border border-zinc-800 rounded-3xl p-8 shadow-2xl">
+                 <div className="flex items-center space-x-4 mb-4">
+                   <div className="w-12 h-12 bg-zinc-800 rounded-full flex items-center justify-center">
+                     <CalendarCheck className="text-amber-500 w-6 h-6" />
+                   </div>
+                   <div>
+                     <div className="text-sm text-zinc-400">Tonight's Forecast</div>
+                     <div className="text-xl font-bold">Fully Booked</div>
+                   </div>
+                 </div>
+                 <div className="space-y-4">
+                    <div className="flex items-center justify-between p-3 bg-zinc-900 rounded-lg border border-zinc-800">
+                      <span className="text-zinc-400">7:00 PM - 8:00 PM</span>
+                      <span className="text-white font-mono">100% Occ.</span>
+                    </div>
+                    <div className="flex items-center justify-between p-3 bg-zinc-900 rounded-lg border border-zinc-800">
+                      <span className="text-zinc-400">Waiting List</span>
+                      <span className="text-amber-500 font-mono">12 Parties</span>
+                    </div>
+                 </div>
+              </div>
+            </div>
+
+            <div className="order-1 md:order-2">
+              <div className="inline-flex items-center space-x-2 bg-zinc-800 rounded-full px-4 py-2 mb-8 border border-zinc-700">
+                <span className="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
+                <span className="text-sm font-medium text-zinc-300">Maximize Covers</span>
+              </div>
+              <h2 className="text-4xl md:text-5xl font-bold mb-8 leading-tight">
+                No More Empty Seats, No More No-Shows
+              </h2>
+              <p className="text-zinc-400 text-lg leading-relaxed mb-10">
+                Turn tables faster and reduce revenue loss. Our smart reminders drastically cut down no-shows, while automated waitlists keep your floor full.
+              </p>
+              
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 border-t border-zinc-800 pt-10">
+                <div>
+                  <div className="text-4xl font-bold text-white mb-2">+20%</div>
+                  <div className="text-zinc-500 text-sm">Table Turnover</div>
+                </div>
+                <div>
+                  <div className="text-4xl font-bold text-white mb-2">-80%</div>
+                  <div className="text-zinc-500 text-sm">No-Shows</div>
+                </div>
+                 <div>
+                  <div className="text-4xl font-bold text-white mb-2">+35%</div>
+                  <div className="text-zinc-500 text-sm">Online Bookings</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* DETAILED FEATURE (Light) */}
+        <section className="bg-zinc-50 py-32 px-6">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center max-w-3xl mx-auto mb-20">
+              <h2 className="text-4xl font-bold text-zinc-900 mb-6">Smart Seating Logic</h2>
+              <p className="text-xl text-zinc-500">
+                Tetris for your dining room. Our algorithm suggests the optimal table for every party size and duration, maximizing your cover count per shift.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+              {[
+                {
+                  icon: <Layout className="w-6 h-6 text-white" />,
+                  title: "Auto-Assignment",
+                  desc: "Instantly assigns incoming reservations to the best available table to prevent gaps and optimize server sections."
+                },
+                {
+                  icon: <UserCheck className="w-6 h-6 text-white" />,
+                  title: "VIP Recognition",
+                  desc: "Alerts the host when a high-spending regular walks in. See their favorite table and past order history instantly."
+                },
+                {
+                  icon: <Calendar className="w-6 h-6 text-white" />,
+                  title: "Event Management",
+                  desc: "Easily block out sections for private parties or large groups without disrupting the rest of the flow."
+                }
+              ].map((feature, i) => (
+                <div key={i} className="bg-white p-8 rounded-2xl shadow-sm border border-zinc-100 hover:shadow-md transition-shadow">
+                  <div className="w-12 h-12 bg-zinc-900 rounded-xl flex items-center justify-center mb-6">
+                    {feature.icon}
+                  </div>
+                  <h3 className="text-xl font-bold text-zinc-900 mb-3">{feature.title}</h3>
+                  <p className="text-zinc-500 leading-relaxed">
+                    {feature.desc}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
         </section>

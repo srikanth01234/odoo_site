@@ -15,12 +15,22 @@ import {
   Search,
   TrendingUp,
   LayoutGrid,
-  RefreshCw
+  RefreshCw,
+  Zap,
+  Smartphone,
+  Globe,
+  WifiOff,
+  Trash2,
+  Users,
+  CalendarCheck,
+  QrCode,
+  Percent,
+  Tags
 } from 'lucide-react';
+import { motion } from 'framer-motion';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import FeatureQuickNav from '@/components/FeatureQuickNav';
-import { Globe } from "lucide-react";
 
 const MultiMenuManagementPage = () => {
   return (
@@ -146,6 +156,113 @@ const MultiMenuManagementPage = () => {
                 Learn More 
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
+            </div>
+          </div>
+        </section>
+
+        {/* STATS SECTION (Dark) */}
+        <section className="bg-zinc-900 text-white py-32 px-6">
+          <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+            <div>
+              <div className="inline-flex items-center space-x-2 bg-zinc-800 rounded-full px-4 py-2 mb-8 border border-zinc-700">
+                <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
+                <span className="text-sm font-medium text-zinc-300">Unified Control</span>
+              </div>
+              <h2 className="text-4xl md:text-5xl font-bold mb-8 leading-tight">
+                Real-time Sync Across All Channels
+              </h2>
+              <p className="text-zinc-400 text-lg leading-relaxed mb-10">
+                Eliminate menu discrepancies forever. When you update a dish, price, or modifier in the central dashboard, it instantly reflects across your POS, website, delivery apps, and digital kiosks.
+              </p>
+              
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 border-t border-zinc-800 pt-10">
+                <div>
+                  <div className="text-4xl font-bold text-white mb-2">99.9%</div>
+                  <div className="text-zinc-500 text-sm">Consistency Rate</div>
+                </div>
+                <div>
+                  <div className="text-4xl font-bold text-white mb-2">&lt; 1s</div>
+                  <div className="text-zinc-500 text-sm">Update Speed</div>
+                </div>
+                 <div>
+                  <div className="text-4xl font-bold text-white mb-2">5+</div>
+                  <div className="text-zinc-500 text-sm">Channels Sync</div>
+                </div>
+              </div>
+            </div>
+            
+            <div className="relative">
+              <div className="absolute inset-0 bg-gradient-to-tr from-red-600/20 to-transparent rounded-3xl blur-2xl"></div>
+              <div className="relative bg-zinc-950 border border-zinc-800 rounded-3xl p-8 shadow-2xl overflow-hidden">
+                <div className="flex items-center justify-between mb-8 border-b border-zinc-800 pb-6">
+                  <h3 className="text-lg font-bold">Menu Sync Status</h3>
+                  <div className="flex items-center space-x-2 text-green-500 bg-green-500/10 px-3 py-1 rounded-full text-xs font-bold">
+                    <CheckCircle className="w-3 h-3" />
+                    <span>ALL SYSTEMS OPERATIONAL</span>
+                  </div>
+                </div>
+                
+                <div className="space-y-4">
+                  {[
+                    { name: 'POS Terminals (Main Floor)', status: 'Synced', time: 'Just now' },
+                    { name: 'Website Menu', status: 'Synced', time: 'Just now' },
+                    { name: 'UberEats Integration', status: 'Synced', time: '2s ago' },
+                    { name: 'Kitchen Display System', status: 'Synced', time: 'Just now' }
+                  ].map((item, i) => (
+                    <div key={i} className="flex items-center justify-between p-4 rounded-xl bg-zinc-900 border border-zinc-800">
+                      <div className="flex items-center space-x-4">
+                        <div className="w-2 h-2 rounded-full bg-green-500"></div>
+                        <span className="font-medium text-zinc-300">{item.name}</span>
+                      </div>
+                      <div className="text-right">
+                        <div className="text-xs text-zinc-500">{item.time}</div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* DETAILED FEATURE (Light) */}
+        <section className="bg-zinc-50 py-32 px-6">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center max-w-3xl mx-auto mb-20">
+              <h2 className="text-4xl font-bold text-zinc-900 mb-6">Seasonal Agility</h2>
+              <p className="text-xl text-zinc-500">
+                Adapt to trends and seasons instantly. Pre-schedule menus for holidays, happy hours, or special events without the last-minute rustic rush.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+              {[
+                {
+                  icon: <CalendarCheck className="w-6 h-6 text-white" />,
+                  title: "Scheduled Publishing",
+                  desc: "Set your summer menu to go live automatically on June 1st at 10 AM. No manual intervention required."
+                },
+                {
+                  icon: <Layers className="w-6 h-6 text-white" />,
+                  title: "Contextual Menus",
+                  desc: "Automatically switch between Lunch, Dinner, and Happy Hour menus based on the time of day."
+                },
+                {
+                  icon: <RefreshCw className="w-6 h-6 text-white" />,
+                  title: "Instant 86ing",
+                  desc: "Ran out of avocado? One click removes it from all digital menus instantly, preventing awkward cancellations."
+                }
+              ].map((feature, i) => (
+                <div key={i} className="bg-white p-8 rounded-2xl shadow-sm border border-zinc-100 hover:shadow-md transition-shadow">
+                  <div className="w-12 h-12 bg-zinc-900 rounded-xl flex items-center justify-center mb-6">
+                    {feature.icon}
+                  </div>
+                  <h3 className="text-xl font-bold text-zinc-900 mb-3">{feature.title}</h3>
+                  <p className="text-zinc-500 leading-relaxed">
+                    {feature.desc}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
         </section>

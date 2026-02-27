@@ -15,8 +15,17 @@ import {
   Smartphone,
   Camera,
   Zap,
-  Sparkles
+  Sparkles,
+  Globe,
+  LayoutGrid,
+  WifiOff,
+  Trash2,
+  Users,
+  CalendarCheck,
+  Percent,
+  Tags
 } from 'lucide-react';
+import { motion } from 'framer-motion';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import FeatureQuickNav from '@/components/FeatureQuickNav';
@@ -145,6 +154,99 @@ const QRCodeMenuPage = () => {
                 Learn More 
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
+            </div>
+          </div>
+        </section>
+
+        {/* STATS SECTION (Dark) */}
+        <section className="bg-zinc-900 text-white py-32 px-6">
+          <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+            <div>
+              <div className="inline-flex items-center space-x-2 bg-zinc-800 rounded-full px-4 py-2 mb-8 border border-zinc-700">
+                <span className="w-2 h-2 rounded-full bg-pink-500 animate-pulse"></span>
+                <span className="text-sm font-medium text-zinc-300">Contactless & Safe</span>
+              </div>
+              <h2 className="text-4xl md:text-5xl font-bold mb-8 leading-tight">
+                Menus That Sell Themselves
+              </h2>
+              <p className="text-zinc-400 text-lg leading-relaxed mb-10">
+                Reduce staff workload and increase check sizes. Guests order faster and spend more when they can browse vivid photos and intuitive modifiers on their own phones.
+              </p>
+              
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 border-t border-zinc-800 pt-10">
+                <div>
+                  <div className="text-4xl font-bold text-white mb-2">+20%</div>
+                  <div className="text-zinc-500 text-sm">Avg Order Value</div>
+                </div>
+                <div>
+                  <div className="text-4xl font-bold text-white mb-2">100%</div>
+                  <div className="text-zinc-500 text-sm">Contactless</div>
+                </div>
+                 <div>
+                  <div className="text-4xl font-bold text-white mb-2">0s</div>
+                  <div className="text-zinc-500 text-sm">Update Delay</div>
+                </div>
+              </div>
+            </div>
+            
+             <div className="relative">
+              <div className="absolute inset-0 bg-gradient-to-t from-pink-600/20 to-transparent rounded-3xl blur-2xl"></div>
+              <div className="relative bg-zinc-950 border border-zinc-800 rounded-3xl p-8 shadow-2xl flex flex-col items-center text-center">
+                 <QrCode className="w-32 h-32 text-white mb-6" />
+                 <p className="text-zinc-400 mb-6 font-mono text-sm">SCAN TO VIEW MENU</p>
+                 <div className="w-full bg-zinc-900 rounded-xl p-4 border border-zinc-800">
+                    <div className="flex items-center space-x-3 mb-2">
+                       <div className="w-10 h-10 bg-zinc-800 rounded-md"></div>
+                       <div className="flex-1 h-2 bg-zinc-800 rounded"></div>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                       <div className="w-10 h-10 bg-zinc-800 rounded-md"></div>
+                       <div className="flex-1 h-2 bg-zinc-800 rounded"></div>
+                    </div>
+                 </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* DETAILED FEATURE (Light) */}
+        <section className="bg-zinc-50 py-32 px-6">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center max-w-3xl mx-auto mb-20">
+              <h2 className="text-4xl font-bold text-zinc-900 mb-6">Visual Menu Engineering</h2>
+              <p className="text-xl text-zinc-500">
+                Forget PDF uploads. Build a digital storefront that guides guests to your highest margin items with smart recommendations and mouth-watering imagery.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+              {[
+                {
+                  icon: <Sparkles className="w-6 h-6 text-white" />,
+                  title: "Smart Upselling",
+                  desc: "Algorithmically suggest pairings (wine with steak, sides with burgers) at the exact moment a guest is most likely to say yes."
+                },
+                {
+                  icon: <Camera className="w-6 h-6 text-white" />,
+                  title: "High-Res Imagery",
+                  desc: "A picture is worth a thousand calories. Professional food photography integration increases conversion rates on appetizers and desserts."
+                },
+                {
+                  icon: <TrendingUp className="w-6 h-6 text-white" />,
+                  title: "Dynamic Pricing",
+                  desc: "Subtly adjust prices for Happy Hour or special events instantly without needing to reprint a single sheet of paper."
+                }
+              ].map((feature, i) => (
+                <div key={i} className="bg-white p-8 rounded-2xl shadow-sm border border-zinc-100 hover:shadow-md transition-shadow">
+                  <div className="w-12 h-12 bg-zinc-900 rounded-xl flex items-center justify-center mb-6">
+                    {feature.icon}
+                  </div>
+                  <h3 className="text-xl font-bold text-zinc-900 mb-3">{feature.title}</h3>
+                  <p className="text-zinc-500 leading-relaxed">
+                    {feature.desc}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
         </section>

@@ -13,8 +13,20 @@ import {
   Search,
   TrendingUp,
   ClipboardCheck,
-  Bike
+  Bike,
+  Zap,
+  Smartphone,
+  Globe,
+  LayoutGrid,
+  WifiOff,
+  Trash2,
+  Users,
+  CalendarCheck,
+  QrCode,
+  Percent,
+  Tags
 } from 'lucide-react';
+import { motion } from 'framer-motion';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import FeatureQuickNav from '@/components/FeatureQuickNav';
@@ -143,6 +155,114 @@ const OrderManagementPage = () => {
                 Learn More 
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
+            </div>
+          </div>
+        </section>
+
+        {/* STATS SECTION (Dark) */}
+        <section className="bg-zinc-900 text-white py-32 px-6">
+          <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+            <div className="order-2 md:order-1 relative">
+               <div className="absolute inset-0 bg-gradient-to-bl from-red-600/20 to-transparent rounded-3xl blur-2xl"></div>
+              <div className="relative bg-zinc-950 border border-zinc-800 rounded-3xl p-8 shadow-2xl">
+                 <div className="flex items-center justify-between mb-8">
+                  <h3 className="text-lg font-bold">Kitchen Performance</h3>
+                   <div className="bg-zinc-800 rounded-lg px-3 py-1 text-xs font-mono text-zinc-400">LIVE FEED</div>
+                </div>
+                <div className="grid grid-cols-2 gap-4 mb-8">
+                   <div className="bg-zinc-900 p-4 rounded-xl border border-zinc-800">
+                     <div className="text-zinc-500 text-xs mb-1">Avg Prep Time</div>
+                     <div className="text-2xl font-bold text-white">8m 12s</div>
+                     <div className="text-green-500 text-xs mt-1 flex items-center">
+                       <TrendingUp className="w-3 h-3 mr-1" /> -15% vs last week
+                     </div>
+                   </div>
+                   <div className="bg-zinc-900 p-4 rounded-xl border border-zinc-800">
+                     <div className="text-zinc-500 text-xs mb-1">Items in Queue</div>
+                     <div className="text-2xl font-bold text-white">24</div>
+                      <div className="text-zinc-500 text-xs mt-1">Normal Load</div>
+                   </div>
+                </div>
+                 <div className="space-y-3">
+                   <div className="flex items-center justify-between text-sm">
+                     <span className="text-zinc-400">Order Accuracy</span>
+                     <span className="text-green-400 font-bold">99.2%</span>
+                   </div>
+                   <div className="w-full bg-zinc-800 rounded-full h-1.5">
+                     <div className="bg-green-500 h-1.5 rounded-full" style={{ width: '99.2%' }}></div>
+                   </div>
+                 </div>
+              </div>
+            </div>
+
+            <div className="order-1 md:order-2">
+              <div className="inline-flex items-center space-x-2 bg-zinc-800 rounded-full px-4 py-2 mb-8 border border-zinc-700">
+                <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
+                <span className="text-sm font-medium text-zinc-300">Kitchen Precision</span>
+              </div>
+              <h2 className="text-4xl md:text-5xl font-bold mb-8 leading-tight">
+                Order Speed & Accuracy Redefined
+              </h2>
+              <p className="text-zinc-400 text-lg leading-relaxed mb-10">
+                From the moment an order is placed to the second it leaves the pass, our system tracks every step. Identify bottlenecks, reduce errors, and deliver food faster.
+              </p>
+              
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 border-t border-zinc-800 pt-10">
+                <div>
+                  <div className="text-4xl font-bold text-white mb-2">-30%</div>
+                  <div className="text-zinc-500 text-sm">Prep Time</div>
+                </div>
+                <div>
+                  <div className="text-4xl font-bold text-white mb-2">99%</div>
+                  <div className="text-zinc-500 text-sm">Order Accuracy</div>
+                </div>
+                 <div>
+                  <div className="text-4xl font-bold text-white mb-2">+25%</div>
+                  <div className="text-zinc-500 text-sm">Delivery Speed</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* DETAILED FEATURE (Light) */}
+        <section className="bg-zinc-50 py-32 px-6">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center max-w-3xl mx-auto mb-20">
+              <h2 className="text-4xl font-bold text-zinc-900 mb-6">Workflow Orchestration</h2>
+              <p className="text-xl text-zinc-500">
+                Turn your kitchen chaos into a symphony. Smart routing sends items to the correct station screens immediately, prioritizing courses automatically.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+               {[
+                {
+                  icon: <LayoutGrid className="w-6 h-6 text-white" />,
+                  title: "Digital KDS",
+                  desc: "Replace paper tickets with durable, interactive kitchen display screens that show modifiers clearly and track timing."
+                },
+                {
+                  icon: <Zap className="w-6 h-6 text-white" />,
+                  title: "Smart Routing",
+                  desc: "Drinks go to the bar, salads to the expanse, and steaks to the grill. Automatic routing eliminates server foot traffic."
+                },
+                {
+                  icon: <Clock className="w-6 h-6 text-white" />,
+                  title: "Course Management",
+                  desc: "Fire appetizers first and hold mains until the right moment. Give your guests the perfect dining pace."
+                }
+              ].map((feature, i) => (
+                <div key={i} className="bg-white p-8 rounded-2xl shadow-sm border border-zinc-100 hover:shadow-md transition-shadow">
+                  <div className="w-12 h-12 bg-zinc-900 rounded-xl flex items-center justify-center mb-6">
+                    {feature.icon}
+                  </div>
+                  <h3 className="text-xl font-bold text-zinc-900 mb-3">{feature.title}</h3>
+                  <p className="text-zinc-500 leading-relaxed">
+                    {feature.desc}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
         </section>

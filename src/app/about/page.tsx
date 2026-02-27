@@ -37,14 +37,14 @@ const AboutPage = () => {
             >
               <div>
                 <h3 className="font-bold text-zinc-900 text-lg mb-2">Modern Restaurant Solutions</h3>
-                <p className="text-zinc-500 text-sm leading-relaxed">
+                <p className="text-zinc-500 text-base leading-relaxed">
                   Innovative POS systems and marketing tools designed to streamline operations and boost growth for restaurants of all sizes.
                 </p>
               </div>
               
               <div>
                 <h3 className="font-bold text-zinc-900 text-lg mb-2">Seamless Integration</h3>
-                <p className="text-zinc-500 text-sm leading-relaxed">
+                <p className="text-zinc-500 text-base leading-relaxed">
                   Unified platforms featuring clean interfaces, powerful analytics, and customer-first experiences.
                 </p>
               </div>
@@ -92,7 +92,7 @@ const AboutPage = () => {
                     className="flex-1 flex flex-col justify-center p-4"
                  >
                    <h3 className="text-3xl font-bold text-zinc-900 mb-3">Our Philosophy</h3>
-                   <p className="text-zinc-600 text-sm leading-relaxed">
+                   <p className="text-zinc-600 text-base leading-relaxed">
                      At Dine360, we believe in empowering restaurateurs with technology that feels invisible yet powerful, enabling them to focus on what they do best—serving great food.
                    </p>
                  </motion.div>
