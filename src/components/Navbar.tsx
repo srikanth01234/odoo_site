@@ -191,7 +191,7 @@ const Navbar = () => {
       </div>
 
       <div className="flex items-center gap-4 px-0 md:px-5">
-        <Link href="/start" className="hidden sm:block bg-red-600 text-white px-6 md:px-8 py-2 md:py-3 rounded-full hover:bg-red-700 transition-colors font-bold shadow-lg shadow-red-600/20 text-xs md:text-sm">
+        <Link href="/contact" className="hidden sm:block bg-red-600 text-white px-6 md:px-8 py-2 md:py-3 rounded-full hover:bg-red-700 transition-colors font-bold shadow-lg shadow-red-600/20 text-xs md:text-sm">
           Start Now
         </Link>
         
@@ -365,7 +365,7 @@ const Navbar = () => {
 
             <div className="p-6">
               <Link 
-                href="/start" 
+                href="/contact" 
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="block w-full text-center bg-red-600 text-white py-4 rounded-xl font-bold shadow-lg shadow-red-600/30"
               >

@@ -45,8 +45,8 @@ const CafeBistroPage = () => {
               </span>
             </div>
 
-            <div className="inline-flex items-center gap-2 text-violet-600 font-bold tracking-widest uppercase text-xs">
-              <div className="h-[1px] w-6 bg-violet-500" />
+            <div className="inline-flex items-center gap-2 text-red-600 font-bold tracking-widest uppercase text-xs">
+              <div className="h-[1px] w-6 bg-red-500" />
               Crafted for the Coffee & Dining Experience
             </div>
 
@@ -62,13 +62,13 @@ const CafeBistroPage = () => {
             <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center mt-1">
               <Link
                 href="/contact"
-                className="bg-violet-600 hover:bg-violet-700 text-white px-7 py-3.5 rounded-xl font-semibold text-base transition-all shadow-lg shadow-violet-600/20 active:scale-95"
+                className="bg-red-600 hover:bg-red-700 text-white px-7 py-3.5 rounded-xl font-semibold text-base transition-all shadow-lg shadow-red-600/20 active:scale-95"
               >
                 Start Free Now
               </Link>
               <Link
                 href="/contact"
-                className="border-2 border-zinc-200 hover:border-violet-500 text-zinc-700 hover:text-violet-600 px-7 py-3.5 rounded-xl font-semibold text-base transition-all active:scale-95"
+                className="bg-black hover:bg-zinc-900 text-white px-7 py-3.5 rounded-xl font-semibold text-base transition-all active:scale-95"
               >
                 Book A Demo
               </Link>
@@ -76,11 +76,11 @@ const CafeBistroPage = () => {
 
             <div className="pt-6 border-t border-zinc-100 mt-4 flex flex-col gap-2">
               <div className="flex items-center gap-2">
-                <div className="w-2 h-2 rounded-full bg-violet-500" />
+                <div className="w-2 h-2 rounded-full bg-red-500" />
                 <span className="text-xs font-semibold text-zinc-500">Cafe & Bistro POS System With Complete Management</span>
               </div>
               <div className="flex items-center gap-2">
-                <div className="w-2 h-2 rounded-full bg-violet-300" />
+                <div className="w-2 h-2 rounded-full bg-red-300" />
                 <span className="text-xs font-semibold text-zinc-500">Complete Cafe & Bistro Management Solution</span>
               </div>
             </div>
@@ -88,7 +88,7 @@ const CafeBistroPage = () => {
 
           {/* Right Content - Cards */}
           <div className="relative h-[500px] w-full flex items-center justify-center lg:justify-end" style={{ perspective: '1000px' }}>
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110%] h-[110%] bg-gradient-to-tr from-violet-50/50 to-purple-50/50 rounded-full blur-3xl -z-10" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110%] h-[110%] bg-gradient-to-tr from-red-50/50 to-orange-50/50 rounded-full blur-3xl -z-10" />
 
             <div className="relative w-full h-full max-w-md mx-auto lg:mr-0">
               {/* Card 1 - Left Tilted */}
@@ -104,7 +104,7 @@ const CafeBistroPage = () => {
                     <p className="text-[10px] text-zinc-300 font-medium tracking-wide uppercase mb-0.5">Orders</p>
                     <p className="text-white font-bold text-2xl">3X</p>
                   </div>
-                  <div className="absolute bottom-0 left-0 w-full h-16 text-violet-500/90">
+                  <div className="absolute bottom-0 left-0 w-full h-16 text-red-500/90">
                     <svg viewBox="0 0 1440 320" preserveAspectRatio="none" className="w-full h-full">
                       <path fill="currentColor" d="M0,192L48,197.3C96,203,192,213,288,229.3C384,245,480,267,576,250.7C672,235,768,181,864,181.3C960,181,1056,235,1152,234.7C1248,235,1344,181,1392,154.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
                     </svg>
@@ -125,7 +125,7 @@ const CafeBistroPage = () => {
                     <p className="text-[10px] text-zinc-300 font-medium tracking-wide uppercase mb-0.5">Satisfaction</p>
                     <p className="text-white font-bold text-2xl">Optimal</p>
                   </div>
-                  <div className="absolute bottom-0 left-0 w-full h-16 text-purple-500/90">
+                  <div className="absolute bottom-0 left-0 w-full h-16 text-orange-500/90">
                     <svg viewBox="0 0 1440 320" preserveAspectRatio="none" className="w-full h-full">
                       <path fill="currentColor" d="M0,96L48,112C96,128,192,160,288,186.7C384,213,480,235,576,213.3C672,192,768,128,864,128C960,128,1056,192,1152,208C1248,224,1344,192,1392,176L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
                     </svg>
@@ -146,7 +146,7 @@ const CafeBistroPage = () => {
                     <p className="text-[10px] text-zinc-300 font-medium tracking-wide uppercase mb-0.5">Accuracy</p>
                     <p className="text-white font-bold text-2xl">100%</p>
                   </div>
-                  <div className="absolute bottom-0 left-0 w-full h-16 text-violet-500/90">
+                  <div className="absolute bottom-0 left-0 w-full h-16 text-red-500/90">
                     <svg viewBox="0 0 1440 320" preserveAspectRatio="none" className="w-full h-full">
                       <path fill="currentColor" d="M0,224L48,213.3C96,203,192,181,288,181.3C384,181,480,203,576,224C672,245,768,267,864,250.7C960,235,1056,181,1152,165.3C1248,149,1344,171,1392,181.3L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
                     </svg>
@@ -167,9 +167,9 @@ const CafeBistroPage = () => {
             viewport={{ once: true }}
             className="flex items-center justify-center gap-2 mb-6"
           >
-            <div className="h-[1px] w-8 bg-violet-500" />
-            <span className="text-violet-600 font-bold tracking-widest uppercase text-xs">Brew Better, Earn More</span>
-            <div className="h-[1px] w-8 bg-violet-500" />
+            <div className="h-[1px] w-8 bg-red-500" />
+            <span className="text-red-600 font-bold tracking-widest uppercase text-xs">Brew Better, Earn More</span>
+            <div className="h-[1px] w-8 bg-red-500" />
           </motion.div>
 
           <motion.h2
@@ -180,7 +180,7 @@ const CafeBistroPage = () => {
             className="text-3xl md:text-5xl font-bold text-zinc-900 mb-6 leading-tight"
           >
             From Your First Latte to a Full House — <br className="hidden md:block" />
-            <span className="text-violet-600">Menumium Powers It All</span>
+            <span className="text-red-600">Menumium Powers It All</span>
           </motion.h2>
 
           <motion.p
@@ -200,7 +200,7 @@ const CafeBistroPage = () => {
               initial={{ opacity: 0, rotate: -15, scale: 0.8 }}
               whileInView={{ opacity: 1, rotate: -5, scale: 1 }}
               viewport={{ once: true }}
-              className="absolute top-10 left-1/4 w-[500px] h-[500px] bg-violet-100/50 rounded-[4rem] -rotate-12"
+              className="absolute top-10 left-1/4 w-[500px] h-[500px] bg-red-100/50 rounded-[4rem] -rotate-12"
             />
             <motion.div
               initial={{ opacity: 0, rotate: 15, scale: 0.8 }}
@@ -225,7 +225,7 @@ const CafeBistroPage = () => {
                 </div>
               </div>
               <div className="p-4 flex-1 flex flex-col pt-8">
-                <div className="w-12 h-12 rounded-2xl bg-violet-500 mb-4 mx-auto flex items-center justify-center text-white font-bold text-xl">M</div>
+                <div className="w-12 h-12 rounded-2xl bg-red-500 mb-4 mx-auto flex items-center justify-center text-white font-bold text-xl">M</div>
                 <div className="text-center mb-6">
                   <h3 className="text-white font-bold text-lg">Cafe & Bistro Hub</h3>
                   <p className="text-zinc-500 text-[10px]">Cloud Operations Active</p>
@@ -246,7 +246,7 @@ const CafeBistroPage = () => {
               className="absolute -left-12 top-20 bg-white p-5 rounded-2xl shadow-xl border border-zinc-100 max-w-[220px]"
             >
               <div className="flex items-center gap-3 mb-2">
-                <div className="p-2 bg-violet-50 rounded-lg text-violet-600">
+                <div className="p-2 bg-red-50 rounded-lg text-red-600">
                   <TrendingUp className="w-5 h-5" />
                 </div>
                 <span className="text-lg font-bold text-zinc-900">☕</span>
@@ -263,13 +263,13 @@ const CafeBistroPage = () => {
               className="absolute -bottom-6 left-1/2 -translate-x-1/2 bg-white p-5 rounded-2xl shadow-xl border border-zinc-100 w-full max-w-[280px] z-20"
             >
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-violet-50 rounded-xl flex items-center justify-center text-violet-600">
+                <div className="w-12 h-12 bg-red-50 rounded-xl flex items-center justify-center text-red-600">
                   <Check className="w-6 h-6" />
                 </div>
                 <div>
                   <div className="flex items-center gap-2">
                     <span className="text-xl font-bold text-zinc-900">📊</span>
-                    <span className="text-[10px] bg-violet-100 text-violet-600 px-2 py-0.5 rounded-full font-bold">LIVE</span>
+                    <span className="text-[10px] bg-red-100 text-red-600 px-2 py-0.5 rounded-full font-bold">LIVE</span>
                   </div>
                   <p className="text-sm font-bold text-zinc-800">Sales Track</p>
                   <p className="text-[11px] text-zinc-500 mt-1">Monitor End-to-End with Our Data Analytics</p>
@@ -285,7 +285,7 @@ const CafeBistroPage = () => {
               className="absolute -right-12 top-48 bg-white p-5 rounded-2xl shadow-xl border border-zinc-100 max-w-[220px]"
             >
               <div className="flex items-center gap-3 mb-2">
-                <div className="p-2 bg-purple-50 rounded-lg text-purple-600">
+                <div className="p-2 bg-orange-50 rounded-lg text-orange-600">
                   <TrendingUp className="w-5 h-5" />
                 </div>
                 <span className="text-lg">🔄</span>
@@ -299,7 +299,7 @@ const CafeBistroPage = () => {
               transition={{ repeat: Infinity, duration: 4 }}
               className="absolute -left-24 top-1/2 w-16 h-16 bg-white rounded-full shadow-lg flex flex-col items-center justify-center border border-zinc-100"
             >
-              <Layout className="w-6 h-6 text-violet-500" />
+              <Layout className="w-6 h-6 text-red-500" />
               <span className="text-[8px] font-bold text-zinc-400 mt-1">Dashboard</span>
             </motion.div>
 
@@ -317,7 +317,7 @@ const CafeBistroPage = () => {
               transition={{ repeat: Infinity, duration: 5, delay: 1 }}
               className="absolute -right-10 -bottom-10 w-20 h-20 bg-zinc-900 rounded-full shadow-2xl flex flex-col items-center justify-center border border-zinc-800"
             >
-              <Dot className="w-10 h-10 text-violet-500 animate-pulse" />
+              <Dot className="w-10 h-10 text-red-500 animate-pulse" />
               <span className="text-[8px] font-bold text-zinc-400 -mt-2">Live Cloud</span>
             </motion.div>
           </div>
@@ -333,9 +333,9 @@ const CafeBistroPage = () => {
           className="bg-zinc-900 rounded-[2.5rem] p-10 md:p-14 text-center"
         >
           <div className="flex items-center justify-center gap-2 mb-4">
-            <div className="h-[1px] w-8 bg-violet-500" />
-            <span className="text-violet-400 font-bold tracking-widest uppercase text-xs">All-in-One Cafe & Bistro Solution</span>
-            <div className="h-[1px] w-8 bg-violet-500" />
+            <div className="h-[1px] w-8 bg-red-500" />
+            <span className="text-red-400 font-bold tracking-widest uppercase text-xs">All-in-One Cafe & Bistro Solution</span>
+            <div className="h-[1px] w-8 bg-red-500" />
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 leading-tight">
             From Morning Brews to Evening Dining — <br className="hidden md:block" />Everything Your Cafe Needs
@@ -386,7 +386,7 @@ const CafeBistroPage = () => {
               </div>
             </div>
             <div className="w-full md:w-1/2 p-6 md:px-12 relative z-10">
-              <div className="w-10 h-10 bg-violet-50 rounded-xl flex items-center justify-center text-violet-500 mb-4">
+              <div className="w-10 h-10 bg-red-50 rounded-xl flex items-center justify-center text-red-500 mb-4">
                 <Zap className="w-5 h-5" />
               </div>
               <h3 className="text-xl font-bold text-zinc-900 mb-3">3X Faster Order Processing</h3>
@@ -405,7 +405,7 @@ const CafeBistroPage = () => {
               </div>
             </div>
             <div className="w-full md:w-1/2 p-6 md:px-12 relative z-10">
-              <div className="w-10 h-10 bg-violet-50 rounded-xl flex items-center justify-center text-violet-500 mb-4">
+              <div className="w-10 h-10 bg-red-50 rounded-xl flex items-center justify-center text-red-500 mb-4">
                 <RefreshCw className="w-5 h-5" />
               </div>
               <h3 className="text-xl font-bold text-zinc-900 mb-3">Instant Order Syncing</h3>
@@ -424,7 +424,7 @@ const CafeBistroPage = () => {
               </div>
             </div>
             <div className="w-full md:w-1/2 p-6 md:px-12 relative z-10">
-              <div className="w-10 h-10 bg-violet-50 rounded-xl flex items-center justify-center text-violet-500 mb-4">
+              <div className="w-10 h-10 bg-red-50 rounded-xl flex items-center justify-center text-red-500 mb-4">
                 <Clock className="w-5 h-5" />
               </div>
               <h3 className="text-xl font-bold text-zinc-900 mb-3">Zero Order Delays</h3>
@@ -443,7 +443,7 @@ const CafeBistroPage = () => {
               </div>
             </div>
             <div className="w-full md:w-1/2 p-6 md:px-12 relative z-10">
-              <div className="w-10 h-10 bg-violet-50 rounded-xl flex items-center justify-center text-violet-500 mb-4">
+              <div className="w-10 h-10 bg-red-50 rounded-xl flex items-center justify-center text-red-500 mb-4">
                 <Target className="w-5 h-5" />
               </div>
               <h3 className="text-xl font-bold text-zinc-900 mb-3">100% Order Accuracy</h3>
@@ -460,10 +460,10 @@ const CafeBistroPage = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="flex flex-col gap-6 order-2 lg:order-1">
             <div className="flex items-center gap-3">
-              <div className="h-[2px] w-10 bg-violet-500 relative">
-                <div className="absolute -right-1 -top-1 w-2 h-2 bg-violet-500 rounded-full" />
+              <div className="h-[2px] w-10 bg-red-500 relative">
+                <div className="absolute -right-1 -top-1 w-2 h-2 bg-red-500 rounded-full" />
               </div>
-              <span className="text-violet-500 font-bold tracking-wider uppercase text-xs flex items-center gap-2">
+              <span className="text-red-500 font-bold tracking-wider uppercase text-xs flex items-center gap-2">
                 <ShoppingCart className="w-3.5 h-3.5" /> Order Management
               </span>
             </div>
@@ -480,7 +480,7 @@ const CafeBistroPage = () => {
                 "Offer smooth cancellations and fast refunds to keep customers happy."
               ].map((point, i) => (
                 <li key={i} className="flex gap-3 items-start group">
-                  <div className="mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-violet-50 flex items-center justify-center text-violet-600 group-hover:bg-violet-600 group-hover:text-white transition-colors">
+                  <div className="mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-red-50 flex items-center justify-center text-red-600 group-hover:bg-red-600 group-hover:text-white transition-colors">
                     <Check className="w-3.5 h-3.5" />
                   </div>
                   <span className="text-zinc-600 text-sm leading-relaxed">{point}</span>
@@ -488,7 +488,7 @@ const CafeBistroPage = () => {
               ))}
             </ul>
             <div className="pt-4">
-              <Link href="/contact" className="inline-flex items-center bg-violet-600 hover:bg-violet-700 text-white px-8 py-3.5 rounded-xl font-bold text-base transition-all shadow-lg shadow-violet-600/20 active:scale-95">
+              <Link href="/contact" className="inline-flex items-center bg-red-600 hover:bg-red-700 text-white px-8 py-3.5 rounded-xl font-bold text-base transition-all shadow-lg shadow-red-600/20 active:scale-95">
                 Get Started Now
               </Link>
             </div>
@@ -520,7 +520,7 @@ const CafeBistroPage = () => {
                         <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center font-bold text-zinc-400 text-[9px]">{order.id}</div>
                         <p className="font-bold text-zinc-800 text-xs">{order.item}</p>
                       </div>
-                      <div className={`w-1.5 h-1.5 rounded-full ${order.status === 'Pending' ? 'bg-yellow-400' : 'bg-violet-400'}`} />
+                      <div className={`w-1.5 h-1.5 rounded-full ${order.status === 'Pending' ? 'bg-yellow-400' : 'bg-red-400'}`} />
                     </div>
                   ))}
                 </div>
@@ -542,7 +542,7 @@ const CafeBistroPage = () => {
             >
               <div className="grid grid-cols-4 gap-3 h-full">
                 {[...Array(8)].map((_, i) => (
-                  <div key={i} className={`aspect-square rounded-xl flex flex-col items-center justify-center border transition-all ${i % 3 === 0 ? 'border-violet-500 bg-violet-50 text-violet-600' : 'border-zinc-100 bg-zinc-50 text-zinc-300'}`}>
+                  <div key={i} className={`aspect-square rounded-xl flex flex-col items-center justify-center border transition-all ${i % 3 === 0 ? 'border-red-500 bg-red-50 text-red-600' : 'border-zinc-100 bg-zinc-50 text-zinc-300'}`}>
                     <span className="text-[10px] font-bold">T-{i + 1}</span>
                   </div>
                 ))}
@@ -565,10 +565,10 @@ const CafeBistroPage = () => {
 
           <div className="flex flex-col gap-6">
             <div className="flex items-center gap-3">
-              <div className="h-[2px] w-10 bg-violet-500 relative">
-                <div className="absolute -right-1 -top-1 w-2 h-2 bg-violet-500 rounded-full" />
+              <div className="h-[2px] w-10 bg-red-500 relative">
+                <div className="absolute -right-1 -top-1 w-2 h-2 bg-red-500 rounded-full" />
               </div>
-              <span className="text-violet-500 font-bold tracking-wider uppercase text-xs flex items-center gap-2">
+              <span className="text-red-500 font-bold tracking-wider uppercase text-xs flex items-center gap-2">
                 <Users className="w-3.5 h-3.5" /> Table & Reservation
               </span>
             </div>
@@ -585,7 +585,7 @@ const CafeBistroPage = () => {
                 "Streamline both walk-ins and pre-bookings from a single interface."
               ].map((point, i) => (
                 <li key={i} className="flex gap-3 items-start group">
-                  <div className="mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-violet-50 flex items-center justify-center text-violet-600 group-hover:bg-violet-600 group-hover:text-white transition-colors">
+                  <div className="mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-red-50 flex items-center justify-center text-red-600 group-hover:bg-red-600 group-hover:text-white transition-colors">
                     <Check className="w-3.5 h-3.5" />
                   </div>
                   <span className="text-zinc-600 text-sm leading-relaxed">{point}</span>
@@ -593,7 +593,7 @@ const CafeBistroPage = () => {
               ))}
             </ul>
             <div className="pt-4">
-              <Link href="/contact" className="inline-flex items-center bg-violet-600 hover:bg-violet-700 text-white px-8 py-3.5 rounded-xl font-bold text-base transition-all shadow-lg shadow-violet-600/20 active:scale-95">
+              <Link href="/contact" className="inline-flex items-center bg-red-600 hover:bg-red-700 text-white px-8 py-3.5 rounded-xl font-bold text-base transition-all shadow-lg shadow-red-600/20 active:scale-95">
                 Get Started Now
               </Link>
             </div>
@@ -624,7 +624,7 @@ const CafeBistroPage = () => {
                         <p className="font-bold text-[12px] text-zinc-800">{i === 1 ? 'Eggs Benedict' : 'Cappuccino'}</p>
                         <div className="flex items-center gap-2 mt-0.5">
                           <span className="text-zinc-900 font-bold text-xs">$12.50</span>
-                          <span className="text-violet-500 text-[9px] font-bold">-10%</span>
+                          <span className="text-red-500 text-[9px] font-bold">-10%</span>
                         </div>
                       </div>
                     </div>
@@ -645,7 +645,7 @@ const CafeBistroPage = () => {
                   <div className="space-y-1">
                     <p className="text-[9px] font-bold text-zinc-500 uppercase">Type</p>
                     <div className="flex items-center gap-1 text-[9px] text-zinc-800 font-medium">
-                      <div className="w-2 h-2 rounded-full bg-violet-500" /> Dine-in
+                      <div className="w-2 h-2 rounded-full bg-red-500" /> Dine-in
                     </div>
                   </div>
                   <div className="space-y-1 pt-1">
@@ -665,11 +665,11 @@ const CafeBistroPage = () => {
               <div className="p-4">
                 <p className="text-[9px] font-bold text-zinc-500 uppercase mb-2">Payment</p>
                 <label className="flex items-center gap-2 text-[9px] text-zinc-800 font-bold mb-3">
-                  <input type="radio" name="pay" defaultChecked className="accent-violet-500" /> Pay First
+                  <input type="radio" name="pay" defaultChecked className="accent-red-500" /> Pay First
                 </label>
                 <div className="flex gap-2">
                   <button className="flex-1 h-8 border border-zinc-100 rounded-lg text-[9px] font-bold">Clear</button>
-                  <button className="flex-2 h-8 bg-violet-600 rounded-lg text-[9px] text-white font-bold px-3">Place Order</button>
+                  <button className="flex-2 h-8 bg-red-600 rounded-lg text-[9px] text-white font-bold px-3">Place Order</button>
                 </div>
               </div>
             </motion.div>
@@ -677,10 +677,10 @@ const CafeBistroPage = () => {
 
           <div className="flex flex-col gap-6">
             <div className="flex items-center gap-3">
-              <div className="h-[2px] w-10 bg-violet-500 relative">
-                <div className="absolute -right-1 -top-1 w-2 h-2 bg-violet-500 rounded-full" />
+              <div className="h-[2px] w-10 bg-red-500 relative">
+                <div className="absolute -right-1 -top-1 w-2 h-2 bg-red-500 rounded-full" />
               </div>
-              <span className="text-violet-500 font-bold tracking-wider uppercase text-xs">POS</span>
+              <span className="text-red-500 font-bold tracking-wider uppercase text-xs">POS</span>
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-zinc-900 leading-tight">
               A POS as Refined <br /> as Your Cafe
@@ -695,7 +695,7 @@ const CafeBistroPage = () => {
                 "Accept all payment methods for a frictionless checkout experience."
               ].map((point, i) => (
                 <li key={i} className="flex gap-3 items-start group">
-                  <div className="mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-violet-50 flex items-center justify-center text-violet-600 group-hover:bg-violet-600 group-hover:text-white transition-colors">
+                  <div className="mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-red-50 flex items-center justify-center text-red-600 group-hover:bg-red-600 group-hover:text-white transition-colors">
                     <Check className="w-3.5 h-3.5" />
                   </div>
                   <span className="text-zinc-600 text-sm leading-relaxed">{point}</span>
@@ -703,7 +703,7 @@ const CafeBistroPage = () => {
               ))}
             </ul>
             <div className="pt-4">
-              <Link href="/contact" className="inline-flex items-center bg-violet-600 hover:bg-violet-700 text-white px-8 py-3.5 rounded-xl font-bold text-base transition-all shadow-lg shadow-violet-600/20 active:scale-95">
+              <Link href="/contact" className="inline-flex items-center bg-red-600 hover:bg-red-700 text-white px-8 py-3.5 rounded-xl font-bold text-base transition-all shadow-lg shadow-red-600/20 active:scale-95">
                 Get Started Now
               </Link>
             </div>
@@ -716,10 +716,10 @@ const CafeBistroPage = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="flex flex-col gap-6 order-2 lg:order-1">
             <div className="flex items-center gap-3">
-              <div className="h-[2px] w-10 bg-violet-500 relative">
-                <div className="absolute -right-1 -top-1 w-2 h-2 bg-violet-500 rounded-full" />
+              <div className="h-[2px] w-10 bg-red-500 relative">
+                <div className="absolute -right-1 -top-1 w-2 h-2 bg-red-500 rounded-full" />
               </div>
-              <span className="text-violet-500 font-bold tracking-wider uppercase text-xs flex items-center gap-2">
+              <span className="text-red-500 font-bold tracking-wider uppercase text-xs flex items-center gap-2">
                 <QrCode className="w-3.5 h-3.5" /> QR Code Menu
               </span>
             </div>
@@ -736,7 +736,7 @@ const CafeBistroPage = () => {
                 "Update prices and items in real-time — no reprinting needed."
               ].map((point, i) => (
                 <li key={i} className="flex gap-3 items-start group">
-                  <div className="mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-violet-50 flex items-center justify-center text-violet-600 group-hover:bg-violet-600 group-hover:text-white transition-colors">
+                  <div className="mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-red-50 flex items-center justify-center text-red-600 group-hover:bg-red-600 group-hover:text-white transition-colors">
                     <Check className="w-3.5 h-3.5" />
                   </div>
                   <span className="text-zinc-600 text-sm leading-relaxed">{point}</span>
@@ -769,13 +769,13 @@ const CafeBistroPage = () => {
                     {['Flat White — $4.50', 'Eggs Benedict — $14.00', 'Banana Bread — $6.00'].map((item, i) => (
                       <div key={i} className="flex justify-between items-center p-2 border border-zinc-50 rounded-lg">
                         <span className="text-[10px] font-bold text-zinc-800">{item.split('—')[0]}</span>
-                        <span className="text-[10px] text-violet-600 font-bold">{item.split('—')[1]}</span>
+                        <span className="text-[10px] text-red-600 font-bold">{item.split('—')[1]}</span>
                       </div>
                     ))}
                   </div>
                 </div>
                 <div className="p-3 border-t border-zinc-100">
-                  <div className="w-full py-2 bg-violet-600 text-white rounded-lg text-center text-[10px] font-bold">View Cart</div>
+                  <div className="w-full py-2 bg-red-600 text-white rounded-lg text-center text-[10px] font-bold">View Cart</div>
                 </div>
               </div>
             </motion.div>
@@ -794,16 +794,16 @@ const CafeBistroPage = () => {
               viewport={{ once: true }}
             >
               <h3 className="font-bold text-zinc-900 text-sm flex items-center gap-2 mb-4">
-                <BookOpen className="w-4 h-4 text-violet-500" /> Menu Management
+                <BookOpen className="w-4 h-4 text-red-500" /> Menu Management
               </h3>
               <div className="grid grid-cols-2 gap-3 mb-6">
                 <div className="p-3.5 bg-zinc-50 rounded-2xl">
                   <p className="text-[9px] text-zinc-400 font-bold uppercase mb-0.5">Menus</p>
                   <p className="text-xl font-bold text-zinc-900">8</p>
                 </div>
-                <div className="p-3.5 bg-violet-50 rounded-2xl border border-violet-100">
-                  <p className="text-[9px] text-violet-400 font-bold uppercase mb-0.5">Seasonal</p>
-                  <p className="text-xl font-bold text-violet-600">3</p>
+                <div className="p-3.5 bg-red-50 rounded-2xl border border-red-100">
+                  <p className="text-[9px] text-red-400 font-bold uppercase mb-0.5">Seasonal</p>
+                  <p className="text-xl font-bold text-red-600">3</p>
                 </div>
               </div>
               <div className="space-y-2">
@@ -824,11 +824,11 @@ const CafeBistroPage = () => {
             >
               <div className="flex items-center justify-between mb-3">
                 <p className="text-white text-[10px] font-bold">Menu Performance</p>
-                <Dot className="text-violet-500 w-6 h-6 animate-pulse" />
+                <Dot className="text-red-500 w-6 h-6 animate-pulse" />
               </div>
               <div className="h-16 w-full flex items-end justify-between gap-1">
                 {[50, 75, 40, 85, 60, 90].map((h, i) => (
-                  <div key={i} style={{ height: `${h}%` }} className="w-full bg-violet-500 rounded-t-sm" />
+                  <div key={i} style={{ height: `${h}%` }} className="w-full bg-red-500 rounded-t-sm" />
                 ))}
               </div>
             </motion.div>
@@ -836,10 +836,10 @@ const CafeBistroPage = () => {
 
           <div className="flex flex-col gap-6">
             <div className="flex items-center gap-3">
-              <div className="h-[2px] w-10 bg-violet-500 relative">
-                <div className="absolute -right-1 -top-1 w-2 h-2 bg-violet-500 rounded-full" />
+              <div className="h-[2px] w-10 bg-red-500 relative">
+                <div className="absolute -right-1 -top-1 w-2 h-2 bg-red-500 rounded-full" />
               </div>
-              <span className="text-violet-500 font-bold tracking-wider uppercase text-xs flex items-center gap-2">
+              <span className="text-red-500 font-bold tracking-wider uppercase text-xs flex items-center gap-2">
                 <BookOpen className="w-3.5 h-3.5" /> Multi Menu + Seasonal Menu
               </span>
             </div>
@@ -856,7 +856,7 @@ const CafeBistroPage = () => {
                 "Toggle item availability on or off based on stock or time of day."
               ].map((point, i) => (
                 <li key={i} className="flex gap-3 items-start group">
-                  <div className="mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-violet-50 flex items-center justify-center text-violet-600 group-hover:bg-violet-600 group-hover:text-white transition-colors">
+                  <div className="mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-red-50 flex items-center justify-center text-red-600 group-hover:bg-red-600 group-hover:text-white transition-colors">
                     <Check className="w-3.5 h-3.5" />
                   </div>
                   <span className="text-zinc-600 text-sm leading-relaxed">{point}</span>
@@ -864,7 +864,7 @@ const CafeBistroPage = () => {
               ))}
             </ul>
             <div className="pt-4">
-              <Link href="/contact" className="inline-flex items-center bg-violet-600 hover:bg-violet-700 text-white px-8 py-3.5 rounded-xl font-bold text-base transition-all shadow-lg shadow-violet-600/20 active:scale-95">
+              <Link href="/contact" className="inline-flex items-center bg-red-600 hover:bg-red-700 text-white px-8 py-3.5 rounded-xl font-bold text-base transition-all shadow-lg shadow-red-600/20 active:scale-95">
                 Get Started Now
               </Link>
             </div>
@@ -877,10 +877,10 @@ const CafeBistroPage = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="flex flex-col gap-6 order-2 lg:order-1">
             <div className="flex items-center gap-3">
-              <div className="h-[2px] w-10 bg-violet-500 relative">
-                <div className="absolute -right-1 -top-1 w-2 h-2 bg-violet-500 rounded-full" />
+              <div className="h-[2px] w-10 bg-red-500 relative">
+                <div className="absolute -right-1 -top-1 w-2 h-2 bg-red-500 rounded-full" />
               </div>
-              <span className="text-violet-500 font-bold tracking-wider uppercase text-xs flex items-center gap-2">
+              <span className="text-red-500 font-bold tracking-wider uppercase text-xs flex items-center gap-2">
                 <Tag className="w-3.5 h-3.5" /> Promotions
               </span>
             </div>
@@ -897,7 +897,7 @@ const CafeBistroPage = () => {
                 "Reward loyal guests with personalized coupons and exclusive perks."
               ].map((point, i) => (
                 <li key={i} className="flex gap-3 items-start group">
-                  <div className="mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-violet-50 flex items-center justify-center text-violet-600 group-hover:bg-violet-600 group-hover:text-white transition-colors">
+                  <div className="mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-red-50 flex items-center justify-center text-red-600 group-hover:bg-red-600 group-hover:text-white transition-colors">
                     <Check className="w-3.5 h-3.5" />
                   </div>
                   <span className="text-zinc-600 text-sm leading-relaxed">{point}</span>
@@ -905,7 +905,7 @@ const CafeBistroPage = () => {
               ))}
             </ul>
             <div className="pt-4">
-              <Link href="/contact" className="inline-flex items-center bg-violet-600 hover:bg-violet-700 text-white px-8 py-3.5 rounded-xl font-bold text-base transition-all shadow-lg shadow-violet-600/20 active:scale-95">
+              <Link href="/contact" className="inline-flex items-center bg-red-600 hover:bg-red-700 text-white px-8 py-3.5 rounded-xl font-bold text-base transition-all shadow-lg shadow-red-600/20 active:scale-95">
                 Get Started Now
               </Link>
             </div>
@@ -921,12 +921,12 @@ const CafeBistroPage = () => {
               <div className="flex flex-col h-full gap-4">
                 <div className="flex items-center justify-between">
                   <h3 className="font-bold text-zinc-900 text-sm">Active Promotions</h3>
-                  <span className="text-[9px] px-2 py-0.5 bg-violet-100 text-violet-600 rounded-full font-bold">3 Active</span>
+                  <span className="text-[9px] px-2 py-0.5 bg-red-100 text-red-600 rounded-full font-bold">3 Active</span>
                 </div>
                 {[
-                  { title: 'Buy 1 Coffee, Get 1 Free', desc: 'All Espresso Drinks — Morning', badge: 'BOGO', color: 'bg-violet-50 border-violet-100' },
+                  { title: 'Buy 1 Coffee, Get 1 Free', desc: 'All Espresso Drinks — Morning', badge: 'BOGO', color: 'bg-red-50 border-red-100' },
                   { title: 'Happy Hour 20% Off', desc: '2PM–4PM Daily', badge: 'TIME', color: 'bg-yellow-50 border-yellow-100' },
-                  { title: 'Loyalty Reward Coupon', desc: 'After 5 visits — Free Pastry', badge: 'LOYALTY', color: 'bg-purple-50 border-purple-100' }
+                  { title: 'Loyalty Reward Coupon', desc: 'After 5 visits — Free Pastry', badge: 'LOYALTY', color: 'bg-orange-50 border-orange-100' }
                 ].map((promo, i) => (
                   <div key={i} className={`p-4 rounded-2xl border ${promo.color} flex items-center justify-between`}>
                     <div>

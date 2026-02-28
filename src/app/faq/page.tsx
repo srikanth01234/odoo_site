@@ -146,7 +146,7 @@ const FAQPage = () => {
       <Navbar />
 
       {/* Hero Section with Background Image */}
-      <section className="relative h-[40vh] min-h-75 flex items-center justify-center overflow-hidden bg-zinc-900 pt-20">
+      <section className="relative h-[60vh] min-h-75 flex items-center justify-center overflow-hidden bg-zinc-900 pt-20">
         <div className="absolute inset-0 z-0">
           <Image
             src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=1974&auto=format&fit=crop"
@@ -189,10 +189,10 @@ const FAQPage = () => {
                   setActiveCategory(category.id);
                   setOpenQuestionIndex(null); 
                 }}
-                className={`px-6 py-2.5 rounded-full text-sm font-bold transition-all duration-300 ${
+                className={`px-6 py-2.5 rounded-full text-sm font-bold transition-all duration-300 shadow-md ${
                   activeCategory === category.id
-                    ? 'bg-rose-600 text-white shadow-lg shadow-rose-600/30 ring-2 ring-rose-600 ring-offset-2 ring-offset-zinc-900'
-                    : 'bg-zinc-800 text-zinc-300 hover:bg-zinc-700 hover:text-white border border-zinc-700'
+                    ? 'bg-rose-600 text-white shadow-lg shadow-rose-600/30'
+                    : 'bg-white text-zinc-900 hover:bg-zinc-100 border border-zinc-200'
                 }`}
               >
                 {category.label}
@@ -214,7 +214,7 @@ const FAQPage = () => {
               {(faqData[activeCategory as keyof typeof faqData] || []).map((item, index) => (
                 <div 
                   key={index} 
-                  className="mb-4 rounded-2xl overflow-hidden bg-zinc-900 border border-zinc-800 transition-all duration-300 hover:border-zinc-700"
+                  className="mb-4 rounded-2xl overflow-hidden bg-white border border-zinc-200 transition-all duration-300 hover:border-zinc-300 shadow-sm"
                 >
                   <button
                     onClick={() => toggleQuestion(index)}
@@ -222,14 +222,14 @@ const FAQPage = () => {
                   >
                     <span 
                       className={`text-base md:text-lg font-bold transition-colors duration-300 ${
-                        openQuestionIndex === index ? 'text-rose-500' : 'text-zinc-200 group-hover:text-white'
+                        openQuestionIndex === index ? 'text-rose-600' : 'text-zinc-900 group-hover:text-zinc-700'
                       }`}
                     >
                       {item.question}
                     </span>
                     <div 
                       className={`shrink-0 ml-4 w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 ${
-                        openQuestionIndex === index ? 'bg-rose-600 text-white rotate-180' : 'bg-zinc-800 text-zinc-400 group-hover:bg-zinc-700 group-hover:text-white'
+                        openQuestionIndex === index ? 'bg-rose-600 text-white rotate-180' : 'bg-zinc-100 text-zinc-600 group-hover:bg-zinc-200'
                       }`}
                     >
                        <ChevronDown className="w-5 h-5" />
@@ -244,7 +244,7 @@ const FAQPage = () => {
                         exit={{ height: 0, opacity: 0 }}
                         transition={{ duration: 0.3, ease: 'easeInOut' }}
                       >
-                        <div className="px-6 pb-6 text-zinc-400 text-sm md:text-base leading-relaxed border-t border-zinc-800/50 pt-4">
+                        <div className="px-6 pb-6 text-zinc-600 text-sm md:text-base leading-relaxed border-t border-zinc-100 pt-4">
                           {item.answer}
                         </div>
                       </motion.div>

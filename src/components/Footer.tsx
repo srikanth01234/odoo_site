@@ -1,6 +1,7 @@
 "use client";
 import React from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { 
   MapPin, Mail, Phone, Facebook, Twitter, Linkedin, Youtube, 
   ChevronsRight, ArrowRight, ArrowUp 
@@ -34,15 +35,37 @@ const Footer = () => {
   };
 
   const links = [
-    "About Us", "Our Gallery", "Our Blogs", "FAQ'S", "Contact Us"
+    { name: "About Us", href: "/about" }, 
+    { name: "Pricing", href: "/pricing" }, 
+    { name: "Our Blogs", href: "/blog" }, 
+    { name: "FAQ'S", href: "/faq" }, 
+    { name: "Contact Us", href: "/contact" }
   ];
 
-  const menuLinks = [
-    "Burger King", "Pizza King", "Fresh Food", "Vegetable", "Desserts"
+  const featureLinks = [
+    { name: "POS Management", href: "/features/pos-management" },
+    { name: "Inventory Management", href: "/features/inventory-management" },
+    { name: "Order Management", href: "/features/order-management" },
+    { name: "Table Reservation", href: "/features/table-reservation" },
+    { name: "QR Code Menu", href: "/features/qr-code-menu" },
+    { name: "Multi Menu", href: "/features/multi-menu-management" },
+    { name: "Promotion", href: "/features/promotion-management" },
+    { name: "Website Builder", href: "/features/restaurant-website" },
+  ];
+
+  const restaurantTypeLinks = [
+    { name: "Bakery", href: "/restaurant-types/bakery" },
+    { name: "Cafe & Bistro", href: "/restaurant-types/cafe-bistro" },
+    { name: "Family Style", href: "/restaurant-types/family-style" },
+    { name: "Fast Food", href: "/restaurant-types/fast-food" },
+    { name: "Fine Dine", href: "/restaurant-types/fine-dine" },
+    { name: "Food Truck", href: "/restaurant-types/food-truck" },
+    { name: "Full Service", href: "/restaurant-types/full-service" },
+    { name: "Ghost Kitchen", href: "/restaurant-types/ghost-kitchen" },
   ];
 
   return (
-    <footer className="relative bg-black pt-24 pb-0 mt-32 text-white overflow-visible">
+    <footer className="relative bg-black pt-24 pb-0 mt-0 text-white overflow-visible">
       
       {/* Floating Info Section (Brand Red Bar) */}
       <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[90%] max-w-6xl z-40">
@@ -103,7 +126,7 @@ const Footer = () => {
           <motion.div variants={itemVariants} className="space-y-6">
             <div className="flex flex-col gap-2">
                 <h2 className="text-3xl font-bold tracking-tighter uppercase relative inline-block">
-                    Pizza <span className="text-brand-red">King</span>
+                    Dine <span className="text-brand-red">360</span>
                     <div className="h-1 w-16 bg-brand-red mt-2"></div>
                 </h2>
             </div>
@@ -126,60 +149,45 @@ const Footer = () => {
              <ul className="space-y-4">
                {links.map((link, i) => (
                  <li key={i}>
-                   <a href="#" className="flex items-center gap-2 text-gray-400 hover:text-brand-red transition-colors group">
+                   <a href={link.href} className="flex items-center gap-2 text-gray-400 hover:text-brand-red transition-colors group">
                      <ChevronsRight size={16} className="text-brand-red group-hover:translate-x-1 transition-transform" />
-                     {link}
+                     {link.name}
                    </a>
                  </li>
                ))}
              </ul>
           </motion.div>
 
-          {/* Column 3: Our Menu */}
+          {/* Column 3: Features */}
           <motion.div variants={itemVariants} className="space-y-6">
-             <h3 className="text-xl font-bold">Our Menu</h3>
+             <h3 className="text-xl font-bold">Features</h3>
              <div className="w-12 h-1 bg-brand-red -mt-4 mb-6"></div>
              <ul className="space-y-4">
-               {menuLinks.map((link, i) => (
+               {featureLinks.map((link, i) => (
                  <li key={i}>
-                   <a href="#" className="flex items-center gap-2 text-gray-400 hover:text-brand-red transition-colors group">
+                   <a href={link.href} className="flex items-center gap-2 text-gray-400 hover:text-brand-red transition-colors group">
                      <ChevronsRight size={16} className="text-brand-red group-hover:translate-x-1 transition-transform" />
-                     {link}
+                     {link.name}
                    </a>
                  </li>
                ))}
              </ul>
           </motion.div>
 
-          {/* Column 4: Contact Us */}
+          {/* Column 4: Restaurant Types */}
           <motion.div variants={itemVariants} className="space-y-6">
-             <h3 className="text-xl font-bold">Contact Us</h3>
+             <h3 className="text-xl font-bold">Restaurant Types</h3>
              <div className="w-12 h-1 bg-brand-red -mt-4 mb-6"></div>
-             
-             <div className="space-y-1 text-sm text-gray-400">
-               <p>Monday - Friday: <span className="text-brand-red">8am - 4pm</span></p>
-               <p>Saturday: <span className="text-brand-red">8am - 12am</span></p>
-             </div>
-
-             <div className="relative mt-6">
-               <input 
-                 type="email" 
-                 placeholder="Your email address" 
-                 className="w-full bg-white text-black px-4 py-3 rounded-lg outline-none pr-14 border border-transparent focus:border-brand-red transition-colors"
-               />
-               <button className="absolute right-1 top-1 bottom-1 w-10 bg-brand-red hover:bg-brand-red/90 rounded-md flex items-center justify-center text-white transition-colors">
-                 <ArrowRight size={18} />
-               </button>
-             </div>
-
-             <label className="flex items-center gap-3 cursor-pointer group">
-               <div className="relative">
-                 <input type="checkbox" className="peer sr-only" />
-                 <div className="w-5 h-5 border-2 border-gray-500 rounded peer-checked:bg-brand-red peer-checked:border-brand-red transition-colors"></div>
-               </div>
-               <span className="text-sm text-gray-400 group-hover:text-white transition-colors">I agree to the <span className="underline decoration-1 underline-offset-4">Privacy Policy.</span></span>
-             </label>
-
+             <ul className="space-y-4">
+               {restaurantTypeLinks.map((link, i) => (
+                 <li key={i}>
+                   <a href={link.href} className="flex items-center gap-2 text-gray-400 hover:text-brand-red transition-colors group">
+                     <ChevronsRight size={16} className="text-brand-red group-hover:translate-x-1 transition-transform" />
+                     {link.name}
+                   </a>
+                 </li>
+               ))}
+             </ul>
           </motion.div>
 
         </motion.div>
@@ -189,11 +197,11 @@ const Footer = () => {
       <div className="bg-brand-red py-8 relative z-20">
         <div className="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-white font-medium">
-             © All Copyright 2024 by Pizza King
+             © All Copyright 2024 by Dine 360
           </p>
           <div className="flex gap-4">
-            <a href="#" className="text-white/80 hover:text-white transition-colors text-sm px-4 py-2 border border-white/20 rounded hover:bg-white/10">Terms & Condition</a>
-            <a href="#" className="text-white/80 hover:text-white transition-colors text-sm px-4 py-2 border border-white/20 rounded hover:bg-white/10">Privacy Policy</a>
+            <Link href="/terms" className="text-white/80 hover:text-white transition-colors text-sm px-4 py-2 border border-white/20 rounded hover:bg-white/10">Terms & Condition</Link>
+            <Link href="/privacy" className="text-white/80 hover:text-white transition-colors text-sm px-4 py-2 border border-white/20 rounded hover:bg-white/10">Privacy Policy</Link>
           </div>
         </div>
       </div>

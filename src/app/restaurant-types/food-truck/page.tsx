@@ -45,8 +45,8 @@ const FoodTruckPage = () => {
               </span>
             </div>
 
-            <div className="inline-flex items-center gap-2 text-orange-600 font-bold tracking-widest uppercase text-xs">
-              <div className="h-[1px] w-6 bg-orange-500" />
+            <div className="inline-flex items-center gap-2 text-red-600 font-bold tracking-widest uppercase text-xs">
+              <div className="h-[1px] w-6 bg-red-500" />
               Quick Serve, Big Results
             </div>
 
@@ -62,13 +62,13 @@ const FoodTruckPage = () => {
             <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center mt-1">
               <Link
                 href="/contact"
-                className="bg-orange-600 hover:bg-orange-700 text-white px-7 py-3.5 rounded-xl font-semibold text-base transition-all shadow-lg shadow-orange-600/20 active:scale-95"
+                className="bg-red-600 hover:bg-red-700 text-white px-7 py-3.5 rounded-xl font-semibold text-base transition-all shadow-lg shadow-red-600/20 active:scale-95"
               >
                 Start Free Now
               </Link>
               <Link
                 href="/contact"
-                className="border-2 border-zinc-200 hover:border-orange-500 text-zinc-700 hover:text-orange-600 px-7 py-3.5 rounded-xl font-semibold text-base transition-all active:scale-95"
+                className="bg-black hover:bg-zinc-900 text-white px-7 py-3.5 rounded-xl font-semibold text-base transition-all active:scale-95"
               >
                 Book A Demo
               </Link>
@@ -76,11 +76,11 @@ const FoodTruckPage = () => {
 
             <div className="pt-6 border-t border-zinc-100 mt-4 flex flex-col gap-2">
               <div className="flex items-center gap-2">
-                <div className="w-2 h-2 rounded-full bg-orange-500" />
+                <div className="w-2 h-2 rounded-full bg-red-500" />
                 <span className="text-xs font-semibold text-zinc-500">Food Truck POS System With Complete Management</span>
               </div>
               <div className="flex items-center gap-2">
-                <div className="w-2 h-2 rounded-full bg-orange-300" />
+                <div className="w-2 h-2 rounded-full bg-red-300" />
                 <span className="text-xs font-semibold text-zinc-500">Food Truck Complete Management Solution</span>
               </div>
             </div>
@@ -88,7 +88,7 @@ const FoodTruckPage = () => {
 
           {/* Right Content - Cards */}
           <div className="relative h-[500px] w-full flex items-center justify-center lg:justify-end" style={{ perspective: '1000px' }}>
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110%] h-[110%] bg-gradient-to-tr from-orange-50/50 to-yellow-50/50 rounded-full blur-3xl -z-10" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110%] h-[110%] bg-gradient-to-tr from-red-50/50 to-yellow-50/50 rounded-full blur-3xl -z-10" />
 
             <div className="relative w-full h-full max-w-md mx-auto lg:mr-0">
               {/* Card 1 - Left Tilted */}
@@ -104,7 +104,7 @@ const FoodTruckPage = () => {
                     <p className="text-[10px] text-zinc-300 font-medium tracking-wide uppercase mb-0.5">Speed</p>
                     <p className="text-white font-bold text-2xl">3X</p>
                   </div>
-                  <div className="absolute bottom-0 left-0 w-full h-16 text-orange-500/90">
+                  <div className="absolute bottom-0 left-0 w-full h-16 text-red-500/90">
                     <svg viewBox="0 0 1440 320" preserveAspectRatio="none" className="w-full h-full">
                       <path fill="currentColor" d="M0,192L48,197.3C96,203,192,213,288,229.3C384,245,480,267,576,250.7C672,235,768,181,864,181.3C960,181,1056,235,1152,234.7C1248,235,1344,181,1392,154.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
                     </svg>
@@ -146,7 +146,7 @@ const FoodTruckPage = () => {
                     <p className="text-[10px] text-zinc-300 font-medium tracking-wide uppercase mb-0.5">Accuracy</p>
                     <p className="text-white font-bold text-2xl">100%</p>
                   </div>
-                  <div className="absolute bottom-0 left-0 w-full h-16 text-orange-500/90">
+                  <div className="absolute bottom-0 left-0 w-full h-16 text-red-500/90">
                     <svg viewBox="0 0 1440 320" preserveAspectRatio="none" className="w-full h-full">
                       <path fill="currentColor" d="M0,224L48,213.3C96,203,192,181,288,181.3C384,181,480,203,576,224C672,245,768,267,864,250.7C960,235,1056,181,1152,165.3C1248,149,1344,171,1392,181.3L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
                     </svg>
@@ -167,9 +167,9 @@ const FoodTruckPage = () => {
             viewport={{ once: true }}
             className="flex items-center justify-center gap-2 mb-6"
           >
-            <div className="h-[1px] w-8 bg-orange-500" />
-            <span className="text-orange-600 font-bold tracking-widest uppercase text-xs">Faster Results, Real Growth</span>
-            <div className="h-[1px] w-8 bg-orange-500" />
+            <div className="h-[1px] w-8 bg-red-500" />
+            <span className="text-red-600 font-bold tracking-widest uppercase text-xs">Faster Results, Real Growth</span>
+            <div className="h-[1px] w-8 bg-red-500" />
           </motion.div>
 
           <motion.h2
@@ -180,7 +180,7 @@ const FoodTruckPage = () => {
             className="text-3xl md:text-5xl font-bold text-zinc-900 mb-6 leading-tight"
           >
             Success on the Streets, Growth in the Numbers <br className="hidden md:block" />
-            <span className="text-orange-600"> - Menumium Leads the Way</span>
+            <span className="text-red-600"> - Menumium Leads the Way</span>
           </motion.h2>
 
           <motion.p
@@ -200,7 +200,7 @@ const FoodTruckPage = () => {
               initial={{ opacity: 0, rotate: -15, scale: 0.8 }}
               whileInView={{ opacity: 1, rotate: -5, scale: 1 }}
               viewport={{ once: true }}
-              className="absolute top-10 left-1/4 w-[500px] h-[500px] bg-orange-100/50 rounded-[4rem] -rotate-12"
+              className="absolute top-10 left-1/4 w-[500px] h-[500px] bg-red-100/50 rounded-[4rem] -rotate-12"
             />
             <motion.div
               initial={{ opacity: 0, rotate: 15, scale: 0.8 }}
@@ -226,7 +226,7 @@ const FoodTruckPage = () => {
                 </div>
               </div>
               <div className="p-4 flex-1 flex flex-col pt-8">
-                <div className="w-12 h-12 rounded-2xl bg-orange-500 mb-4 mx-auto flex items-center justify-center text-white font-bold text-xl">M</div>
+                <div className="w-12 h-12 rounded-2xl bg-red-500 mb-4 mx-auto flex items-center justify-center text-white font-bold text-xl">M</div>
                 <div className="text-center mb-6">
                   <h3 className="text-white font-bold text-lg">Food Truck Hub</h3>
                   <p className="text-zinc-500 text-[10px]">Cloud Operations Active</p>
@@ -248,7 +248,7 @@ const FoodTruckPage = () => {
               className="absolute -left-12 top-20 bg-white p-5 rounded-2xl shadow-xl border border-zinc-100 max-w-[220px]"
             >
               <div className="flex items-center gap-3 mb-2">
-                <div className="p-2 bg-orange-50 rounded-lg text-orange-600">
+                <div className="p-2 bg-red-50 rounded-lg text-red-600">
                   <TrendingUp className="w-5 h-5" />
                 </div>
                 <span className="text-lg font-bold text-zinc-900">😊</span>
@@ -266,13 +266,13 @@ const FoodTruckPage = () => {
               className="absolute -bottom-6 left-1/2 -translate-x-1/2 bg-white p-5 rounded-2xl shadow-xl border border-zinc-100 w-full max-w-[280px] z-20"
             >
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-orange-50 rounded-xl flex items-center justify-center text-orange-600">
+                <div className="w-12 h-12 bg-red-50 rounded-xl flex items-center justify-center text-red-600">
                   <Check className="w-6 h-6" />
                 </div>
                 <div>
                   <div className="flex items-center gap-2">
                     <span className="text-xl font-bold text-zinc-900">📊</span>
-                    <span className="text-[10px] bg-orange-100 text-orange-600 px-2 py-0.5 rounded-full font-bold">LIVE</span>
+                    <span className="text-[10px] bg-red-100 text-red-600 px-2 py-0.5 rounded-full font-bold">LIVE</span>
                   </div>
                   <p className="text-sm font-bold text-zinc-800">Sales Track</p>
                   <p className="text-[11px] text-zinc-500 mt-1">Monitor End-to-End with Our Data Analytics</p>
@@ -304,7 +304,7 @@ const FoodTruckPage = () => {
               transition={{ repeat: Infinity, duration: 4 }}
               className="absolute -left-24 top-1/2 w-16 h-16 bg-white rounded-full shadow-lg flex flex-col items-center justify-center border border-zinc-100"
             >
-              <Layout className="w-6 h-6 text-orange-500" />
+              <Layout className="w-6 h-6 text-red-500" />
               <span className="text-[8px] font-bold text-zinc-400 mt-1">Dashboard</span>
             </motion.div>
 
@@ -322,7 +322,7 @@ const FoodTruckPage = () => {
               transition={{ repeat: Infinity, duration: 5, delay: 1 }}
               className="absolute -right-10 -bottom-10 w-20 h-20 bg-zinc-900 rounded-full shadow-2xl flex flex-col items-center justify-center border border-zinc-800"
             >
-              <Dot className="w-10 h-10 text-orange-500 animate-pulse" />
+              <Dot className="w-10 h-10 text-red-500 animate-pulse" />
               <span className="text-[8px] font-bold text-zinc-400 -mt-2">Live Cloud</span>
             </motion.div>
           </div>
@@ -338,9 +338,9 @@ const FoodTruckPage = () => {
           className="bg-zinc-900 rounded-[2.5rem] p-10 md:p-14 text-center"
         >
           <div className="flex items-center justify-center gap-2 mb-4">
-            <div className="h-[1px] w-8 bg-orange-500" />
-            <span className="text-orange-400 font-bold tracking-widest uppercase text-xs">All-in-One Food Truck Solution</span>
-            <div className="h-[1px] w-8 bg-orange-500" />
+            <div className="h-[1px] w-8 bg-red-500" />
+            <span className="text-red-400 font-bold tracking-widest uppercase text-xs">All-in-One Food Truck Solution</span>
+            <div className="h-[1px] w-8 bg-red-500" />
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 leading-tight">
             From Orders to Payments - <br className="hidden md:block" />Everything Your Food Truck Needs
@@ -391,7 +391,7 @@ const FoodTruckPage = () => {
               </div>
             </div>
             <div className="w-full md:w-1/2 p-6 md:px-12 relative z-10">
-              <div className="w-10 h-10 bg-orange-50 rounded-xl flex items-center justify-center text-orange-500 mb-4">
+              <div className="w-10 h-10 bg-red-50 rounded-xl flex items-center justify-center text-red-500 mb-4">
                 <Zap className="w-5 h-5" />
               </div>
               <h3 className="text-xl font-bold text-zinc-900 mb-3">3X Faster Order Processing</h3>
@@ -410,7 +410,7 @@ const FoodTruckPage = () => {
               </div>
             </div>
             <div className="w-full md:w-1/2 p-6 md:px-12 relative z-10">
-              <div className="w-10 h-10 bg-orange-50 rounded-xl flex items-center justify-center text-orange-500 mb-4">
+              <div className="w-10 h-10 bg-red-50 rounded-xl flex items-center justify-center text-red-500 mb-4">
                 <RefreshCw className="w-5 h-5" />
               </div>
               <h3 className="text-xl font-bold text-zinc-900 mb-3">Instant Order Syncing</h3>
@@ -429,7 +429,7 @@ const FoodTruckPage = () => {
               </div>
             </div>
             <div className="w-full md:w-1/2 p-6 md:px-12 relative z-10">
-              <div className="w-10 h-10 bg-orange-50 rounded-xl flex items-center justify-center text-orange-500 mb-4">
+              <div className="w-10 h-10 bg-red-50 rounded-xl flex items-center justify-center text-red-500 mb-4">
                 <Clock className="w-5 h-5" />
               </div>
               <h3 className="text-xl font-bold text-zinc-900 mb-3">Zero Order Delays</h3>
@@ -448,7 +448,7 @@ const FoodTruckPage = () => {
               </div>
             </div>
             <div className="w-full md:w-1/2 p-6 md:px-12 relative z-10">
-              <div className="w-10 h-10 bg-orange-50 rounded-xl flex items-center justify-center text-orange-500 mb-4">
+              <div className="w-10 h-10 bg-red-50 rounded-xl flex items-center justify-center text-red-500 mb-4">
                 <Target className="w-5 h-5" />
               </div>
               <h3 className="text-xl font-bold text-zinc-900 mb-3">100% Order Accuracy</h3>
@@ -467,10 +467,10 @@ const FoodTruckPage = () => {
           {/* Left Side - Text Content */}
           <div className="flex flex-col gap-6 order-2 lg:order-1">
             <div className="flex items-center gap-3">
-              <div className="h-[2px] w-10 bg-orange-500 relative">
-                <div className="absolute -right-1 -top-1 w-2 h-2 bg-orange-500 rounded-full" />
+              <div className="h-[2px] w-10 bg-red-500 relative">
+                <div className="absolute -right-1 -top-1 w-2 h-2 bg-red-500 rounded-full" />
               </div>
-              <span className="text-orange-500 font-bold tracking-wider uppercase text-xs flex items-center gap-2">
+              <span className="text-red-500 font-bold tracking-wider uppercase text-xs flex items-center gap-2">
                 <ShoppingCart className="w-3.5 h-3.5" /> Order Management
               </span>
             </div>
@@ -490,7 +490,7 @@ const FoodTruckPage = () => {
                 "Provide smooth service with easy cancellations and fast refunds."
               ].map((point, i) => (
                 <li key={i} className="flex gap-3 items-start group">
-                  <div className="mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-orange-50 flex items-center justify-center text-orange-600 group-hover:bg-orange-600 group-hover:text-white transition-colors">
+                  <div className="mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-red-50 flex items-center justify-center text-red-600 group-hover:bg-red-600 group-hover:text-white transition-colors">
                     <Check className="w-3.5 h-3.5" />
                   </div>
                   <span className="text-zinc-600 text-sm leading-relaxed">{point}</span>
@@ -501,7 +501,7 @@ const FoodTruckPage = () => {
             <div className="pt-4">
               <Link
                 href="/contact"
-                className="inline-flex items-center bg-orange-600 hover:bg-orange-700 text-white px-8 py-3.5 rounded-xl font-bold text-base transition-all shadow-lg shadow-orange-600/20 active:scale-95"
+                className="inline-flex items-center bg-red-600 hover:bg-red-700 text-white px-8 py-3.5 rounded-xl font-bold text-base transition-all shadow-lg shadow-red-600/20 active:scale-95"
               >
                 Get Started Now
               </Link>
@@ -619,7 +619,7 @@ const FoodTruckPage = () => {
                   <p className="text-[9px] font-bold text-zinc-500 uppercase mb-1.5">Filter By Category</p>
                   <div className="flex gap-1.5 flex-wrap">
                     {['Proteins', 'Carbs', 'Sauces'].map((cat) => (
-                      <span key={cat} className="text-[8px] font-bold px-2 py-0.5 bg-orange-50 text-orange-600 border border-orange-100 rounded-full">{cat}</span>
+                      <span key={cat} className="text-[8px] font-bold px-2 py-0.5 bg-red-50 text-red-600 border border-red-100 rounded-full">{cat}</span>
                     ))}
                   </div>
                 </div>
@@ -630,10 +630,10 @@ const FoodTruckPage = () => {
           {/* Right Side - Text Content */}
           <div className="flex flex-col gap-6">
             <div className="flex items-center gap-3">
-              <div className="h-[2px] w-10 bg-orange-500 relative">
-                <div className="absolute -right-1 -top-1 w-2 h-2 bg-orange-500 rounded-full" />
+              <div className="h-[2px] w-10 bg-red-500 relative">
+                <div className="absolute -right-1 -top-1 w-2 h-2 bg-red-500 rounded-full" />
               </div>
-              <span className="text-orange-500 font-bold tracking-wider uppercase text-xs flex items-center gap-2">
+              <span className="text-red-500 font-bold tracking-wider uppercase text-xs flex items-center gap-2">
                 <Package className="w-3.5 h-3.5" /> Inventory Management
               </span>
             </div>
@@ -653,7 +653,7 @@ const FoodTruckPage = () => {
                 "Stay alerted for low-stock and out-of-stock items with a detailed ingredient list."
               ].map((point, i) => (
                 <li key={i} className="flex gap-3 items-start group">
-                  <div className="mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-orange-50 flex items-center justify-center text-orange-600 group-hover:bg-orange-600 group-hover:text-white transition-colors">
+                  <div className="mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-red-50 flex items-center justify-center text-red-600 group-hover:bg-red-600 group-hover:text-white transition-colors">
                     <Check className="w-3.5 h-3.5" />
                   </div>
                   <span className="text-zinc-600 text-sm leading-relaxed">{point}</span>
@@ -664,7 +664,7 @@ const FoodTruckPage = () => {
             <div className="pt-4">
               <Link
                 href="/contact"
-                className="inline-flex items-center bg-orange-600 hover:bg-orange-700 text-white px-8 py-3.5 rounded-xl font-bold text-base transition-all shadow-lg shadow-orange-600/20 active:scale-95"
+                className="inline-flex items-center bg-red-600 hover:bg-red-700 text-white px-8 py-3.5 rounded-xl font-bold text-base transition-all shadow-lg shadow-red-600/20 active:scale-95"
               >
                 Get Started Now
               </Link>
@@ -702,7 +702,7 @@ const FoodTruckPage = () => {
                         <p className="font-bold text-[12px] text-zinc-800">{i === 1 ? 'Street Burger' : 'Loaded Fries'}</p>
                         <div className="flex items-center gap-2 mt-0.5">
                           <span className="text-zinc-900 font-bold text-xs">$9.99</span>
-                          <span className="text-orange-500 text-[9px] font-bold">-15%</span>
+                          <span className="text-red-500 text-[9px] font-bold">-15%</span>
                         </div>
                       </div>
                     </div>
@@ -727,7 +727,7 @@ const FoodTruckPage = () => {
                     <p className="text-[9px] font-bold text-zinc-500 uppercase">Type</p>
                     <div className="flex gap-2">
                       <div className="flex items-center gap-1 text-[9px] text-zinc-800 font-medium">
-                        <div className="w-2 h-2 rounded-full bg-orange-500" /> Takeaway
+                        <div className="w-2 h-2 rounded-full bg-red-500" /> Takeaway
                       </div>
                     </div>
                   </div>
@@ -750,12 +750,12 @@ const FoodTruckPage = () => {
                 <div className="mb-3">
                   <p className="text-[9px] font-bold text-zinc-500 uppercase mb-1.5">Payment</p>
                   <label className="flex items-center gap-2 text-[9px] text-zinc-800 font-bold">
-                    <input type="radio" name="pay" defaultChecked className="accent-orange-500" /> Pay First
+                    <input type="radio" name="pay" defaultChecked className="accent-red-500" /> Pay First
                   </label>
                 </div>
                 <div className="flex gap-2">
                   <button className="flex-1 h-8 border border-zinc-100 rounded-lg text-[9px] font-bold">Clear</button>
-                  <button className="flex-2 h-8 bg-orange-600 rounded-lg text-[9px] text-white font-bold px-3">Place Order</button>
+                  <button className="flex-2 h-8 bg-red-600 rounded-lg text-[9px] text-white font-bold px-3">Place Order</button>
                 </div>
               </div>
             </motion.div>
@@ -764,10 +764,10 @@ const FoodTruckPage = () => {
           {/* Right Side - Text Content */}
           <div className="flex flex-col gap-6">
             <div className="flex items-center gap-3">
-              <div className="h-[2px] w-10 bg-orange-500 relative">
-                <div className="absolute -right-1 -top-1 w-2 h-2 bg-orange-500 rounded-full" />
+              <div className="h-[2px] w-10 bg-red-500 relative">
+                <div className="absolute -right-1 -top-1 w-2 h-2 bg-red-500 rounded-full" />
               </div>
-              <span className="text-orange-500 font-bold tracking-wider uppercase text-xs">POS</span>
+              <span className="text-red-500 font-bold tracking-wider uppercase text-xs">POS</span>
             </div>
 
             <h2 className="text-3xl md:text-4xl font-bold text-zinc-900 leading-tight">
@@ -785,7 +785,7 @@ const FoodTruckPage = () => {
                 "Connect with various payment options to speed up transactions and reduce wait times."
               ].map((point, i) => (
                 <li key={i} className="flex gap-3 items-start group">
-                  <div className="mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-orange-50 flex items-center justify-center text-orange-600 group-hover:bg-orange-600 group-hover:text-white transition-colors">
+                  <div className="mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-red-50 flex items-center justify-center text-red-600 group-hover:bg-red-600 group-hover:text-white transition-colors">
                     <Check className="w-3.5 h-3.5" />
                   </div>
                   <span className="text-zinc-600 text-sm leading-relaxed">{point}</span>
@@ -796,7 +796,7 @@ const FoodTruckPage = () => {
             <div className="pt-4">
               <Link
                 href="/contact"
-                className="inline-flex items-center bg-orange-600 hover:bg-orange-700 text-white px-8 py-3.5 rounded-xl font-bold text-base transition-all shadow-lg shadow-orange-600/20 active:scale-95"
+                className="inline-flex items-center bg-red-600 hover:bg-red-700 text-white px-8 py-3.5 rounded-xl font-bold text-base transition-all shadow-lg shadow-red-600/20 active:scale-95"
               >
                 Get Started Now
               </Link>
@@ -812,7 +812,7 @@ const FoodTruckPage = () => {
           className="mt-16 bg-zinc-900 rounded-[2rem] p-8 md:p-12 flex flex-col md:flex-row items-center gap-8"
         >
           <div className="flex-shrink-0 text-center">
-            <p className="text-7xl font-black text-orange-500">59%</p>
+            <p className="text-7xl font-black text-red-500">59%</p>
             <p className="text-zinc-400 text-sm font-semibold mt-1">of customers</p>
           </div>
           <div className="hidden md:block w-[2px] h-20 bg-zinc-700" />
@@ -830,10 +830,10 @@ const FoodTruckPage = () => {
           {/* Left Side - Text Content */}
           <div className="flex flex-col gap-6 order-2 lg:order-1">
             <div className="flex items-center gap-3">
-              <div className="h-[2px] w-10 bg-orange-500 relative">
-                <div className="absolute -right-1 -top-1 w-2 h-2 bg-orange-500 rounded-full" />
+              <div className="h-[2px] w-10 bg-red-500 relative">
+                <div className="absolute -right-1 -top-1 w-2 h-2 bg-red-500 rounded-full" />
               </div>
-              <span className="text-orange-500 font-bold tracking-wider uppercase text-xs flex items-center gap-2">
+              <span className="text-red-500 font-bold tracking-wider uppercase text-xs flex items-center gap-2">
                 <QrCode className="w-3.5 h-3.5" /> QR Code Menu
               </span>
             </div>
@@ -853,7 +853,7 @@ const FoodTruckPage = () => {
                 "Quickly update menu selections and prices to ensure all orders are accurate."
               ].map((point, i) => (
                 <li key={i} className="flex gap-3 items-start group">
-                  <div className="mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-orange-50 flex items-center justify-center text-orange-600 group-hover:bg-orange-600 group-hover:text-white transition-colors">
+                  <div className="mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-red-50 flex items-center justify-center text-red-600 group-hover:bg-red-600 group-hover:text-white transition-colors">
                     <Check className="w-3.5 h-3.5" />
                   </div>
                   <span className="text-zinc-600 text-sm leading-relaxed">{point}</span>
@@ -890,20 +890,20 @@ const FoodTruckPage = () => {
                   <div className="space-y-2">
                     <div className="flex justify-between items-center p-2 border border-zinc-50 rounded-lg">
                       <span className="text-[10px] font-bold text-zinc-800">Street Burger</span>
-                      <span className="text-[10px] text-orange-600 font-bold">$9.99</span>
+                      <span className="text-[10px] text-red-600 font-bold">$9.99</span>
                     </div>
                     <div className="flex justify-between items-center p-2 border border-zinc-50 rounded-lg">
                       <span className="text-[10px] font-bold text-zinc-800">Loaded Fries</span>
-                      <span className="text-[10px] text-orange-600 font-bold">$6.49</span>
+                      <span className="text-[10px] text-red-600 font-bold">$6.49</span>
                     </div>
                     <div className="flex justify-between items-center p-2 border border-zinc-50 rounded-lg">
                       <span className="text-[10px] font-bold text-zinc-800">BBQ Wrap</span>
-                      <span className="text-[10px] text-orange-600 font-bold">$8.99</span>
+                      <span className="text-[10px] text-red-600 font-bold">$8.99</span>
                     </div>
                   </div>
                 </div>
                 <div className="p-3 border-t border-zinc-100">
-                  <div className="w-full py-2 bg-orange-600 text-white rounded-lg text-center text-[10px] font-bold">View Cart</div>
+                  <div className="w-full py-2 bg-red-600 text-white rounded-lg text-center text-[10px] font-bold">View Cart</div>
                 </div>
               </div>
             </motion.div>
@@ -925,7 +925,7 @@ const FoodTruckPage = () => {
             >
               <div className="mb-4">
                 <h3 className="font-bold text-zinc-900 text-sm flex items-center gap-2">
-                  <BookOpen className="w-4 h-4 text-orange-500" />
+                  <BookOpen className="w-4 h-4 text-red-500" />
                   Menu Management
                 </h3>
               </div>
@@ -934,9 +934,9 @@ const FoodTruckPage = () => {
                   <p className="text-[9px] text-zinc-400 font-bold uppercase mb-0.5">Menus</p>
                   <p className="text-xl font-bold text-zinc-900">12</p>
                 </div>
-                <div className="p-3.5 bg-orange-50 rounded-2xl border border-orange-100">
-                  <p className="text-[9px] text-orange-400 font-bold uppercase mb-0.5">Seasonal</p>
-                  <p className="text-xl font-bold text-orange-600">4</p>
+                <div className="p-3.5 bg-red-50 rounded-2xl border border-red-100">
+                  <p className="text-[9px] text-red-400 font-bold uppercase mb-0.5">Seasonal</p>
+                  <p className="text-xl font-bold text-red-600">4</p>
                 </div>
               </div>
               <div className="space-y-2">
@@ -958,11 +958,11 @@ const FoodTruckPage = () => {
             >
               <div className="flex items-center justify-between mb-3">
                 <p className="text-white text-[10px] font-bold">Menu Performance</p>
-                <Dot className="text-orange-500 w-6 h-6 animate-pulse" />
+                <Dot className="text-red-500 w-6 h-6 animate-pulse" />
               </div>
               <div className="h-16 w-full flex items-end justify-between gap-1">
                 {[40, 70, 45, 90, 65, 80].map((h, i) => (
-                  <div key={i} style={{ height: `${h}%` }} className="w-full bg-orange-500 rounded-t-sm" />
+                  <div key={i} style={{ height: `${h}%` }} className="w-full bg-red-500 rounded-t-sm" />
                 ))}
               </div>
             </motion.div>
@@ -971,10 +971,10 @@ const FoodTruckPage = () => {
           {/* Right Side - Text Content */}
           <div className="flex flex-col gap-6">
             <div className="flex items-center gap-3">
-              <div className="h-[2px] w-10 bg-orange-500 relative">
-                <div className="absolute -right-1 -top-1 w-2 h-2 bg-orange-500 rounded-full" />
+              <div className="h-[2px] w-10 bg-red-500 relative">
+                <div className="absolute -right-1 -top-1 w-2 h-2 bg-red-500 rounded-full" />
               </div>
-              <span className="text-orange-500 font-bold tracking-wider uppercase text-xs flex items-center gap-2">
+              <span className="text-red-500 font-bold tracking-wider uppercase text-xs flex items-center gap-2">
                 <BookOpen className="w-3.5 h-3.5" /> Multi Menu + Seasonal Menu
               </span>
             </div>
@@ -994,7 +994,7 @@ const FoodTruckPage = () => {
                 "Easily manage food availability by turning items on or off based on stock level."
               ].map((point, i) => (
                 <li key={i} className="flex gap-3 items-start group">
-                  <div className="mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-orange-50 flex items-center justify-center text-orange-600 group-hover:bg-orange-600 group-hover:text-white transition-colors">
+                  <div className="mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-red-50 flex items-center justify-center text-red-600 group-hover:bg-red-600 group-hover:text-white transition-colors">
                     <Check className="w-3.5 h-3.5" />
                   </div>
                   <span className="text-zinc-600 text-sm leading-relaxed">{point}</span>
@@ -1005,7 +1005,7 @@ const FoodTruckPage = () => {
             <div className="pt-4">
               <Link
                 href="/contact"
-                className="inline-flex items-center bg-orange-600 hover:bg-orange-700 text-white px-8 py-3.5 rounded-xl font-bold text-base transition-all shadow-lg shadow-orange-600/20 active:scale-95"
+                className="inline-flex items-center bg-red-600 hover:bg-red-700 text-white px-8 py-3.5 rounded-xl font-bold text-base transition-all shadow-lg shadow-red-600/20 active:scale-95"
               >
                 Get Started Now
               </Link>
@@ -1022,10 +1022,10 @@ const FoodTruckPage = () => {
           {/* Left Side - Text Content */}
           <div className="flex flex-col gap-6 order-2 lg:order-1">
             <div className="flex items-center gap-3">
-              <div className="h-[2px] w-10 bg-orange-500 relative">
-                <div className="absolute -right-1 -top-1 w-2 h-2 bg-orange-500 rounded-full" />
+              <div className="h-[2px] w-10 bg-red-500 relative">
+                <div className="absolute -right-1 -top-1 w-2 h-2 bg-red-500 rounded-full" />
               </div>
-              <span className="text-orange-500 font-bold tracking-wider uppercase text-xs flex items-center gap-2">
+              <span className="text-red-500 font-bold tracking-wider uppercase text-xs flex items-center gap-2">
                 <Tag className="w-3.5 h-3.5" /> Promotions
               </span>
             </div>
@@ -1045,7 +1045,7 @@ const FoodTruckPage = () => {
                 "Offer personalized coupons to turn first-time customers into loyal regulars."
               ].map((point, i) => (
                 <li key={i} className="flex gap-3 items-start group">
-                  <div className="mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-orange-50 flex items-center justify-center text-orange-600 group-hover:bg-orange-600 group-hover:text-white transition-colors">
+                  <div className="mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-red-50 flex items-center justify-center text-red-600 group-hover:bg-red-600 group-hover:text-white transition-colors">
                     <Check className="w-3.5 h-3.5" />
                   </div>
                   <span className="text-zinc-600 text-sm leading-relaxed">{point}</span>
@@ -1056,7 +1056,7 @@ const FoodTruckPage = () => {
             <div className="pt-4">
               <Link
                 href="/contact"
-                className="inline-flex items-center bg-orange-600 hover:bg-orange-700 text-white px-8 py-3.5 rounded-xl font-bold text-base transition-all shadow-lg shadow-orange-600/20 active:scale-95"
+                className="inline-flex items-center bg-red-600 hover:bg-red-700 text-white px-8 py-3.5 rounded-xl font-bold text-base transition-all shadow-lg shadow-red-600/20 active:scale-95"
               >
                 Get Started Now
               </Link>
@@ -1074,10 +1074,10 @@ const FoodTruckPage = () => {
               <div className="flex flex-col h-full gap-4">
                 <div className="flex items-center justify-between">
                   <h3 className="font-bold text-zinc-900 text-sm">Active Promotions</h3>
-                  <span className="text-[9px] px-2 py-0.5 bg-orange-100 text-orange-600 rounded-full font-bold">3 Active</span>
+                  <span className="text-[9px] px-2 py-0.5 bg-red-100 text-red-600 rounded-full font-bold">3 Active</span>
                 </div>
                 {[
-                  { title: 'Buy 1 Get 1 Free', desc: 'Street Burger - All Day', badge: 'BOGO', color: 'bg-orange-50 border-orange-100' },
+                  { title: 'Buy 1 Get 1 Free', desc: 'Street Burger - All Day', badge: 'BOGO', color: 'bg-red-50 border-red-100' },
                   { title: 'Happy Hour - 20% Off', desc: '2PM–5PM Daily', badge: 'TIME', color: 'bg-yellow-50 border-yellow-100' },
                   { title: 'Loyalty Coupon', desc: 'Repeat customers - $3 off', badge: 'COUPON', color: 'bg-teal-50 border-teal-100' }
                 ].map((promo, i) => (

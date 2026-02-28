@@ -96,10 +96,23 @@ const FAQ = () => {
           transition={{ duration: 0.8 }}
           className="relative z-10 text-center max-w-3xl mx-auto"
         >
-          <span className="text-red-600 font-bold uppercase tracking-wider text-sm mb-4 block">Answers to common questions</span>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-black mb-6 tracking-tight uppercase">
+          <motion.h3 
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-red-600 text-4xl font-serif italic mb-4 block"
+          >
+            AnswersToCommonQuestions
+          </motion.h3>
+          <motion.h2 
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="text-4xl md:text-6xl font-serif font-black text-black mt-2 mb-6"
+          >
             Frequently <br/> Asked <span className="text-red-600">Questions</span>
-          </h2>
+          </motion.h2>
           <p className="text-gray-500 text-lg md:text-xl max-w-2xl mx-auto">
             Everything you need to know about Odoo restaurant management system to get started. 
           </p>

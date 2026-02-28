@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 const features = [
   {
@@ -14,7 +15,8 @@ const features = [
       "Split bills & multiple payment methods",
       "Real-time sales reports"
     ],
-    image: "https://images.unsplash.com/photo-1556742044-3c52d6e88c62?q=80&w=2070"
+    image: "https://images.unsplash.com/photo-1556742044-3c52d6e88c62?q=80&w=2070",
+    link: "/features/pos-management" 
   },
   {
     category: "Order Management",
@@ -26,7 +28,8 @@ const features = [
       "Reduce human errors",
       "Improve preparation time"
     ],
-    image: "https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?q=80&w=2070"
+    image: "https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?q=80&w=2070",
+    link: "/features/order-management"
   },
   {
     category: "Table & Reservation",
@@ -38,7 +41,8 @@ const features = [
       "Walk-in management",
       "Reduce waiting chaos"
     ],
-    image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070"
+    image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070",
+    link: "/features/table-reservation"
   },
   {
     category: "QR Code Menu",
@@ -50,7 +54,8 @@ const features = [
       "No reprinting costs",
       "Faster ordering experience"
     ],
-    image: "https://images.unsplash.com/photo-1513151233558-d860c5398176?q=80&w=2144"
+    image: "https://images.unsplash.com/photo-1513151233558-d860c5398176?q=80&w=2144",
+    link: "/features/qr-code-menu"
   },
   {
     category: "Inventory Management",
@@ -62,7 +67,8 @@ const features = [
       "Ingredient-level tracking",
       "Reduce wastage & theft"
     ],
-    image: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=2074"
+    image: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=2074",
+    link: "/features/inventory-management" 
   },
   {
     category: "Multi-Branch Control",
@@ -73,7 +79,8 @@ const features = [
       "Centralized reporting",
       "Branch performance comparison"
     ],
-    image: "https://images.unsplash.com/photo-1546241072-48010ad2862c?q=80&w=1974"
+    image: "https://images.unsplash.com/photo-1546241072-48010ad2862c?q=80&w=1974",
+    link: "/features/multi-menu-management" 
   }
 ];
 
@@ -172,9 +179,9 @@ const FeaturesSection = () => {
                     ))}
                   </ul>
 
-                  <button className="bg-red-600 text-white px-8 py-3 rounded-full font-bold hover:bg-red-700 transition-all shadow-lg shadow-red-600/20 transform hover:-translate-y-1">
+                  <Link href={feature.link} className="inline-block bg-red-600 text-white px-8 py-3 rounded-full font-bold hover:bg-red-700 transition-all shadow-lg shadow-red-600/20 transform hover:-translate-y-1">
                     Get Started Now
-                  </button>
+                  </Link>
                 </div>
               </div>
 
